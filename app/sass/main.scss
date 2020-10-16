@@ -1,0 +1,64 @@
+@import "variables";
+@import "header";
+@import "components";
+@import "sections";
+@import "fonts";
+
+body{
+  font-family: 'Gotham Pro';
+}
+a:hover{
+  color: unset;
+  text-decoration: none;
+}
+.vissually-hidden{
+  position: absolute !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(100%) !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  text-indent: -9999px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+  user-select: none !important;
+}
+.btn-style:focus{
+  border: none;
+  outline: none;
+}
+.btn-style{
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding-left: 44px;
+  padding-right: 44px;
+  min-height: 72px;
+  background: $gradietnt-bottom;
+  box-shadow: $btn-shadow;
+  color: $white;
+  text-align: center;
+  border-radius: 45px;
+  text-shadow: 0 1px 0px #a2572a;
+}
+.key{
+  content: '';
+  display: inline-block;
+  width: 29px;
+  height: 30px;
+  margin-left: 20px;
+  background: url(../img/dest/Key.png);
+  background-repeat: no-repeat;
+}

@@ -1,0 +1,26 @@
+$primary:     #f5955b;
+$logo-color:  #e16012;
+$success:     #22cb8e;
+$logo-color:  #e16012;
+$light-grey:  #b4b4b4;
+$grey:        #7c7c7c;
+$dark-grey:   #494747;
+$black:       #000000;
+$white:       #ffffff;
+$gradietnt-right: linear-gradient(to right, #faa16b, #e87530);
+$gradietnt-bottom: linear-gradient(to bottom, #faa16b, #e87530);
+$btn-shadow: 0px 19px 18px rgba(232, 117, 48, 0.33);
+
+.title{
+    &-1{
+        font-size: 52px;
+    }
+    &-2{
+        font-size: 36px;   
+    }
+}
+.text{
+    &-1{
+        font-size: 24px;
+    }
+}

@@ -1,0 +1,33 @@
+.phone-window{
+    width: 165px;
+    height: 330px;
+    padding: 9px;
+    background: url(../img/dest/iphone.png);
+    background-repeat: no-repeat;
+}
+.phone-window--intro{
+    position: absolute;
+    bottom: -34px;
+    box-shadow: 0px 71px 81px rgba(0, 0, 0, 0.3);
+    border-radius: 24px;
+    z-index: 2;
+}
+.macbook-window{
+    width: 607px;
+    height: 359px;
+    padding-left: 55px;
+    padding-right: 53px;
+    padding-bottom: 36px;
+    padding-top: 11px;
+    background: url(../img/dest/macbook-shadow.png);
+}
+.macbook-window--intro{
+    position: absolute;
+    bottom: 0%;
+    z-index: 1;
+    box-shadow: 0 115px 81px -38px rgba(0,0,0,.3);
+}
+.screen-wrapper{
+    overflow: hidden;
+    border-radius: 5px;
+}

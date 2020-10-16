@@ -57,3 +57,55 @@
         transform: scaleX(1) translateX(0);
     }
 }
+.service-description{
+    &__title{
+        font-size: 24px;
+        margin-bottom: 28px;
+        color: $black;
+        font-weight: bold;
+    }
+}
+.sub-list{
+    counter-reset: item;
+    list-style-type: none;
+    margin: 70px 0;
+}
+.sub-item{
+    display: block;
+    font-size: 16px;
+    height: 28px;
+    font-weight: bold;
+    color: $grey;
+    margin-bottom: 22px;
+    cursor: pointer;
+    transition: all .3s;
+}
+.sub-item::before { 
+    content: '0'counter(item) "  "; 
+    counter-increment: item;
+    left: 15px;
+    position: absolute;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: all .3s;
+}
+.sub-item:hover{
+    color: $black;
+    &::before{
+        visibility: visible;
+        color: $black;
+        opacity: 1;
+        transform:translateX(0);
+    }
+}
+.sub-item--active{
+    color: $black;
+    font-size: 18px;
+    &::before{
+        visibility: visible;
+        color: $black;
+        opacity: 1;
+        transform:translateX(0);
+    }
+}

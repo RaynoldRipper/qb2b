@@ -2,10 +2,15 @@
 @import "header";
 @import "components";
 @import "sections";
+@import "sections/team.scss";
 @import "fonts";
 
 body{
   font-family: 'Gotham Pro';
+}
+ul, ol{
+  list-style: none;
+  padding: 0;
 }
 a:hover{
   color: unset;

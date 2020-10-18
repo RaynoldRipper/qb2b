@@ -1,9 +1,10 @@
 .phone-window{
-    width: 165px;
+    max-width: 165px;
     height: 330px;
     padding: 9px;
     background: url(../img/dest/iphone.png);
     background-repeat: no-repeat;
+    // background-size: contain;   
 }
 .phone-window--intro{
     position: absolute;
@@ -13,26 +14,36 @@
     z-index: 2;
 }
 .macbook-window{
-    width: 607px;
+    max-width: 607px;
     height: 359px;
     padding-left: 55px;
     padding-right: 53px;
     padding-bottom: 36px;
     padding-top: 11px;
     background: url(../img/dest/macbook-shadow.png);
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 .macbook-window--intro{
     position: absolute;
+    left: 75px;
     bottom: 0%;
     z-index: 1;
-    box-shadow: 0 115px 81px -38px rgba(0,0,0,.3);
+    box-shadow: 0 175px 81px -90px rgba(0,0,0,.3);
 }
-.ipad-window{
+.ipad-horizontal-window{
     background: url(../img/dest/ipad_horizontal.png);
     width: 585px;
     height: 413px;
+    padding-left: 53px;
+    padding-top: 26px;
+    padding-bottom: 28px;
+    padding-right: 53px;
 }
 .screen-wrapper{
     overflow: hidden;
-    border-radius: 5px;
+    // border-radius: 5px;
+}
+.screen-wrapper img{
+    width: 100%;
 }

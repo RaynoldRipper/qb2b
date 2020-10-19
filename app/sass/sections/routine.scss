@@ -1,0 +1,24 @@
+.routine{
+    position: relative;
+    padding-top: 184px;
+}
+.routine__title{
+    text-align: center;
+    margin-bottom: 180px;
+}
+.routine-container{
+    position: relative;
+}
+.routine-service{
+    padding-top: 86px;
+    padding-bottom: 50px;
+}
+.routine-service:nth-child(2n+1){
+    margin-right: auto;
+}
+.routine-service:nth-child(2n){
+    margin-left: auto;
+}
+.routine-btn{
+    margin: 190px auto 0px auto;
+}

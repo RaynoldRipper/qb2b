@@ -1,0 +1,72 @@
+.task{
+    background: url(../../img/dest/task-lise.png);
+    background-repeat: no-repeat;
+    background-position: 53% 508px;
+    padding-top: 230px;
+    &__title{
+        margin-bottom: 120px;
+    }
+    &-item{
+        position: relative;
+        padding-top: 60px;
+        padding-bottom: 60px;
+        max-width: 314px;
+    }
+    &-item:nth-child(2){
+        padding-top: 54px;
+        .task-link::after{
+            top: 40%;
+        }
+        .task-link::before{
+            top: 40%;
+        }
+    }
+    &-item:nth-child(3){
+        padding-top: 16px;
+        padding-bottom: 16px;
+    }
+    &-link::after{
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #edeef0;
+        z-index: 1;
+    }
+    &-link::before{
+        content: '';
+        position: absolute;
+        transition: all .3s;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        border-radius: 50%;
+        background:$gradietnt-right;
+        box-shadow: $btn-shadow;
+        opacity: 0;
+        z-index: 3;
+    }
+    &-link{
+        color: $grey;
+        transition: all .3s;
+        display: block;
+        max-width: 280px;
+        font-size: 16px;
+        font-weight: bold;
+        &:hover::before{
+            opacity: 1;
+        }
+    }
+    &-link--active{
+        font-size: 18px;
+        color: $black;
+    }
+}

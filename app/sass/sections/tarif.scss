@@ -1,0 +1,149 @@
+.tarif{
+    padding-top: 180px;
+    &-item{
+        &__bage{
+            display: block;
+            font-size: 14px;
+            color: #818181;
+            text-align: center;
+        }
+        &__title{
+            font-size: 18px;
+            text-align: center;
+        }
+        &__description{
+            font-size: 12px;
+            color: #818181;
+            text-align: center;
+        }
+        &__price{
+            margin-top: 40px;
+            font-weight: bold;
+            text-align: center;
+        }
+    }
+    &__table{
+        width: 100%;
+        margin-top:85px;
+        tbody{
+            display: block;
+        }
+    }
+}
+.table{
+    &-item{
+        padding-bottom: 45px;
+        padding-top: 35px;
+    }
+    &-text{
+        display: block;
+        text-align: center;
+        font-weight: normal;
+        font-size: 12px;
+    }
+    &-title{
+        display: block;
+        text-align: center;
+        font-size: 16px;
+    }
+    &-cell{
+        padding-top: 25px;
+        padding-bottom: 26px;
+        text-align: center;
+    }
+    &-cell:first-child{
+        border-bottom: 1px solid #d3d3d3;
+    }
+}
+.tarif{
+  padding-top: 170px;
+  &-item{
+    transition: all.3s;
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+    &::before{
+      content: '';
+      transition: all .3s;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      box-shadow: 0px 10px 24px #f3f3f3;
+      background-color: $white;
+      border-radius: 15px;
+    }
+    &__card{
+      background-color: $white;
+      border-radius: 15px;
+      position: relative;
+      z-index: 2;
+    }
+    &__name{
+        position: relative;
+        padding-top: 28px;
+        padding-left: 36px;        
+        padding-right: 40px;
+        padding-bottom: 40px;
+        margin: 0;
+        &::after{
+            content: '';
+            display: block;
+            position: absolute;
+            background: url(../img/dest/card-arrow.png);
+            width:  35px;
+            height: 35px;
+            transform: translate(-50%, -50%);
+            transition: all .3s;
+            opacity: .3;
+            top: 50%;
+            right: 26px;
+        }
+    }
+    &:hover{
+      z-index: 5;
+      .tarif-item__options{
+        opacity: 1;
+        left: 100%;
+        width: max-content;
+      }
+    }
+  }
+}
+.tarif-item__options{
+  overflow: hidden;
+  transition: all .3s;
+  display: flex;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+  padding-left: 45px;
+  padding-right: 15px;
+  padding-bottom: 42px;
+  background-color: $white;
+  opacity: 0;
+}
+.tarif-info:nth-child(4n+4){
+  .tarif-item::before{
+    right: 0;
+  }
+  &:hover{
+    .tarif-item__options{
+      left: initial;
+      right: 100%;
+    }
+  }
+}
+.options-item{
+    white-space: nowrap;
+    font-size: 12px;
+    color: #565656;
+}
+.options-item::before{
+    content: '- ';
+}

@@ -118,3 +118,32 @@
         transform:translateX(0);
     }
 }
+.service-control{
+    padding-top: 216px;
+    &__title{
+        margin-bottom: 80px;
+    }
+}
+.tab-block{
+    cursor: pointer;
+    padding-left: 30px;
+    padding-bottom: 58px;
+    padding-top: 58px;
+    &__num{
+        transition: all .3s;
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
+        color: #9b9b9b;
+        margin-bottom: 30px;
+    }
+    &__text{
+        color: #9b9b9b;
+        font-size: 14px;
+    }
+    &:hover{
+        .tab-block__num{
+            color: $primary;
+        }
+    }
+}

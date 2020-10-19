@@ -1,0 +1,26 @@
+.get-free{
+    padding-top: 176px;
+    &__title{
+        margin-bottom: 134px;
+    }
+}
+.free-list{
+    margin-bottom: 0;
+    margin-top: 0;
+}
+.price{
+    text-decoration: line-through;
+}
+.economy-value{
+    display: flex;
+    margin-left: 55px;
+    max-width: 254px;
+}
+.text-free{
+    font-weight: bold;
+    margin-left: auto;
+}
+.total-economy{
+    margin-top: 120px;
+    margin-left: 55px;
+}

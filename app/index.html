@@ -6,15 +6,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap"
     rel="stylesheet">
   <link rel="stylesheet" href="css/app.min.css">
-  <link rel="stylesheet" href="css/animate.min.css">
+  <link rel="stylesheet" href="css/animate.css">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
-  <script src="./js/wow.min.js"></script>
-
   <title>QB2B</title>
 </head>
 
@@ -41,10 +39,7 @@
     </div>
   </header>
   <main class="main">
-    <script>
-      new WOW().init();
-    </script>
-    <section class="section-info intro intro-bgr" data-wow-duration="2s" data-wow-delay="5s" data-wow-offset="10" data-wow-iteration="10">
+    <section class="section-info intro intro-bgr wow fadeInDown">
       <div class="container">
         <div class="row">
           <div class="col-md-5">
@@ -74,7 +69,7 @@
         </div>
       </div>
     </section>
-    <section class="section-info capabilities" data-wow-duration="2s" data-wow-delay="5s" data-wow-offset="10" data-wow-iteration="10">
+    <section class="section-info capabilities wow fadeInDown">
       <div class="container">
         <h3 class="title-2 capabilities__title">Сервис в котором вы<br> видите <strong>все основные показатели</strong>
         </h3>
@@ -114,7 +109,7 @@
         </div>
       </div>
     </section>
-    <section class="section-info team">
+    <section class="section-info team wow fadeInDown">
       <div class="container">
         <div class="pen-wrapper">
           <img src="./img/dest/pen.png" alt="Картнка ручки" class="pen-image">
@@ -639,8 +634,8 @@
             <div class="row">
               <div class="offset-md-2 col-md-3">
                 <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="name">
-                <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="name">
-                <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="name">
+                <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="phone">
+                <input type="email" class="form-input" placeholder="Как к вам обращаться?" name="email">
               </div>
               <div class="col-md-5">
                 <textarea class="form-textarea" name="text" id="">
@@ -689,23 +684,27 @@
         </div>
       </div>
     </div>
-    <div class="header">
+    <header class="header">
       <div class="container">
-        <div class="row align-items-center py-4">
-          <div class="logo col-md-6">
-            <div class="logo__coube"></div>
-            <div class="logo__text">КУБ2Б</div>
+        <div class="row align-items-center justify-content-lg-between py-4">
+          <div class="col-sm-6 col-md-4 col-xl-5">
+            <a href="#" class="logo">
+              <div class="logo__coube"></div>
+              <div class="logo__text">КУБ2Б</div>
+            </a>
           </div>
-          <div class="info col-md-6 justify-content-between">
-            <div class="info__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
-            <a href="tel:88435005060" class="info__phone">8 (843) 500-50-60</a>
+          <div class="contacts col-sm-6 col-md-8 col-xl-7 justify-content-between">
+            <div class="contacts__info">
+              <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
+              <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
+            </div>
             <div class="burger-menu">
               <i class="burger-menu__line"></i>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </header>
   </footer>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
     integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
@@ -714,6 +713,19 @@
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
     </script>
   <script src="./js/app.min.js"></script>
+  <script src="/js/wow.js"></script>
+  <script>
+    wow = new WOW(
+      {
+        animateClass: 'animated',
+        offset:       100,
+        callback:     function(box) {
+          console.log("WOW: animating <" + box.tagName.toLowerCase() + ">")
+        }
+      }
+    );
+    wow.init();
+  </script>
 </body>
 
 </html>

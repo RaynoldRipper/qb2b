@@ -68,5 +68,8 @@
     &-link--active{
         font-size: 18px;
         color: $black;
+        &::before{
+            opacity: 1;
+        }
     }
 }

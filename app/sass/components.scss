@@ -1,7 +1,6 @@
 .phone-window{
-    max-width: 165px;
-    height: 330px;
-    padding: 9px;
+    width: fit-content;
+    padding: 9px 9px 9px 9px;
     background: url(../img/dest/iphone.png);
     background-repeat: no-repeat;
     // background-size: contain;   
@@ -34,8 +33,7 @@
     width: fit-content;
 }
 .macbook-window{
-    max-width: 607px;
-    height: 359px;
+    width: fit-content;
     padding-left: 55px;
     padding-right: 53px;
     padding-bottom: 36px;
@@ -76,4 +74,13 @@
 }
 .screen-wrapper img{
     width: 100%;
+}
+.star{
+    display: block;
+    margin-right: 8px;
+    width: 24px;
+    height: 23px;
+    background: url(../img/dest/star.png);
+    background-repeat: no-repeat;
+    background-size: contain;
 }

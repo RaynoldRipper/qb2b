@@ -10,20 +10,26 @@
         font-size: 26px;
         font-weight: bold;
         margin-left: -46px;
+        color: $black;
         background-color: white;
     }
 }
-.info{
+.contacts{
     display: flex;
     align-items: center;
     &__adress{
+        font-weight: 500;
         color: $dark-grey;
         font-size: 14px;
     }
     &__phone{
+        transition: all .3s;
         color: $black;
         font-size: 18px;
         font-weight: bold;
+        &:hover{
+            color: $primary;
+        }
     }
 }
 .burger-menu{
@@ -36,6 +42,24 @@
     box-shadow: $btn-shadow;
     cursor: pointer;
     z-index: 1;
+    transition: all .3s;
+    &--active{
+        .burger-menu__line{
+            transition-delay: .12s;
+            transition-timing-function: cubic-bezier(.215,.61,.355,1);
+            transform: rotate(45deg);
+            &::before{
+                bottom: 0;
+                transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+                transform: rotate(-90deg);
+            }
+            &::after{
+                top: 0;
+                transition: top 75ms ease,opacity 75ms ease .12s;
+                opacity: 0;
+            }
+        }
+    }
     &__line{
         content: '';
         position: relative;
@@ -45,6 +69,9 @@
         height: 2px;
         border-radius: 2px;
         background-color: $white;
+        transition-timing-function: ease;
+        transition-duration: .15s;
+        transition-property: transform;
         z-index: 3;
         &::after{
             content: '';
@@ -56,6 +83,7 @@
             height: 2px;
             border-radius: 2px;
             background-color: $white;
+            transition: top 75ms ease .12s,opacity 75ms ease;
         }
         &::before{
             content: '';
@@ -67,6 +95,7 @@
             height: 2px;
             border-radius: 2px;
             background-color: $white;
+            transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
         }
     }
     &:after {
@@ -84,6 +113,8 @@
     }
     &:hover{
         color: $white;
+        transform: translateY(5px);
+        box-shadow: 0 12px 8px rgba(232,117,48,.33);
         &::after {
           opacity: 1;
         }
@@ -91,4 +122,24 @@
 }
 .primary-color{
     color: $primary;
+}
+@media(min-width:992px){
+    .contacts{
+        &__info{
+            display: flex;
+            align-items: center;
+            width: 100%;
+            justify-content: space-around;
+        }
+    }
+}
+@media(max-width:768px){
+    .contacts{
+        &__info{
+            display: none;
+        }
+        .burger-menu{
+            margin-left: auto;
+        }
+    }
 }

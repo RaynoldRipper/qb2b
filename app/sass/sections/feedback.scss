@@ -1,0 +1,43 @@
+.feedback{
+    &__title{
+        margin-top: 115px;
+        margin-bottom: 76px;
+    }
+}
+.contact{
+    margin-bottom: 80px;
+    &-link{
+        font-size: 24px;
+        font-weight: bold;
+        color: $black;
+    }
+}
+.adress{
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    &-wrapper{
+        margin-bottom: 100px;
+    }
+}
+.form{
+    &-input, &-textarea{
+        transition: all .3s;
+        width: 100%;
+        padding: 25px 20px;
+        border-radius: 8px;
+        margin-bottom: 18px;
+        border: 1px solid #edeef0;
+        outline: none;
+        &:focus,&:hover{
+            border-color: #898989;
+        }
+    }
+    &-textarea{
+        height: calc(100% - 18px);
+    }
+    &-btn{
+        margin: auto;
+        margin-top: 30px;
+    }
+}

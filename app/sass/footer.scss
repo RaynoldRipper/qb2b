@@ -1,0 +1,39 @@
+.info{
+    font-size: 12px;
+    color: #727272;
+    margin-bottom: 50px;
+}
+.company-info{
+    margin-bottom: 40px;
+    &__title{
+        color: $black;
+        font-weight: 500;
+        font-size: 14px;
+    }
+    &__text{
+        font-size: 14px;
+        color: #727272;
+    }
+}
+.privacy{
+    font-size: 14px;
+    color: $black;
+    font-weight: bold;
+    transition: all .3s;
+    &:hover{
+        color: #727272;
+    }
+}
+.footer{
+    padding-top: 120px;
+    &-link{
+        display: block;
+        margin-bottom: 20px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #727272;
+    }
+    &-nav-title{
+        margin-bottom: 30px;
+    }
+}

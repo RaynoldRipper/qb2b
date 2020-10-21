@@ -1,3 +1,45 @@
+@media(max-width:1240px){
+    #bodyNav{
+        display: none;
+    }
+}
+#bodyNav{
+    position: fixed;
+    background-color: initial !important;
+    z-index: 100;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.nav-link.custom{
+    transition: all .3s;
+    width: 15px;
+    height: 15px;
+    padding: 0;
+    margin-bottom: 22px;
+    border: 2px solid #f3f1f1;
+    border-radius: 0;
+    &:hover{
+        border-color: $primary;
+    }
+    &.active{
+        position: relative;
+        width: 20px;
+        height: 20px;
+        border: 2px solid $primary;
+        background-color: initial;
+        &::after{
+            content: '';
+            transition: all .3s;
+            display: block;
+            position: absolute;
+            right: 1px;
+            bottom: 1px;
+            width: 5px;
+            height: 5px;
+            background-color: $primary;
+        }
+    }
+}
 .phone-window{
     width: fit-content;
     padding: 9px 9px 9px 9px;
@@ -67,6 +109,7 @@
     padding-top: 26px;
     padding-bottom: 28px;
     padding-right: 53px;
+    border-radius: 25px;
     background-repeat: no-repeat;
 }
 .ipad-vertical-window{
@@ -81,6 +124,20 @@
 .ipad{
     &-bgr{
         position: relative;
+        max-width: 479px;
+        width: 100%;
+        max-height: 360px;
+        height: 100%;
+    }
+    &-screen-item{
+        opacity: 0;
+        width: 100%;
+        position: absolute;
+        transition: all .3s;
+        &.active{
+            opacity: 1;
+            z-index: 2;
+        }
     }
     &-table{
         transition: all .4s;
@@ -102,6 +159,32 @@
         right: 8px;
         top: 56px;
         max-width: 224px;  
+        border-radius: 8px;
+        &.active{
+            box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+            transform: translateY(-6px);
+        }
+    }
+    &-analitica{
+        transition: all .4s;
+        position: absolute;
+        display: block;
+        left: 20px;
+        bottom: 10px;
+        max-width: 440px;
+        border-radius: 8px;
+        &.active{
+            box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+            transform: translateY(-6px);
+        }
+    }
+    &-indicators{
+        transition: all .4s;
+        position: absolute;
+        display: block;
+        right: 22px;
+        top: 78px;
+        max-width: 195px;
         border-radius: 8px;
         &.active{
             box-shadow: 4px 4px 4px rgba(0,0,0,.4);

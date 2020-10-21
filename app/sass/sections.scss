@@ -87,35 +87,38 @@
     color: $grey;
     margin-bottom: 22px;
     cursor: pointer;
-    transition: all .3s;
+    transition: all .1s;
 }
 .sub-item::before { 
     content: '0'counter(item) "  "; 
     counter-increment: item;
-    left: 15px;
+    left: 35px;
     position: absolute;
-    visibility: hidden;
     opacity: 0;
-    transform: translateX(20px);
-    transition: all .3s;
+    transition: left .3s, opacity .3s;
+    // transform: translateX(20px);
 }
 .sub-item:hover{
     color: $black;
-    &::before{
-        visibility: visible;
-        color: $black;
-        opacity: 1;
-        transform:translateX(0);
-    }
+    // &::before{
+    //     visibility: visible;
+    //     color: $black;
+    //     opacity: 1;
+    //     transform:translateX(0);
+    // }
+}
+.carousel-item{
+    transition: transform .6s ease-in-out !important;
 }
 .sub-item--active{
     color: $black;
     font-size: 18px;
     &::before{
         visibility: visible;
+        left: 20px;
         color: $black;
         opacity: 1;
-        transform:translateX(0);
+        // transform:translateX(0);
     }
 }
 .service-control{

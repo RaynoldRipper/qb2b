@@ -4,6 +4,16 @@
     background: url(../img/dest/iphone.png);
     background-repeat: no-repeat;
     // background-size: contain;   
+    &--intro{
+        cursor: pointer;
+        border-radius: 25px;
+        animation: phone 2s forwards .5s;
+        box-shadow: 0 47px 67px rgba(0,0,0,.3);
+        &.active{
+            position: relative;
+            animation: phone-reverse 2s forwards;
+        }
+    }
 }
 .phone-window--routine{
     position: sticky;
@@ -68,12 +78,72 @@
     padding-right: 28px;
     background-repeat: no-repeat;
 }
+.ipad{
+    &-bgr{
+        position: relative;
+    }
+    &-table{
+        transition: all .4s;
+        position: absolute;
+        display: block;
+        left: 8px;
+        top: 56px;
+        max-width: 224px;
+        border-radius: 8px;
+        &.active{
+            box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+            transform: translateY(-6px);
+        }
+    }
+    &-kvartal{
+        transition: all .4s;
+        position: absolute;
+        display: block;
+        right: 8px;
+        top: 56px;
+        max-width: 224px;  
+        border-radius: 8px;
+        &.active{
+            box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+            transform: translateY(-6px);
+        }
+    }
+}
 .screen-wrapper{
     overflow: hidden;
-    // border-radius: 5px;
+    ::-webkit-scrollbar{
+        position: absolute;
+        width: 4px; /* ширина для вертикального скролла */
+        height: 6px; /* высота для горизонтального скролла */
+        background-color: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+        position: absolute;
+        background-color: #b1b1b1;
+        border-radius: 2px;
+    }
 }
-.screen-wrapper img{
+.screen-iphone{
+    border-radius: 20px;
+    width: 194px;
+    height: 419px;
+    transition: all .3s;
+}
+.screen-item{
+    transition: all .3s;
+    position: absolute;
+    max-height: 419px;
+    z-index: 1;
+    opacity: 0;
+    // overflow-y: auto;
+    &.active{
+        opacity: 1;
+        z-index: 5;
+    }
+}
+.screen-wrapper .moc-picture{
     width: 100%;
+    display: block;
 }
 .star{
     display: block;
@@ -83,4 +153,37 @@
     background: url(../img/dest/star.png);
     background-repeat: no-repeat;
     background-size: contain;
+}
+@keyframes phone {
+    0%{
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(-100px);
+        z-index: 3;
+        position: relative;
+    }
+    100%{
+        transform: translateX(0);
+        z-index: 3;
+        position: relative;
+        box-shadow: 0px 71px 81px rgba(0, 0, 0, 0.3)
+    }
+}
+@keyframes phone-reverse {
+    0%{
+        box-shadow: 0px 71px 81px rgba(0, 0, 0, 0.3);
+        transform: translateX(0);
+        z-index: 3;
+        position: relative;
+    }
+    50%{
+        transform: translateX(-100px);
+        z-index: 3;
+        position: relative;
+    }
+    100%{
+        transform: translateX(0);
+        box-shadow: 0 47px 67px rgba(0,0,0,.3);
+    }
 }

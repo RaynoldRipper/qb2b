@@ -8,12 +8,28 @@
   <link rel="stylesheet" href="css/app.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="./css/bootstrap.min.css">
   <link rel="stylesheet" href="./css/style.min.css">
   <title>QB2B</title>
+  <script>
+    function numAnim(val,el,timeout,step){
+    var i=0;
+    (function(){
+      if(i<=val){
+      setTimeout(arguments.callee,timeout);
+      document.getElementById(el).innerHTML=i;
+      i=i+step;
+    }
+    else{
+    document.getElementById(el).innerHTML=val;
+    }
+    })();
+  }
+  </script>
 </head>
 
 <body data-spy="scroll" data-target="#bodyNav" data-offset="100">
@@ -85,48 +101,139 @@
     </section>
     <section class="section-info capabilities wow fadeInDown" id="section-capabilities">
       <div class="container">
-        <h3 class="title-2 capabilities__title">Сервис в котором вы<br> видите <strong>все основные показатели</strong>
+        <h3 class="title-2 capabilities__title">Сервис в котором вы<br> видите <strong>все основные показатели бизнеса</strong>
         </h3>
-        <div class="row tab-container">
-          <div class="col-md-3">
-            <a href="#" class="tab-link tab-link--active">Бухгалтерия</a>
-          </div>
-          <div class="col-md-3">
-            <a href="#" class="tab-link">Маркетинг</a>
-          </div>
-          <div class="col-md-3">
-            <a href="#" class="tab-link">Юристы</a>
-          </div>
-          <div class="col-md-3">
-            <a href="#" class="tab-link">IT - Специалисты</a>
-          </div>
+        <div class="tab-container">
+            <div href="#" class="tab-link active" data-slideid="capabilities-slide-buh" id="capabilities-btn-buh">Бухгалтерия</div>
+            <div href="#" class="tab-link" data-slideid="capabilities-slide-mark" id="capabilities-btn-mark">Маркетинг</div>
+            <div href="#" class="tab-link" data-slideid="capabilities-slide-lawyer" id="capabilities-btn-lawyer">Юристы</div>
+            <div href="#" class="tab-link" data-slideid="capabilities-slide-it" id="capabilities-btn-it">IT - Специалисты</div>
         </div>
-        <div class="row">
-          <div class="col-md-5 service-description">
-            <h4 class="title-4 service-description__title">Бухгалтерия</h4>
-            <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая вот
-              такими документами.</p>
-            <ol class="sub-list">
-              <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
-              <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
-              <li class="sub-item" id="ipad-analitica">Доход и расход компании</li>
-              <li class="sub-item" id="ipad-indicators">Проводимые операции</li>
-            </ol>
-          </div>
-          <div class="col-md-6">
-            <div class="ipad-horizontal-window">
-              <div class="screen-wrapper ipad-bgr">
-                <div class="ipad-screen-item" id="ipad-screen-table">
-                  <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
-                  <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
-                  <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов" class="ipad-kvartal">
+        <div class="custom-slider">
+          <div class="custom-slider-list">
+            <div class="custom-slider-item active" id="capabilities-slide-buh">
+              <div class="row">
+                <div class="col-md-5 service-description">
+                  <h4 class="title-4 service-description__title">Бухгалтерия</h4>
+                  <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая вот
+                    такими документами.</p>
+                  <ol class="sub-list">
+                    <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
+                    <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
+                    <li class="sub-item" id="ipad-indicators">Доход и расход компании</li>
+                    <li class="sub-item" id="ipad-analitica">Проводимые операции</li>
+                  </ol>
                 </div>
-                <div class="ipad-screen-item" id="ipad-screen-analitica">
-                  <img src="./img/dest/bgr-analitica.png" class="moc-picture" alt="Каринка фона айпада">
-                  <img src="./img/dest/table-price.png" alt="Картинка в айпаде с таблицей" class="ipad-analitica">
-                  <img src="./img/dest/indicators.png" alt="Картинка в айпаде с суммой налогов" class="ipad-indicators">
+                <div class="col-md-6">
+                  <div class="ipad-horizontal-window">
+                    <div class="screen-wrapper ipad-screen-horizontal">
+                      <div class="ipad-screen-item" id="ipad-screen-table">
+                        <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
+                        <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов" class="ipad-kvartal">
+                      </div>
+                      <div class="ipad-screen-item" id="ipad-screen-analitica">
+                        <img src="./img/dest/bgr-analitica.png" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/table-price.png" alt="Картинка в айпаде с таблицей" class="ipad-analitica">
+                        <img src="./img/dest/indicators.png" alt="Картинка в айпаде с суммой налогов" class="ipad-indicators">
+                      </div>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </div>  
+            </div>
+            <div class="custom-slider-item" id="capabilities-slide-mark">
+              <div class="row">
+                <div class="col-md-5 service-description">
+                  <h4 class="title-4 service-description__title">Бухгалтерия</h4>
+                  <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая вот
+                    такими документами.</p>
+                  <ol class="sub-list">
+                    <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
+                    <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
+                    <li class="sub-item" id="ipad-indicators">Доход и расход компании</li>
+                    <li class="sub-item" id="ipad-analitica">Проводимые операции</li>
+                  </ol>
+                </div>
+                <div class="col-md-6">
+                  <div class="ipad-horizontal-window">
+                    <div class="screen-wrapper ipad-screen-horizontal">
+                      <div class="ipad-screen-item" id="ipad-screen-table">
+                        <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
+                        <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов" class="ipad-kvartal">
+                      </div>
+                      <div class="ipad-screen-item" id="ipad-screen-analitica">
+                        <img src="./img/dest/bgr-analitica.png" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/table-price.png" alt="Картинка в айпаде с таблицей" class="ipad-analitica">
+                        <img src="./img/dest/indicators.png" alt="Картинка в айпаде с суммой налогов" class="ipad-indicators">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="custom-slider-item" id="capabilities-slide-lawyer">
+              <div class="row">
+                <div class="col-md-5 service-description">
+                  <h4 class="title-4 service-description__title">Бухгалтерия</h4>
+                  <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая вот
+                    такими документами.</p>
+                  <ol class="sub-list">
+                    <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
+                    <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
+                    <li class="sub-item" id="ipad-indicators">Доход и расход компании</li>
+                    <li class="sub-item" id="ipad-analitica">Проводимые операции</li>
+                  </ol>
+                </div>
+                <div class="col-md-6">
+                  <div class="ipad-horizontal-window">
+                    <div class="screen-wrapper ipad-screen-horizontal">
+                      <div class="ipad-screen-item" id="ipad-screen-table">
+                        <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
+                        <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов" class="ipad-kvartal">
+                      </div>
+                      <div class="ipad-screen-item" id="ipad-screen-analitica">
+                        <img src="./img/dest/bgr-analitica.png" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/table-price.png" alt="Картинка в айпаде с таблицей" class="ipad-analitica">
+                        <img src="./img/dest/indicators.png" alt="Картинка в айпаде с суммой налогов" class="ipad-indicators">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
+            </div>
+            <div class="custom-slider-item" id="capabilities-slide-it">
+              <div class="row">
+                <div class="col-md-5 service-description">
+                  <h4 class="title-4 service-description__title">Бухгалтерия</h4>
+                  <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая вот
+                    такими документами.</p>
+                  <ol class="sub-list">
+                    <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
+                    <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
+                    <li class="sub-item" id="ipad-indicators">Доход и расход компании</li>
+                    <li class="sub-item" id="ipad-analitica">Проводимые операции</li>
+                  </ol>
+                </div>
+                <div class="col-md-6">
+                  <div class="ipad-horizontal-window">
+                    <div class="screen-wrapper ipad-screen-horizontal">
+                      <div class="ipad-screen-item" id="ipad-screen-table">
+                        <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
+                        <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов" class="ipad-kvartal">
+                      </div>
+                      <div class="ipad-screen-item" id="ipad-screen-analitica">
+                        <img src="./img/dest/bgr-analitica.png" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/table-price.png" alt="Картинка в айпаде с таблицей" class="ipad-analitica">
+                        <img src="./img/dest/indicators.png" alt="Картинка в айпаде с суммой налогов" class="ipad-indicators">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>  
             </div>
           </div>
         </div>
@@ -277,31 +384,42 @@
       <div class="container">
         <h3 class="title-2 routine__title">А ещё мы <strong>снимем с Вас рутину и будем сами:</strong></h3>
         <div class="row flex-column routine-container">
-          <div class="col-md-4 routine-service" id="block_1">
+          <div class="col-md-4 routine-service slide" data-background="url('./img/dest/routine-buh.jpg')" id="block_1">
             <h4 class="title-4">Бухгалтерия</h4>
-            <p class="text-3">Создавать платежи в банк-клиентов</p>
-            <p class="text-3">Общаться с налоговыми и проверяющими органами</p>
+            <p class="text-3">Создавать платежки в банк-клиенте - Общаться с налоговыми и проверяющими органами</p>
+            <p class="text-3">Выставлять счета</p>
+            <p class="text-3">Формировать акты</p>
+            <p class="text-3">Сдавать отчеты в контролирующие органы</p>
+            <p class="text-3">Следить чтобы все налоги были уплачены</p>
           </div>
-          <div class="col-md-4 routine-service" id="block_2">
-            <h4 class="title-4">Бухгалтерия</h4>
-            <p class="text-3">Создавать платежи в банк-клиентов</p>
-            <p class="text-3">Общаться с налоговыми и проверяющими органами</p>
+          <div class="col-md-4 routine-service slide" data-background="#27ae60" id="block_2">
+            <h4 class="title-4">Кадровый учет</h4>
+            <p class="text-3">Трудоустраивать, увольнять сотрудников</p>
+            <p class="text-3">Оформлять больничные и отпуска</p>
+            <p class="text-3">Начислять и выплачивать заработные платы</p>
           </div>
-          <div class="col-md-4 routine-service" id="block_3">
-            <h4 class="title-4">Бухгалтерия</h4>
-            <p class="text-3">Создавать платежи в банк-клиентов</p>
-            <p class="text-3">Общаться с налоговыми и проверяющими органами</p>
+          <div class="col-md-4 routine-service slide" data-background="#e67e22" id="block_3">
+            <h4 class="title-4">Юридическая поддержка</h4>
+            <p class="text-3">Проверять все договора на предмет юридической грамотности</p>
+            <p class="text-3">Заполнять реквизиты договоров</p>
           </div>
-          <div class="col-md-4 routine-service" id="block_4">
-            <h4 class="title-4">Бухгалтерия</h4>
-            <p class="text-3">Создавать платежи в банк-клиентов</p>
-            <p class="text-3">Общаться с налоговыми и проверяющими органами</p>
+          <div class="col-md-4 routine-service slide" data-background="url('./img/dest/routine-marketing.jpg')" id="block_4">
+            <h4 class="title-4">Маркетинговое обслуживание</h4>
+            <p class="text-3">Настраивать рекламу и проводить к вам потенциальных клиентов</p>
+            <p class="text-3">Вносить изменения на ваш сайт</p>
+          </div>
+          <div class="col-md-4 routine-service slide" id="block_4">
+            <h4 class="title-4">IT обслуживание</h4>
+            <p class="text-3">Настраивать сервер, сканеры и принтеры</p>
+            <p class="text-3">Организовывать Ip-телефонию</p>
+            <p class="text-3">Настраивать корпоративные почтовые программы</p>
           </div>
           <div class="sticky-wrapper">
             <div class="phone-lg phone-window--routine">
               <div class="screen-wrapper screen-iphone">
-                <div class="screen-item"></div>
-                <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                <div class="screen-item routine-screen">
+                  <!-- <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона"> -->
+                </div>
               </div>
             </div>
           </div>
@@ -316,16 +434,24 @@
         <div class="row">
           <div class="col-md-7">
             <div class="macbook-window">
-              <div class="screen-wrapper">
-                <img src="./img/dest/macbool_screen.png" class="moc-picture" alt="Картинка Макбука">
+              <div class="screen-wrapper macbook-screen">
+                <div class="screen-item" id="mac-screen-ecp">
+                  <img src="./img/dest/free-ecp.jpg" class="moc-picture" alt="Картинка Макбука">
+                </div>
+                <div class="screen-item" id="mac-screen-eso">
+                  <img src="./img/dest/free-eso.jpg" class="moc-picture" alt="Картинка Макбука">
+                </div>
+                <div class="screen-item" id="mac-screen-buh">
+                  <img src="./img/dest/free-buh.jpg" class="moc-picture" alt="Картинка Макбука">
+                </div>
               </div>
             </div>
           </div>
           <div class="col-md-5">
             <ol class="sub-list free-list">
-              <li class="sub-item">Электронно-цифровая подпись</li>
-              <li class="sub-item sub-item--active">Система электронной сдачи отчетов</li>
-              <li class="sub-item">Учетная система для бухгалтерии</li>
+              <li id="free-ecp" class="sub-item" onclick="numAnim(2500,'price-before',10,115)">Электронно-цифровая подпись</li>
+              <li id="free-eso" class="sub-item sub-item--active" onclick="numAnim(8500,'price-before',10,115)">Система электронной сдачи отчетов</li>
+              <li id="free-buh" class="sub-item" onclick="numAnim(13500,'price-before',10,115)">Учетная система для бухгалтерии</li>
             </ol>
             <!-- <div class="free-list">
               <a href="#" class="free-item__tab">Электронно-цифровая подпись</a>
@@ -333,7 +459,7 @@
               <a href="#" class="free-item__tab">Учетная система для бухгалтерии</a>
             </div> -->
             <div class="economy-value">
-              <span class="text-2 price">8.500 руб</span>
+              <span class="text-2 price" id="price-before">8.500 </span><span class="text-2" style="margin-left: 10px;"> руб</span>
               <span class="text-2 text-free">Бесплатно</span>
             </div>
             <div class="total-economy">
@@ -355,7 +481,7 @@
                 <div id="phone-1" class="task-link">Видите все сданные отчеты</div>
               </li>
               <li class="task-item">
-                <div id="phone-2" class="task-link task-link--active">Общаться с ответственными за их выполнение</div>
+                <div id="phone-2" class="task-link">Общаться с ответственными за их выполнение</div>
               </li>
               <li class="task-item">
                 <div id="phone-3" class="task-link">Получать уведомления на телефон о выполнении</div>
@@ -366,13 +492,13 @@
             <div class="phone-lg phone--task">
               <div class="screen-wrapper screen-iphone" id="tasks-screen">
                 <div class="screen-item" id="tasks-phone-1">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" id="iphone-1" alt="Картинка Айфона">
+                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
                 <div class="screen-item" id="tasks-phone-2">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" id="iphone-1" alt="Картинка Айфона">
+                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
                 <div class="screen-item" id="tasks-phone-3">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" id="iphone-1" alt="Картинка Айфона">
+                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
               </div>
             </div>
@@ -386,38 +512,61 @@
           задачам,<br>будет<strong>контролировать служба клиентского
             сервиса</strong></h3>
         <div class="row align-items-center">
-          <div class="col-md-3">
-            <div class="tab-block">
-              <span class="tab-block__num">01.</span>
-              <p class="tab-block__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру вебмастеру
-                вебмастеру
-              </p>
-            </div>
-            <div class="tab-block">
-              <span class="tab-block__num">03.</span>
-              <p class="tab-block__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру вебмастеру
-                вебмастеру
-              </p>
-            </div>
-          </div>
-          <div class="col-md-3">
-            <div class="tab-block">
-              <span class="tab-block__num">02.</span>
-              <p class="tab-block__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру вебмастеру
-                вебмастеру
-              </p>
-            </div>
-            <div class="tab-block">
-              <span class="tab-block__num">04.</span>
-              <p class="tab-block__text">Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру вебмастеру
-                вебмастеру
-              </p>
+          <div class="col-md-6">
+            <div class="row">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tab-block" id="srvice-control-1">
+                    <span class="tab-block__num">01.</span>
+                    <p class="tab-block__text">Вы можете поставить нам задачу через встроенный чат в виртуальном офисе, 
+                      по электронной почте, позвонив по телефону, либо через мобильное приложение
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tab-block" id="srvice-control-2">
+                    <span class="tab-block__num">02.</span>
+                    <p class="tab-block__text">
+                      Сотрудник, принявший задачу, назначает ответственных, контролирует и следит за выполнением
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="tab-block" id="srvice-control-3">
+                    <span class="tab-block__num">03.</span>
+                    <p class="tab-block__text">Информация о всех ваших поставленных задачах выводится в виртуальный офис, 
+                      там вы можете видеть сроки, скачивать прикрепленные файлы и вести переписку с ответственным за ее выполнение
+                    </p>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="tab-block" id="srvice-control-4">
+                    <span class="tab-block__num">04.</span>
+                    <p class="tab-block__text">
+                      На четвертом шаге мы проверяем качество выполнение задачи и отправляем вам уведомление о её выполнении.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
           <div class="offset-1 col-md-5">
             <div class="ipad-vertical-window">
-              <div class="screen-wrapper">
-                <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
+              <div class="screen-wrapper ipad-screen-vertical">
+                <div class="ipad-screen-item" id="service-screen-1">
+                  <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
+                </div>
+                <div class="ipad-screen-item" id="service-screen-2">
+                  <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
+                </div>
+                <div class="ipad-screen-item" id="service-screen-3">
+                  <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
+                </div>
+                <div class="ipad-screen-item" id="service-screen-4">
+                  <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
+                </div>
               </div>
             </div>
           </div>
@@ -455,9 +604,9 @@
             <div class="tarif-item">
               <div class="tarif-item__card">
                 <span class="tarif-item__bage">Тариф</span>
-                <h4 class="tarif-item__title">Легкий старт</h4>
-                <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
-                  лишнего. Идеально поддодит для только что открывшихся фирм.</p>
+                <h4 class="tarif-item__title">Оптимальный</h4>
+                <p class="tarif-item__description">Когда бизнесу нужна юридическая поддержка и гугл уже не помогает решать их, 
+                  а шаблонные договора не подходят - обороты фирмы и сумма контрактов стали больше и требуют более серьезной защиты</p>
                 <p class="tarif-item__price">от 1000 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
@@ -470,6 +619,8 @@
                   <li class="options-item">Бухгалтер по первичной документации</li>
                   <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                  <li class="options-item">Юрист</li>
+                  <li class="options-item">ИТ специалист</li>
                 </ul>
               </div>
             </div>
@@ -478,9 +629,10 @@
             <div class="tarif-item">
               <div class="tarif-item__card">
                 <span class="tarif-item__bage">Тариф</span>
-                <h4 class="tarif-item__title">Легкий старт</h4>
-                <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
-                  лишнего. Идеально поддодит для только что открывшихся фирм.</p>
+                <h4 class="tarif-item__title">Смарт</h4>
+                <p class="tarif-item__description">Сотрудников стало больше, техника нуждается в системной настройке и оптимизации. 
+                  Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на буемаге
+                </p>
                 <p class="tarif-item__price">от 1000 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
@@ -493,6 +645,8 @@
                   <li class="options-item">Бухгалтер по первичной документации</li>
                   <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                  <li class="options-item">Юрист</li>
+                  <li class="options-item">ИТ специалист</li>
                 </ul>
               </div>
             </div>
@@ -501,9 +655,10 @@
             <div class="tarif-item">
               <div class="tarif-item__card">
                 <span class="tarif-item__bage">Тариф</span>
-                <h4 class="tarif-item__title">Легкий старт</h4>
-                <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
-                  лишнего. Идеально поддодит для только что открывшихся фирм.</p>
+                <h4 class="tarif-item__title">PROдвижение</h4>
+                <p class="tarif-item__description">Бизнес процессы и циклы сделки выстроены, нужен постоянный поток новых клиентов, 
+                  руководитель фирмы больше не может уделять время маркетингу и привлечению клиентов
+                </p>
                 <p class="tarif-item__price">от 1000 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
@@ -516,6 +671,8 @@
                   <li class="options-item">Бухгалтер по первичной документации</li>
                   <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                  <li class="options-item">Юрист</li>
+                  <li class="options-item">Маркетолог</li>
                 </ul>
               </div>
             </div>
@@ -542,8 +699,21 @@
             </div>
           </div>
           <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name row-name">Разово при подключении тарифа</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+          </div>
+          <div class="row table-row">
             <div class="col-md-4 table-cell table-cell-name">
-              <p class="row-name">Открытие расчета через банки-партнеры</p>
+              <p class="row-name">Регистрация ООО и ИП</p>
             </div>
             <div class="col-md-2 table-cell">
               <i class="check-active"></i>
@@ -573,7 +743,7 @@
           </div>
           <div class="row table-row">
             <div class="col-md-4 table-cell table-cell-name">
-              <p class="row-name">Открытие расчета через банки-партнеры</p>
+              <p class="row-name">Консультации по выбору системы налогообложения</p>
             </div>
             <div class="col-md-2 table-cell">
               <i class="check-active"></i>
@@ -584,6 +754,109 @@
             </div>
             <div class="col-md-2 table-cell">
               <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консультации по выбору ОКВЭД</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консультация бухгалтера</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Выпуск Электронно-цифровой подписи</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД; ССЧ</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Одностраничный сайт- визитка</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Пакет шаблонов договоров и необходимых документов для ведения бизнеса</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name row-name">Бухгалтерское обслуживание</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
             </div>
           </div>
         </div>
@@ -596,7 +869,7 @@
         <h3 class="title-2 text-center reviews__title"><strong>Оценки нашей работы<br></strong>Клиентами</h3>
         <div class="row">
           <div class="offset-md-3 col-md-2">
-            <div class="review-block">
+            <div class="review-block" id="review-block-yandex">
               <div class="review-block__desc">
                 <p class="review-block__name">Яндекс</p>
                 <p class="review-block__value">4.9</p>
@@ -609,9 +882,9 @@
                 <i class="star"></i>
               </div>
             </div>
-            <div class="review-block">
+            <div class="review-block" id="review-block-google">
               <div class="review-block__desc">
-                <p class="review-block__name">Яндекс</p>
+                <p class="review-block__name">Google</p>
                 <p class="review-block__value">4.9</p>
               </div>
               <div class="review-block__stars">
@@ -622,9 +895,9 @@
                 <i class="star"></i>
               </div>
             </div>
-            <div class="review-block">
+            <div class="review-block" id="review-block-2gis">
               <div class="review-block__desc">
-                <p class="review-block__name">Яндекс</p>
+                <p class="review-block__name">2Gis</p>
                 <p class="review-block__value">4.9</p>
               </div>
               <div class="review-block__stars">
@@ -638,15 +911,15 @@
           </div>
           <div class="offset-md-1 col-md-3">
             <div class="phone-lg phone--task">
-              <div class="screen-wrapper screen-iphone" id="tasks-screen">
-                <div class="screen-item" id="tasks-phone-1">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" id="iphone-1" alt="Картинка Айфона">
+              <div class="screen-wrapper screen-iphone">
+                <div class="screen-item" id="review-screen-yandex">
+                  <img src="./img/dest/review-yandex.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
-                <div class="screen-item" id="tasks-phone-2">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" id="iphone-1" alt="Картинка Айфона">
+                <div class="screen-item" id="review-screen-google">
+                  <img src="./img/dest/review-google.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
-                <div class="screen-item" id="tasks-phone-3">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" id="iphone-1" alt="Картинка Айфона">
+                <div class="screen-item" id="review-screen-2gis">
+                  <img src="./img/dest/review-2gis.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
               </div>
             </div>
@@ -751,9 +1024,36 @@
     </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="./js/app.min.js"></script>
   <script src="/js/wow.min.js"></script>
+  <script>
+    /**
+     * This was built using the scrollie jQuery Plugin
+     * https://github.com/Funsella/jquery-scrollie
+     */
+    
+    
+    $( window ).ready(function() {
+      
+        var wHeight = $('.routine-service').height();
+    
+        $('.slide')
+          .height(wHeight)
+          .scrollie({
+            scrollOffset : -500,
+            scrollingInView : function(elem) {
+                       
+              var bgColor = elem.data('background');
+              
+              $('.routine-screen').css('background', bgColor);
+              $('.routine-screen').css('opacity', '1');
+              
+            }
+          });
+    
+      });
+    </script>
 
 </body>
 

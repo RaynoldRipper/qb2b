@@ -12,10 +12,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
       screenAnalitica = document.querySelector('#ipad-screen-analitica');
   let subList = document.querySelector('.sub-list'),
       freeList = document.querySelector('.free-list'),
+      freeItem = freeList.querySelectorAll('.sub-item'),
       taskList = document.querySelectorAll('.task-link'),
       subItem = subList.querySelectorAll('.sub-item'),
       activeClass = "sub-item--active";
-  
+  let controlBlocks = document.querySelectorAll('.tab-block'),
+      reviewBlocks = document.querySelectorAll('.review-block');
+  let tabButtons = document.querySelectorAll('.tab-link');
+
   freeList.addEventListener("click", function(event) {
     const element = event.target.closest(".sub-item");
     if (!element) return;
@@ -30,6 +34,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     activeElement && activeElement.classList.remove(activeClass);
     (element === activeElement) || element.classList.add(activeClass);
   });
+  
   for (var i=0; i<subItem.length; i++) {
     if (subItem[i].nextSibling.length !== null) {
       subItem[i].addEventListener('mouseover',function(){
@@ -77,6 +82,79 @@ document.addEventListener("DOMContentLoaded", function(event) {
       });
     }
   }
+  // Секция служба клиентского сервиса
+  for (var i=0; i<controlBlocks.length; i++) {
+    if (controlBlocks[i].nextSibling.length !== null) {
+      controlBlocks[i].addEventListener('mouseover',function(){
+        $('.active').removeClass('active');
+        if (this.id == 'srvice-control-1'){
+          document.querySelector('#service-screen-1').classList.add('active');
+        }
+        else if (this.id == 'srvice-control-2'){
+          document.querySelector('#service-screen-2').classList.add('active');
+        }
+        else if (this.id == 'srvice-control-3'){
+          document.querySelector('#service-screen-3').classList.add('active');
+        }
+        else if (this.id == 'srvice-control-4'){
+          document.querySelector('#service-screen-4').classList.add('active');
+        }
+      });
+    }
+  }
+  // Секция отзывов
+  for (var i=0; i<reviewBlocks.length; i++) {
+    if (reviewBlocks[i].nextSibling.length !== null) {
+      reviewBlocks[i].addEventListener('mouseover',function(){
+        $('.active').removeClass('active');
+        if (this.id == 'review-block-yandex'){
+          document.querySelector('#review-screen-yandex').classList.add('active');
+        }
+        else if (this.id == 'review-block-google'){
+          document.querySelector('#review-screen-google').classList.add('active');
+        }
+        else if (this.id == 'review-block-2gis'){
+          document.querySelector('#review-screen-2gis').classList.add('active');
+        }
+      });
+    }
+  }
+  // 
+  for (var i=0; i<freeItem.length; i++) {
+    if (freeItem[i].nextSibling.length !== null) {
+      freeItem[i].addEventListener('mouseover',function(){
+        $('.active').removeClass('active');
+        if (this.id == 'free-ecp'){
+          document.querySelector('#mac-screen-ecp').classList.add('active');
+        }
+        else if (this.id == 'free-eso'){
+          document.querySelector('#mac-screen-eso').classList.add('active');
+        }
+        else if (this.id == 'free-buh'){
+          document.querySelector('#mac-screen-buh').classList.add('active');
+        }
+      });
+    }
+  }
+  // // Секция слайдера
+  // for (var i=0; i<tabButtons.length; i++) {
+  //   if (tabButtons[i].nextSibling.length !== null) {
+  //     tabButtons[i].addEventListener('click',function(){
+  //       for (let sliderItem of document.getElementsByClassName('custom-slider-item')){
+  //         if (sliderItem.classList.contains('active')){
+  //           sliderItem.classList.remove('active');
+  //         }
+  //       }
+  //       for (let value of document.querySelector('.tab-container').children){
+  //         if (value.classList.contains('active')){
+  //           value.classList.remove('active');
+  //           this.classList.add('active');
+  //             document.getElementById(this.dataset.slideid).classList.add('active');
+  //         }
+  //       }
+  //     });
+  //   }
+  // }
 
   tableOpenBtn.addEventListener('click',function(){
     tableWrapper.classList.toggle('table-wrapper--opened');
@@ -122,7 +200,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
     })
   })()
 
-
 });
 
 
@@ -151,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
           scrollingOutOfView : null, // actives when the element reaches the top of the window and stops when it is out of the window
           scrolledOutOfView : null  // activates wehn the element is completly out of the window
   };
+
 
   // The actual plugin constructor
   function Plugin ( element, options ) {

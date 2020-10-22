@@ -31,10 +31,16 @@
     }
 }
 .tab-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 84px;
 }
 .tab-link{
     position: relative;
+    cursor: pointer;
+    display: block;
+    padding: 0 15px;
     font-size: 18px;
     color: $grey;
     font-weight: bold;
@@ -59,7 +65,7 @@
         transform: scaleX(1) translateX(0);
     }
 }
-.tab-link--active{
+.tab-link.active{
     color: $black;
     &::after{
         transform: scaleX(1) translateX(0);

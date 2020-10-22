@@ -1,26 +1,9 @@
-// .custom-slider{
-//     position: relative;
-//     &-list{
-//         position: relative;
-//         width: 100%;
-//         overflow: hidden;
-//     }
-//     &-item{
-//         position: relative;
-//         display: none;
-//         -webkit-box-align: center;
-//         -ms-flex-align: center;
-//         align-items: center;
-//         width: 100%;
-//         transition: -webkit-transform .6s ease;
-//         perspective: 1000px;
-//         animation: slider-next 2s;
-//         &.active{
-//             display: block;
-//             animation: slider-this 2s;
-//         }
-//     }
-// }
+.custom-slider{
+    position: relative;
+    &-item{
+      
+    }
+}
 // @keyframes slider-this{
 //     0%{
 //         transform: translateX(100%);

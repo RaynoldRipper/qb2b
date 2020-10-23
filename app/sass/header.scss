@@ -1,12 +1,18 @@
-.logo{
+.header {
+    position: relative;
+}
+
+.logo {
     display: flex;
     align-items: center;
-    &__coube{
+
+    &__coube {
         width: 56px;
         height: 56px;
         border: 3px solid $logo-color;
     }
-    &__text{
+
+    &__text {
         font-size: 26px;
         font-weight: bold;
         margin-left: -46px;
@@ -14,28 +20,34 @@
         background-color: white;
     }
 }
-.contacts{
+
+.contacts {
     display: flex;
     align-items: center;
-    &__adress{
+
+    &__adress {
         font-weight: 500;
         color: $dark-grey;
         font-size: 14px;
     }
-    &__phone{
+
+    &__phone {
         transition: all .3s;
         color: $black;
         font-size: 18px;
         font-weight: bold;
-        &:hover{
+
+        &:hover {
             color: $primary;
         }
     }
 }
-.burger-menu{
+
+.burger-menu {
     position: relative;
     display: flex;
-    width: 46px;
+    max-width: 46px;
+    width: 100%;
     height: 46px;
     background: $gradietnt-right;
     border-radius: 50%;
@@ -43,24 +55,38 @@
     cursor: pointer;
     z-index: 1;
     transition: all .3s;
-    &--active{
-        .burger-menu__line{
+    &.active {
+        // position: relative;
+        right: 0;
+        z-index: 1200;
+        background: rgba(179, 90, 48, 0.56);
+        transform: translateY(5px);
+        &::after{
+            display: none;
+        }
+        &:hover{
+            background: rgba(128, 63, 32, 0.56);
+        }
+        .burger-menu__line {
             transition-delay: .12s;
-            transition-timing-function: cubic-bezier(.215,.61,.355,1);
+            transition-timing-function: cubic-bezier(.215, .61, .355, 1);
             transform: rotate(45deg);
-            &::before{
+
+            &::before {
                 bottom: 0;
-                transition: bottom 75ms ease,transform 75ms cubic-bezier(.215,.61,.355,1) .12s;
+                transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s;
                 transform: rotate(-90deg);
             }
-            &::after{
+
+            &::after {
                 top: 0;
-                transition: top 75ms ease,opacity 75ms ease .12s;
+                transition: top 75ms ease, opacity 75ms ease .12s;
                 opacity: 0;
             }
         }
     }
-    &__line{
+
+    &__line {
         content: '';
         position: relative;
         display: block;
@@ -73,7 +99,8 @@
         transition-duration: .15s;
         transition-property: transform;
         z-index: 3;
-        &::after{
+
+        &::after {
             content: '';
             position: absolute;
             display: block;
@@ -83,9 +110,10 @@
             height: 2px;
             border-radius: 2px;
             background-color: $white;
-            transition: top 75ms ease .12s,opacity 75ms ease;
+            transition: top 75ms ease .12s, opacity 75ms ease;
         }
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             bottom: -6px;
@@ -95,9 +123,10 @@
             height: 2px;
             border-radius: 2px;
             background-color: $white;
-            transition: bottom 75ms ease .12s,transform 75ms cubic-bezier(.55,.055,.675,.19);
+            transition: bottom 75ms ease .12s, transform 75ms cubic-bezier(.55, .055, .675, .19);
         }
     }
+
     &:after {
         position: absolute;
         content: "";
@@ -111,21 +140,161 @@
         z-index: 2;
         opacity: 0;
     }
-    &:hover{
+
+    &:hover {
         color: $white;
         transform: translateY(5px);
-        box-shadow: 0 12px 8px rgba(232,117,48,.33);
+        box-shadow: 0 12px 8px rgba(232, 117, 48, .33);
+
         &::after {
-          opacity: 1;
+            opacity: 1;
         }
     }
 }
-.primary-color{
+
+.primary-color {
     color: $primary;
 }
-@media(min-width:992px){
-    .contacts{
-        &__info{
+
+.main-navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+
+    &__list {
+        // padding: 10px 15px;
+        // background-color: rgba(245, 149, 91, 0.8);
+        opacity: 0.8;
+    }
+
+    &__item {}
+
+    &__link {
+        transition: all .3s;
+        display: block;
+        font-weight: bold;
+        font-size: 16px;
+        color: $primary;
+        padding: 10px 76px;
+    }
+
+    &.active {}
+}
+
+// It actually starts here
+
+$menu-bg: $primary;
+$menu-color: #ffffff;
+$menu-font-size: 2.5rem;
+$menu-zindex: 1100;
+
+#menu {
+    background: $menu-bg;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    overflow: hidden;
+    position: fixed;
+    text-align: center;
+    top: 0;
+    transition: all 0.7s ease-in-out;
+    // For some sweet fadez
+    visibility: hidden;
+    width: 100%;
+    z-index: $menu-zindex;
+
+    &.open {
+        opacity: 1;
+        visibility: visible;
+
+        @for $i from 1 through 10 {
+            li:nth-child(#{$i}) {
+                animation-delay: $i*0.1s;
+            }
+        }
+
+        li {
+            animation-duration: 1.0s;
+            animation-fill-mode: both;
+            animation-name: fadeInUp;
+        }
+    }
+
+    ul {
+        &:hover {
+            a {
+                opacity: 0.5;
+            }
+        }
+
+        a {
+            // Stops it being a twitchy mess in chrome :pray:
+            // https://www.binarymoon.co.uk/2014/02/fixing-css-transitions-in-google-chrome/
+            -webkit-transform: translateZ(0);
+            transition: opacity 0.3s ease-in-out;
+
+            &:hover {
+                opacity: 1;
+            }
+        }
+    }
+
+    .main-nav {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            color: $menu-color;
+            display: block;
+            font-size: $menu-font-size;
+            font-weight: bold;
+            padding: 1rem 1rem;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            &:first {
+                padding-top: 0;
+            }
+        }
+    }
+
+    .menu-footer {
+        padding: 2rem;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+
+        ul {
+            display: inline-block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+
+            li {
+                display: inline;
+                margin: 0 1rem;
+            }
+        }
+
+        a {
+            color: $menu-color;
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+    }
+}
+
+@media(min-width:992px) {
+    .contacts {
+        &__info {
             display: flex;
             align-items: center;
             width: 100%;
@@ -133,12 +302,14 @@
         }
     }
 }
-@media(max-width:768px){
-    .contacts{
-        &__info{
+
+@media(max-width:768px) {
+    .contacts {
+        &__info {
             display: none;
         }
-        .burger-menu{
+
+        .burger-menu {
             margin-left: auto;
         }
     }

@@ -2,22 +2,21 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
   let tableOpenBtn = document.querySelector('.btn-open');
   let tableWrapper = document.querySelector('.table-wrapper');
-  let burgerButton = document.querySelector('.burger-menu');
   let routineItem = document.querySelectorAll('.routine-service');
   let ipadTable = document.querySelector('.ipad-table'),
-    ipadKvartal = document.querySelector('.ipad-kvartal'),
-    ipadAnalitica = document.querySelector('.ipad-analitica'),
-    ipadIndicators = document.querySelector('.ipad-indicators'),
-    screenTable = document.querySelector('#ipad-screen-table'),
-    screenAnalitica = document.querySelector('#ipad-screen-analitica');
-  let subList = document.querySelector('.sub-list'),
-    freeList = document.querySelector('.free-list'),
-    freeItem = freeList.querySelectorAll('.sub-item'),
-    taskList = document.querySelectorAll('.task-link'),
-    subItem = subList.querySelectorAll('.sub-item'),
-    activeClass = "sub-item--active";
+      ipadKvartal = document.querySelector('.ipad-kvartal'),
+      ipadAnalitica = document.querySelector('.ipad-analitica'),
+      ipadIndicators = document.querySelector('.ipad-indicators'),
+      screenTable = document.querySelector('#ipad-screen-table'),
+      screenAnalitica = document.querySelector('#ipad-screen-analitica');
+  let subList = document.querySelector('.capabilities'),
+      freeList = document.querySelector('.free-list'),
+      freeItem = freeList.querySelectorAll('.sub-item'),
+      taskList = document.querySelectorAll('.task-link'),
+      subItem = subList.querySelectorAll('.sub-item'),
+      activeClass = "sub-item--active";
   let controlBlocks = document.querySelectorAll('.tab-block'),
-    reviewBlocks = document.querySelectorAll('.review-block');
+      reviewBlocks = document.querySelectorAll('.review-block');
   let tabButtons = document.querySelectorAll('.tab-link');
 
   freeList.addEventListener("click", function (event) {
@@ -38,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   for (var i = 0; i < subItem.length; i++) {
     if (subItem[i].nextSibling.length !== null) {
       subItem[i].addEventListener('mouseover', function () {
-        screenTable.classList.remove('active');
+        $('.ipad-screen-horizontal .ipad-screen-item').removeClass('active');
         screenAnalitica.classList.remove('active');
         if (this.id == 'ipad-table') {
           screenTable.classList.add('active');
@@ -53,6 +52,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
           screenAnalitica.classList.add('active');
           ipadIndicators.classList.add('active');
         }
+        
+        if (this.dataset.image){
+          // console.log(this.dataset.image);
+          document.getElementById(this.dataset.image).classList.add('active');
+        }
       });
       subItem[i].addEventListener('mouseout', function () {
         ipadTable.classList.remove('active');
@@ -66,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   for (var i = 0; i < taskList.length; i++) {
     if (taskList[i].nextSibling.length !== null) {
       taskList[i].addEventListener('mouseover', function () {
-        $('.active').removeClass('active');
+        $('.screen-item-task.screen-item').removeClass('active');
         if (this.id == 'phone-1') {
           document.querySelector('#tasks-phone-1').classList.add('active');
         } else if (this.id == 'phone-2') {
@@ -81,7 +85,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   for (var i = 0; i < controlBlocks.length; i++) {
     if (controlBlocks[i].nextSibling.length !== null) {
       controlBlocks[i].addEventListener('mouseover', function () {
-        $('.active').removeClass('active');
+        $('.ipad-screen-vertical .ipad-screen-item').removeClass('active');
         if (this.id == 'srvice-control-1') {
           document.querySelector('#service-screen-1').classList.add('active');
         } else if (this.id == 'srvice-control-2') {
@@ -98,7 +102,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   for (var i = 0; i < reviewBlocks.length; i++) {
     if (reviewBlocks[i].nextSibling.length !== null) {
       reviewBlocks[i].addEventListener('mouseover', function () {
-        $('.active').removeClass('active');
+        $('.reviews .screen-item').removeClass('active');
         if (this.id == 'review-block-yandex') {
           document.querySelector('#review-screen-yandex').classList.add('active');
         } else if (this.id == 'review-block-google') {
@@ -113,7 +117,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
   for (var i = 0; i < freeItem.length; i++) {
     if (freeItem[i].nextSibling.length !== null) {
       freeItem[i].addEventListener('mouseover', function () {
-        $('.active').removeClass('active');
+        $('.macbook-screen .screen-item').removeClass('active');
         if (this.id == 'free-ecp') {
           document.querySelector('#mac-screen-ecp').classList.add('active');
         } else if (this.id == 'free-eso') {
@@ -147,9 +151,6 @@ document.addEventListener("DOMContentLoaded", function (event) {
   tableOpenBtn.addEventListener('click', function () {
     tableWrapper.classList.toggle('table-wrapper--opened');
     tableOpenBtn.classList.toggle('btn-open--active');
-  });
-  burgerButton.addEventListener('click', function () {
-    burgerButton.classList.toggle('burger-menu--active');
   });
 
   var h = $('.table-content').css('height');
@@ -185,7 +186,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
       // console.log(posY);
     })
   })()
-  // Слайдер
+  $('.burger-menu').click (function(){
+    $(this).toggleClass('active');
+    $('#menu').toggleClass('open');
+    $('body').toggleClass('overflow-hide');
+  });
 });
 
 
@@ -364,56 +369,107 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(document).ready(function () {
   $('#sm_slider').smSlider({
     duration: 500,
+    subMenuClass : 'tab-link',
     delay: 8000,
     subMenu: true,
     autoArr: false,
     pagination: false
   });
 
-  var angrednsol1 = $('#block_1').offset().top;
-  var angrednsol2 = $('#block_2').offset().top;
-  var angrednsol3 = $('#block_3').offset().top;
-  var angrednsol4 = $('#block_4').offset().top;
-  var scrollOffset = 500;
+  // var angrednsol1 = $('#block_1').offset().top;
+  // var angrednsol2 = $('#block_2').offset().top;
+  // var angrednsol3 = $('#block_3').offset().top;
+  // var angrednsol4 = $('#block_4').offset().top;
+  // var scrollOffset = 500;
 
-  $(window).scroll(function () {
+  // $(window).scroll(function () {
 
-    var scroll = $(window).scrollTop() + scrollOffset;
+  //   var scroll = $(window).scrollTop() + scrollOffset;
 
 
-    if (scroll < 500) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-buh').addClass('active');
-    }
+  //   if (scroll < 500) {
+  //     $('.routine-screen').removeClass('active');
+  //     $('#routine-screen-buh').addClass('active');
+  //   }
 
-    if (scroll > angrednsol2) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-uchet').addClass('active');
-    }
+  //   if (scroll > angrednsol2) {
+  //     $('.routine-screen').removeClass('active');
+  //     $('#routine-screen-uchet').addClass('active');
+  //   }
 
-    if (scroll > angrednsol3) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-lawyer').addClass('active');
-    }
+  //   if (scroll > angrednsol3) {
+  //     $('.routine-screen').removeClass('active');
+  //     $('#routine-screen-lawyer').addClass('active');
+  //   }
 
-    if (scroll > angrednsol4 ) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-mark').addClass('active');
-    }
-  });
-  // var wHeight = $('.routine-service').height();
-  // $('.slide')
-  //   .height(wHeight)
-  //   .scrollie({
-  //     scrollOffset: -500,
-  //     scrollingInView: function (elem) {
+  //   if (scroll > angrednsol4 ) {
+  //     $('.routine-screen').removeClass('active');
+  //     $('#routine-screen-mark').addClass('active');
+  //   }
+  // });
 
-  //       var bgColor = elem.data('background');
+  var wHeight = $('.routine-service').height();
+  $('.slide')
+    .height(wHeight)
+    .scrollie({
+      scrollOffset: -400,
+      scrollingToTheTop: function (elem) {
+        var bgColor = elem.data('background');
+        $('.routine-screen').removeClass('active');
+        $(bgColor).addClass('active');
+      }
+    });
 
-  //       $(bgColor).addClass('active');
-  //     },
-  //     scrollingOutOfView: function (elem) {
-  //       $('.routine-screen').removeClass('active');
-  //     }
-  //   });
+  // let element_1 = $('#block_1'),
+  //     element_2 = $('#block_2'),
+  //     element_3 = $('#block_3'),
+  //     element_4 = $('#block_4');
+
+  // let counter = 0;
+  // $(window).scroll(function () {
+  //   var scroll = $(window).scrollTop() + $(window).height();
+  //   var offsetPad = 0
+  //   //Если скролл до конца елемента
+  //   var offsetBot_elem1 = element_1.offset().top + element_1.height() + offsetPad;
+  //   var offsetBot_elem2 = element_2.offset().top + element_2.height() + offsetPad;
+  //   var offsetBot_elem3 = element_3.offset().top + element_3.height() + offsetPad;
+  //   var offsetBot_elem4 = element_4.offset().top + element_4.height() + offsetPad;
+  //   //Если скролл до начала елемента
+  //   var offset_elem1 = element_1.offset().top + offsetPad;
+  //   var offset_elem2 = element_2.offset().top + offsetPad;
+  //   var offset_elem3 = element_3.offset().top + offsetPad;
+  //   var offset_elem4 = element_4.offset().top + offsetPad;
+
+
+  //   if (scroll > offset_elem1 && counter == 0 && scroll < offsetBot_elem1) {
+  //     $(element_1.data('background')).addClass('active');
+  //   }
+  //   if (scroll > offsetBot_elem1 && $('.routine-screen').hasClass('active')){
+  //     $('.routine-screen').removeClass('active');
+  //   }
+
+  //   if (scroll > offset_elem2 && counter == 0 && scroll < offsetBot_elem2) {
+  //     $(element_2.data('background')).addClass('active');
+  //     console.log(offset_elem2);
+  //   }
+  //   if (scroll > offsetBot_elem2){
+  //     // element_1 = $('#block_2');
+  //   }
+
+  //   if (scroll > offset_elem3 && counter == 0 && scroll < offsetBot_elem3) {
+  //     $('#routine-screen-buh').addClass('active');
+  //     console.log(offsetBot_elem3);
+  //   }
+  //   if (scroll > offsetBot_elem3){
+  //     // element_1 = $('#block_2');
+  //   }
+
+  //   if (scroll > offset_elem4 && counter == 0 && scroll < offsetBot_elem4) {
+  //     $('#routine-screen-buh').addClass('active');
+  //     console.log(offsetBot_elem4);
+  //   }
+  //   if (scroll > offsetBot_elem4){
+  //     // element_1 = $('#block_2');
+  //   }
+  // });
 })

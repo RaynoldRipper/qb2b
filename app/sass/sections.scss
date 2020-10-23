@@ -15,6 +15,9 @@
         }
     }
 }
+.screen-intro{
+    border-radius: 14px;
+}
 .intro-bgr{
     background: url(../img/dest/inro-bgr.png);
     background-repeat: no-repeat;
@@ -61,9 +64,7 @@
     bottom: -8px;
 }
 .tab-link:hover{
-    &::after{
-        transform: scaleX(1) translateX(0);
-    }
+    color: $black;
 }
 .tab-link.active{
     color: $black;
@@ -88,7 +89,6 @@
 .sub-item{
     display: block;
     font-size: 16px;
-    height: 28px;
     font-weight: bold;
     color: $grey;
     margin-bottom: 22px;

@@ -37,19 +37,24 @@
       border-radius: 15px;
       position: relative;
       z-index: 2;
+      max-height: 280px;
+      overflow: hidden;
     }
     &__picture{
       transition: all .3s;
         position: relative;
         width: 100%;
+        filter: grayscale(1);
     }
     &__name{
         position: relative;
+        z-index: 2;
         padding-top: 28px;
         padding-left: 36px;        
         padding-right: 40px;
         padding-bottom: 40px;
         margin: 0;
+        background-color: $white;
         &::after{
             content: '';
             display: block;
@@ -70,7 +75,7 @@
           opacity: 1;
       }
       .team-item__picture{
-          opacity: 0;
+        filter: grayscale(0);
       }
       .info-block{
         opacity: 1;

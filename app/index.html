@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/app.min.css">
   <link rel="stylesheet" href="css/animate.css">
   <meta charset="utf-8">
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- Bootstrap CSS -->
@@ -34,7 +33,7 @@
 <body data-spy="scroll" data-target="#bodyNav" data-offset="100">
   <header class="header">
     <div class="container">
-      <div class="row align-items-center justify-content-lg-between py-4">
+      <div class="row align-items-center justify-content-lg-between py-4 position-relative">
         <div class="col-sm-6 col-md-4 col-xl-5">
           <a href="#" class="logo">
             <div class="logo__coube"></div>
@@ -48,6 +47,48 @@
           </div>
           <div class="burger-menu">
             <i class="burger-menu__line"></i>
+          </div>
+        </div>
+        <div class="main-navigation">
+
+          <div id="menu" class="">
+            <nav class="main-nav">
+              <ul>
+                <li>
+                  <a href="#">
+                    Регистрация ИП
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Регистрация ООО
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    Бухгалтерские услуги
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+            <!-- <footer class="menu-footer">
+              <nav class="footer-nav">
+                <ul>
+                  <li>
+                    <a href="#">
+                      Twitter
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      Subscribe
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </footer> -->
           </div>
         </div>
       </div>
@@ -85,8 +126,8 @@
           </div>
           <div class="col-md-7 position-relative">
             <div class="phone-window phone-window--intro" onclick="this.classList.toggle('active')">
-              <div class="screen-wrapper">
-                <img src="./img/dest/iphone_screen.png" class="moc-picture" alt="Картинка Айфона">
+              <div class="screen-wrapper screen-intro">
+                <img src="./img/dest/intro-phone-screen.png" class="moc-picture" alt="Картинка Айфона">
               </div>
             </div>
             <div class="macbook-window macbook-window--intro">
@@ -104,13 +145,13 @@
             бизнеса</strong>
         </h3>
         <div class="tab-container">
-          <div href="#" class="tab-link active" data-slideid="capabilities-slide-buh" id="capabilities-btn-buh">
+          <div class="tab-link active" data-index="0">
             Бухгалтерия</div>
-          <div href="#" class="tab-link" data-slideid="capabilities-slide-mark" id="capabilities-btn-mark">Маркетинг
+          <div class="tab-link" data-index="1">Маркетинг
           </div>
-          <div href="#" class="tab-link" data-slideid="capabilities-slide-lawyer" id="capabilities-btn-lawyer">Юристы
+          <div class="tab-link" data-index="2">Юристы
           </div>
-          <div href="#" class="tab-link" data-slideid="capabilities-slide-it" id="capabilities-btn-it">IT - Специалисты
+          <div class="tab-link" data-index="3">IT - Специалисты
           </div>
         </div>
         <div class="custom-slider" id="sm_slider">
@@ -132,7 +173,7 @@
                 <div class="col-md-6">
                   <div class="ipad-horizontal-window">
                     <div class="screen-wrapper ipad-screen-horizontal">
-                      <div class="ipad-screen-item" id="ipad-screen-table">
+                      <div class="ipad-screen-item active" id="ipad-screen-table">
                         <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
                         <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
                         <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов"
@@ -149,34 +190,107 @@
                 </div>
               </div>
             </li>
-            <li class="custom-slider-item" id="capabilities-slide-buh">
+            <li class="custom-slider-item" >
               <div class="row">
                 <div class="col-md-5 service-description">
-                  <h4 class="title-4 service-description__title">Бухгалтерия</h4>
-                  <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая
-                    вот
-                    такими документами.</p>
+                  <h4 class="title-4 service-description__title">Маркетинг</h4>
+                  <p class="text-3">Оказываем комплексное маркетинговое сопровождение, предоставляем удобные отчеты о
+                    проделанной работе:
+                  </p>
                   <ol class="sub-list">
-                    <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
-                    <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
-                    <li class="sub-item" id="ipad-indicators">Доход и расход компании</li>
-                    <li class="sub-item" id="ipad-analitica">Проводимые операции</li>
+                    <li class="sub-item" data-image="mark-analitic" id="ipad-site">Разработка сайтов</li>
+                    <li class="sub-item" data-image="mark-site" id="ipad-context">Настройка контекстной рекламы</li>
+                    <li class="sub-item" data-image="mark-context" id="ipad-analitic-config">Настройка систем аналитики
+                    </li>
+                    <li class="sub-item" data-image="mark-targeting" id="ipad-target-mark">Настройка таргетированной
+                      рекламы</li>
                   </ol>
                 </div>
                 <div class="col-md-6">
                   <div class="ipad-horizontal-window">
                     <div class="screen-wrapper ipad-screen-horizontal">
-                      <div class="ipad-screen-item" id="ipad-screen-table">
-                        <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
-                        <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
-                        <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов"
-                          class="ipad-kvartal">
+                      <div class="ipad-screen-item active" id="mark-analitic">
+                        <img src="./img/dest/mark-site.jpg" class="moc-picture" alt="Каринка фона айпада">
                       </div>
-                      <div class="ipad-screen-item" id="ipad-screen-analitica">
+                      <div class="ipad-screen-item" id="mark-site">
+                        <img src="./img/dest/mark-context.jpg" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="mark-context">
+                        <img src="./img/dest/mark-analitic.jpg" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="mark-targeting">
+                        <img src="./img/dest/mark-targeting.jpg" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="custom-slider-item" >
+              <div class="row">
+                <div class="col-md-5 service-description">
+                  <h4 class="title-4 service-description__title">Юристы</h4>
+                  <p class="text-3">Оказываем полную юридическую поддержку бизнеса:</p>
+                  <ol class="sub-list">
+                    <li class="sub-item" data-image="lawyer-consult">Консультации по сложным вопросам</li>
+                    <li class="sub-item" data-image="lawyer-expert">Правовая экспертиза документов</li>
+                    <li class="sub-item" data-image="lawyer-changes">Внесение изменений в учредительные документы</li>
+                    <li class="sub-item" data-image="lawyer-deal">Сопровождение сделок</li>
+                  </ol>
+                </div>
+                <div class="col-md-6">
+                  <div class="ipad-horizontal-window">
+                    <div class="screen-wrapper ipad-screen-horizontal active">
+                      <div class="ipad-screen-item" id="lawyer-consult">
+                        <img src="./img/dest/capabilities-consult.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="lawyer-expert">
+                        <img src="./img/dest/capabilities-expert.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="lawyer-changes">
+                        <img src="./img/dest/capabilities-changes.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="lawyer-deal">
+                        <img src="./img/dest/capabilities-deal.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="custom-slider-item" >
+              <div class="row">
+                <div class="col-md-5 service-description">
+                  <h4 class="title-4 service-description__title">IT - Специалисты</h4>
+                  <p class="text-3">Оказываем IT поддержку бизнесу, настраиваем программное обеспечение,
+                    автоматизируем бизнес процесс, помогаем с техническим оснащением офиса, следим за исправностью
+                  </p>
+                  <ol class="sub-list">
+                    <li class="sub-item" data-image="it-to">Подбор и покупка технического оснащения</li>
+                    <li class="sub-item" data-image="it-config">Настройка программного обеспечения</li>
+                    <li class="sub-item" data-image="it-settings">Настройка и организация удаленных рабочих мест сотрудникам
+                    </li>
+                    <li class="sub-item" data-image="it-autobp">Автоматизация бизнес процессов</li>
+                    <li class="sub-item" data-image="it-1c">Установка и настройка 1С</li>
+                  </ol>
+                </div>
+                <div class="col-md-6">
+                  <div class="ipad-horizontal-window">
+                    <div class="screen-wrapper ipad-screen-horizontal">
+                      <div class="ipad-screen-item active" id="it-to">
+                        <img src="./img/dest/capabilities-to.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="it-config">
+                        <img src="./img/dest/capabilities-config.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="it-settings">
+                        <img src="./img/dest/capabilities-settings.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="it-autobp">
+                        <img src="./img/dest/capabilities-autobp.png" class="moc-picture" alt="Каринка фона айпада">
+                      </div>
+                      <div class="ipad-screen-item" id="it-1c">
                         <img src="./img/dest/bgr-analitica.png" class="moc-picture" alt="Каринка фона айпада">
-                        <img src="./img/dest/table-price.png" alt="Картинка в айпаде с таблицей" class="ipad-analitica">
-                        <img src="./img/dest/indicators.png" alt="Картинка в айпаде с суммой налогов"
-                          class="ipad-indicators">
                       </div>
                     </div>
                   </div>
@@ -198,9 +312,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-diana.jpg" alt="Фотография Дианы" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -214,9 +328,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/tema-zilya.jpg" alt="Фотография Зили" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -230,9 +344,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-leysian.jpg" alt="Фотография Лейсян" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -246,9 +360,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-elvira.jpg" alt="Фотография Эльвиры" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -262,9 +376,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-gulnara.jpg" alt="Фотография" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -278,9 +392,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-alina.jpg" alt="Фотография Алины" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -294,9 +408,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-zarina.jpg" alt="Фотография Зарины" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -310,9 +424,9 @@
             <div class="col-md-3 person">
               <div class="team-item">
                 <div class="team-item__card">
-                  <img src="./img/dest/photo.png" alt="Фотография" class="team-item__picture">
-                  <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                  <img src="./img/dest/team/team-ramil.jpg" alt="Фотография Рамиля" class="team-item__picture">
                 </div>
+                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -351,13 +465,12 @@
             <p class="text-3">Проверять все договора на предмет юридической грамотности</p>
             <p class="text-3">Заполнять реквизиты договоров</p>
           </div>
-          <div class="col-md-4 routine-service slide" data-background="routine-screen-mark"
-            id="block_4">
+          <div class="col-md-4 routine-service slide" data-background="#routine-screen-mark" id="block_4">
             <h4 class="title-4">Маркетинговое обслуживание</h4>
             <p class="text-3">Настраивать рекламу и проводить к вам потенциальных клиентов</p>
             <p class="text-3">Вносить изменения на ваш сайт</p>
           </div>
-          <div class="col-md-4 routine-service slide" id="block_4">
+          <div class="col-md-4 routine-service slide" data-background="#routine-screen-it" id="block_5">
             <h4 class="title-4">IT обслуживание</h4>
             <p class="text-3">Настраивать сервер, сканеры и принтеры</p>
             <p class="text-3">Организовывать Ip-телефонию</p>
@@ -366,17 +479,20 @@
           <div class="sticky-wrapper">
             <div class="phone-lg phone-window--routine">
               <div class="screen-wrapper screen-iphone">
-                <div class="screen-item routine-screen" id="routine-screen-buh">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                <div class="screen-item routine-screen active" id="routine-screen-buh">
+                  <img src="./img/dest/routine-buh.jpg" class="moc-picture" alt="Картинка Айфона">
                 </div>
                 <div class="screen-item routine-screen" id="routine-screen-uchet">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                  <img src="./img/dest/routine-kadr.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
                 <div class="screen-item routine-screen" id="routine-screen-lawyer">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                  <img src="./img/dest/routine-lawyer.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
                 <div class="screen-item routine-screen" id="routine-screen-mark">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                  <img src="./img/dest/routine-marketing.jpg" class="moc-picture" alt="Картинка Айфона">
+                </div>
+                <div class="screen-item routine-screen" id="routine-screen-it">
+                  <img src="./img/dest/routine-it.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
               </div>
             </div>
@@ -394,7 +510,7 @@
           <div class="col-md-7">
             <div class="macbook-window">
               <div class="screen-wrapper macbook-screen">
-                <div class="screen-item" id="mac-screen-ecp">
+                <div class="screen-item active" id="mac-screen-ecp">
                   <img src="./img/dest/free-ecp.jpg" class="moc-picture" alt="Картинка Макбука">
                 </div>
                 <div class="screen-item" id="mac-screen-eso">
@@ -454,14 +570,14 @@
           <div class="offset-1 col-md-4">
             <div class="phone-lg phone--task">
               <div class="screen-wrapper screen-iphone" id="tasks-screen">
-                <div class="screen-item" id="tasks-phone-1">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                <div class="screen-item screen-item-task active" id="tasks-phone-1">
+                  <img src="./img/dest/task-otchet.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
-                <div class="screen-item" id="tasks-phone-2">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                <div class="screen-item screen-item-task" id="tasks-phone-2">
+                  <img src="./img/dest/task-talk.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
-                <div class="screen-item" id="tasks-phone-3">
-                  <img src="./img/dest/screen-routine.png" class="moc-picture" alt="Картинка Айфона">
+                <div class="screen-item screen-item-task" id="tasks-phone-3">
+                  <img src="./img/dest/task-notific.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
               </div>
             </div>
@@ -481,7 +597,7 @@
                 <div class="col-md-6">
                   <div class="tab-block" id="srvice-control-1">
                     <span class="tab-block__num">01.</span>
-                    <p class="tab-block__text">Вы можете поставить нам задачу через встроенный чат в виртуальном офисе,
+                    <p class="tab-block__text">Вы можете поставить нам задачу через встроенный чат в виртуальном офисе, 
                       по электронной почте, позвонив по телефону, либо через мобильное приложение
                     </p>
                   </div>
@@ -521,7 +637,7 @@
           <div class="offset-1 col-md-5">
             <div class="ipad-vertical-window">
               <div class="screen-wrapper ipad-screen-vertical">
-                <div class="ipad-screen-item" id="service-screen-1">
+                <div class="ipad-screen-item active" id="service-screen-1">
                   <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
                 </div>
                 <div class="ipad-screen-item" id="service-screen-2">
@@ -883,7 +999,7 @@
           <div class="offset-md-1 col-md-3">
             <div class="phone-lg phone--task">
               <div class="screen-wrapper screen-iphone">
-                <div class="screen-item" id="review-screen-yandex">
+                <div class="screen-item active" id="review-screen-yandex">
                   <img src="./img/dest/review-yandex.png" class="moc-picture" alt="Картинка Айфона">
                 </div>
                 <div class="screen-item" id="review-screen-google">
@@ -914,7 +1030,7 @@
           <p class="adress">г. Казань, ул. Пушкина 30</p>
         </div>
         <div class="form-wrapper">
-          <form action="">
+          <form>
             <div class="row">
               <div class="offset-md-2 col-md-3">
                 <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="name">
@@ -922,7 +1038,7 @@
                 <input type="email" class="form-input" placeholder="Как к вам обращаться?" name="email">
               </div>
               <div class="col-md-5">
-                <textarea class="form-textarea" name="text" id="">
+                <textarea class="form-textarea" name="text">
 
                 </textarea>
               </div>
@@ -969,7 +1085,7 @@
         </div>
       </div>
     </div>
-    <header class="header">
+    <div class="header">
       <div class="container">
         <div class="row align-items-center justify-content-lg-between py-4">
           <div class="col-sm-6 col-md-4 col-xl-5">
@@ -989,16 +1105,17 @@
           </div>
         </div>
       </div>
-    </header>
+    </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-  </script>
+    </script>
   <script src="./js/app.min.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./js/jquery.smslider.min.js"></script>
-  
+
 
 </body>
 

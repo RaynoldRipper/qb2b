@@ -45,7 +45,7 @@
     padding: 9px 9px 9px 9px;
     background: url(../img/dest/iphone.png);
     background-repeat: no-repeat;
-    // background-size: contain;   
+    background-size: cover;   
     &--intro{
         cursor: pointer;
         border-radius: 25px;
@@ -76,7 +76,7 @@
 .phone-lg{
     background: url(../img/dest/iphone-routine.png);
     background-repeat: no-repeat;
-    padding: 12px 14px;
+    padding: 12px 13px;
     border-radius: 34px;
     box-shadow: 0px 71px 81px rgba(0, 0, 0, 0.3);
 }
@@ -237,7 +237,7 @@
 .screen-iphone{
     position: relative;
     border-radius: 20px;
-    width: 194px;
+    width: 195px;
     height: 419px;
     transition: all .3s;
 }

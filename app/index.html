@@ -33,7 +33,7 @@
 <body data-spy="scroll" data-target="#bodyNav" data-offset="100">
   <header class="header">
     <div class="container">
-      <div class="row align-items-center justify-content-lg-between py-4 position-relative">
+      <div class="header__top-nav py-4">
         <div class="col-sm-6 col-md-4 col-xl-5">
           <a href="#" class="logo">
             <div class="logo__coube"></div>
@@ -50,7 +50,6 @@
           </div>
         </div>
         <div class="main-navigation">
-
           <div id="menu" class="">
             <nav class="main-nav">
               <ul>
@@ -72,23 +71,6 @@
                 </li>
               </ul>
             </nav>
-
-            <!-- <footer class="menu-footer">
-              <nav class="footer-nav">
-                <ul>
-                  <li>
-                    <a href="#">
-                      Twitter
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      Subscribe
-                    </a>
-                  </li>
-                </ul>
-              </nav>
-            </footer> -->
           </div>
         </div>
       </div>
@@ -112,19 +94,19 @@
     <section class="section-info intro intro-bgr wow fadeInDown" id="section-intro">
       <div class="container">
         <div class="row">
-          <div class="col-md-5">
+          <div class="col-md-5 intro-slogan">
             <div class="intro-text">
               <h2 class="title-1 intro-text__title">
                 <span class="primary-color">к</span>омплексное<br><span class="primary-color">у</span>правление<br><span
                   class="primary-color">б</span>изнесом
               </h2>
               <p class="text-1 intro-text__subtitile">
-                Всё в одном интерфейсе...
+                Всё в одном <span class="mobile-br">интерфейсе...</span>
               </p>
             </div>
             <a href="#" class="btn-style"><span class="btn-text">Зайти в демо кабинет</span><i class="key"></i></a>
           </div>
-          <div class="col-md-7 position-relative">
+          <div class="col-md-7 intro-devices">
             <div class="phone-window phone-window--intro" onclick="this.classList.toggle('active')">
               <div class="screen-wrapper screen-intro">
                 <img src="./img/dest/intro-phone-screen.png" class="moc-picture" alt="Картинка Айфона">
@@ -155,7 +137,7 @@
           </div>
         </div>
         <div class="custom-slider" id="sm_slider">
-          <ul style="height: 560px; overflow: hidden; position: relative; width: 100%;">
+          <ul style="height: 560px; position: relative; width: 100%;">
             <li class="custom-slider-item active" id="capabilities-slide-buh">
               <div class="row">
                 <div class="col-md-5 service-description">
@@ -309,7 +291,7 @@
         <h3 class="title-2 team__title">Сервис где за вас,<br> <strong>все делает команда экспертов</strong></h3>
         <div class="wrap">
           <div class="row team-list">
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-diana.jpg" alt="Фотография Дианы" class="team-item__picture">
@@ -325,7 +307,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/tema-zilya.jpg" alt="Фотография Зили" class="team-item__picture">
@@ -341,7 +323,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-leysian.jpg" alt="Фотография Лейсян" class="team-item__picture">
@@ -357,7 +339,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-elvira.jpg" alt="Фотография Эльвиры" class="team-item__picture">
@@ -373,7 +355,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-gulnara.jpg" alt="Фотография" class="team-item__picture">
@@ -389,7 +371,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-alina.jpg" alt="Фотография Алины" class="team-item__picture">
@@ -405,7 +387,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-zarina.jpg" alt="Фотография Зарины" class="team-item__picture">
@@ -421,7 +403,7 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-3 person">
+            <div class="col-sm-6 col-md-4 col-lg-3 person">
               <div class="team-item">
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-ramil.jpg" alt="Фотография Рамиля" class="team-item__picture">
@@ -506,8 +488,8 @@
       <div class="container">
         <h3 class="title-2 text-center get-free__title">Подключившись к сервису,<br><strong>вы бесплатно
             получите:</strong></h3>
-        <div class="row">
-          <div class="col-md-7">
+        <div class="row position-relative">
+          <div class="col-md-7 mac-view">
             <div class="macbook-window">
               <div class="screen-wrapper macbook-screen">
                 <div class="screen-item active" id="mac-screen-ecp">
@@ -553,8 +535,8 @@
       <div class="container">
         <h3 class="title-2 text-center task__title">Вы сможете ставить задачи,<br><strong>через встроенный
             задачник</strong></h3>
-        <div class="row">
-          <div class="offset-2 col-md-4">
+        <div class="row task__content">
+          <div class="offset-2 col-md-4 task-list">
             <ul class="task-list">
               <li class="task-item">
                 <div id="phone-1" class="task-link">Видите все сданные отчеты</div>
@@ -567,7 +549,7 @@
               </li>
             </ul>
           </div>
-          <div class="offset-1 col-md-4">
+          <div class="offset-1 col-md-4 task-screen">
             <div class="phone-lg phone--task">
               <div class="screen-wrapper screen-iphone" id="tasks-screen">
                 <div class="screen-item screen-item-task active" id="tasks-phone-1">
@@ -593,7 +575,7 @@
         <div class="row align-items-center">
           <div class="col-md-6">
             <div class="row">
-              <div class="row">
+              <div class="flex-container">
                 <div class="col-md-6">
                   <div class="tab-block" id="srvice-control-1">
                     <span class="tab-block__num">01.</span>
@@ -611,7 +593,7 @@
                   </div>
                 </div>
               </div>
-              <div class="row">
+              <div class="flex-container">
                 <div class="col-md-6">
                   <div class="tab-block" id="srvice-control-3">
                     <span class="tab-block__num">03.</span>

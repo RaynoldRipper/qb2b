@@ -12,6 +12,7 @@
 @import "custom-slider.scss";
 @import "footer.scss";
 @import "smslider";
+@import "media.scss";
 @import "fonts";
 
 body{
@@ -100,6 +101,7 @@ p{
     opacity: 1;
     transform: translateX(0);
     width: 29px;
+    margin-left: 20px;
   }
 }
 .btn-text {
@@ -111,15 +113,31 @@ p{
   position: relative;
   transition: all .3s;
   opacity: 0;
-  transform: translateX(-29px);
   z-index: 4;
   display: inline-block;
   width: 0px;
   height: 30px;
-  margin-left: 20px;
   background: url(../img/dest/Key.png);
   background-repeat: no-repeat;
 }
-
-
-
+.sm_slider-inner{
+  overflow: visible !important;
+}
+.flex-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+@media(max-width:768px){
+  .intro .btn-style{
+      font-size: 12px;
+      padding-left: 30px;
+      padding-right: 30px;
+      min-height: 52px;
+      margin: auto;
+      .key{
+        height: 26px;
+        background-size: contain;
+        background-position: center;
+      }
+  }
+}

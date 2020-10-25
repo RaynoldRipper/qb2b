@@ -1,5 +1,8 @@
 .tarif {
   padding-top: 170px;
+  &-info{
+    margin-bottom: 20px;
+  }
   &-item {
     height: 100%;
     padding: 24px 20px;
@@ -12,6 +15,7 @@
     z-index: 1;
     &__bage {
       display: block;
+      font-weight: normal;
       font-size: 14px;
       color: #818181;
       text-align: center;
@@ -71,24 +75,6 @@
   padding-bottom: 42px;
   background-color: $white;
   opacity: 0;
-}
-
-.tarif-info:nth-child(4n+4) {
-  .tarif-item__options {
-    right: 0;
-    left: initial;
-  }
-
-  &:hover {
-    .tarif-item__options {
-      left: initial;
-      right: 100%;
-    }
-    .tarif-item{
-      border-top-left-radius: 0;
-      border-bottom-left-radius: 0;
-    }
-  }
 }
 
 .options-item {
@@ -230,7 +216,7 @@
     padding-bottom: 50px;
     position: relative;
     max-height: 490px;
-    box-shadow: inset 0 -100px 31px #ffffff;
+    box-shadow: inset 0 -53px 31px #ffffff;
     overflow: hidden;
   }
 }
@@ -247,5 +233,67 @@
   100%{
     opacity: 1;
     bottom: 40px;
+  }
+}
+.tarif-mobile{
+  &__header{
+    font-size: 16px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    border-bottom: 1px solid #cacaca;
+  }
+  &__btn{
+    width: 100%;
+    outline: none;
+    border: none;
+    background: none;
+    font-weight: 500;
+    font-size: 16px;
+    &:focus{
+      outline: none;
+    }
+    .tarif-item__bage{
+      font-size: 12px;
+      font-weight: 500;
+    }
+    &::after{
+      content: '>';
+      display: inline-block;
+    }
+    &.collapsed::after{
+      content: '<';
+      display: block;
+    }
+  }
+  &__description{
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+    background-color: #ececec;
+  }
+  &__row{
+    margin-left: 20px;
+    margin-right: 20px;
+    padding-top: 20px;
+    border-bottom: 1px solid #cacaca;
+    padding-bottom: 20px;
+    display: flex;
+  }
+  &__option{
+    flex-basis: 70%;
+    font-size: 12px;
+    font-weight: 500;
+  }
+  &__value{
+    flex-basis: 30%;
+  }
+  &__card{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 24px #f3f3f3;
   }
 }

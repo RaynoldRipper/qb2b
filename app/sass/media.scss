@@ -50,6 +50,25 @@
         }
     }
 }
+@media(min-width:768px) and (max-width:1200px){
+    .tarif-info:nth-child(2),.tarif-info:nth-child(4) {
+        .tarif-item__options {
+          right: 0;
+          left: initial;
+        }
+      
+        &:hover {
+          .tarif-item__options {
+            left: initial;
+            right: 100%;
+          }
+          .tarif-item{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
+}
 
 @media(min-width:992px) {
     .team {
@@ -137,8 +156,138 @@
         }
 
     }
+    .tarif-info:nth-child(3),.tarif-info:nth-child(4) {
+        .tarif-item__options {
+          right: 0;
+          left: initial;
+        }
+      
+        &:hover {
+          .tarif-item__options {
+            left: initial;
+            right: 100%;
+          }
+          .tarif-item{
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+          }
+        }
+      }
 }
+@media(max-width:1200px){
+    .ipad-vertical-window{
+        background-size: contain;
+        width: 100%;
+        padding-left: 22px;
+        padding-top: 47px;
+        padding-bottom: 46px;
+        padding-right: 23px;
+    }
+    .ipad-screen-vertical{
+        height: 433px;
+        width: 100%;
+    }
+    .ipad-horizontal-window {
+        background-size: contain;
+        width: 450px;
+        height: 318px;
+        padding-left: 42px;
+        padding-top: 21px;
+        padding-bottom: 22px;
+        padding-right: 40px;
+    }
+    .ipad-indicators {
+        right: 10px;
+        top: 61px;
+        max-width: 150px;
+    }
+    .ipad-analitica {
+        left: 12px;
+        bottom: 10px;
+        max-width: 347px;
+    }
+    .ipad-table, .ipad-kvartal{
+        top: 38px;
+        max-width: 172px;
+    }
+    .macbook-window--intro{
+        left: 0;
+    }
+}
+@media(max-width:992px) and (min-width:768px){
+    .tarif-item__options{
+        width: calc(100% + 30px) !important;
+        padding-left: 20px;
+    }
+}
+@media(max-width:992px) {
+    .macbook-window {
+        padding-left: 42px;
+        padding-right: 42px;
+        padding-bottom: 29px;
+        padding-top: 11px;
+    }
+    .options-item{
+        white-space: pre-line;
+    }
+    .get-free {
+        padding-top: 80px;
 
+        .mac-view {
+            .macbook-window {
+                margin: auto;
+                padding-left: 42px;
+                padding-right: 42px;
+                padding-bottom: 28px;
+            }
+
+            .macbook-screen {
+                width: 300px;
+                height: 188px;
+            }
+        }
+
+        .economy-value {
+            margin: 20px;
+            margin-top: 20px;
+        }
+
+        .total-economy {
+            margin-top: 30px;
+        }
+    }
+    .ipad-vertical-window{
+        background-size: contain;
+        margin: auto;
+        width: 290px;
+        padding-left: 17px;
+        padding-top: 37px;
+        padding-bottom: 34px;
+        padding-right: 17px;
+    }
+    .ipad-screen-vertical{
+        width: 100%;
+        height: 341px;
+    }
+    .ipad-horizontal-window {
+        width: 409px;
+        height: 289px;
+        padding-left: 37px;
+        padding-top: 18px;
+        padding-bottom: 19px;
+        padding-right: 36px;
+        border-radius: 16px;
+    }
+    .ipad-analitica{
+        max-width: 316px;
+    }
+    .ipad-indicators{
+        max-width: 125px;
+    }
+    .ipad-kvartal, .ipad-table {
+        max-width: 156px;
+    }
+}
 @media(max-width:768px) {
     .intro {
         padding-top: 52px;
@@ -158,7 +307,8 @@
             position: absolute;
             width: fit-content;
             top: 116px;
-            right: 0;
+            right: initial;
+            left: 40%;
             z-index: 0;
             max-width: 140px;
 
@@ -180,7 +330,18 @@
             display: block;
         }
     }
-
+    .tarif-item:hover {
+        border-bottom-left-radius: 0;
+        .tarif-item__options{
+            left: initial;
+            top: 100%;
+            width: 100% !important;
+            height: fit-content;
+            margin-left: 0;
+            left: 0;
+        }
+    }
+    
     .capabilities {
         padding-top: 80px;
 
@@ -421,68 +582,27 @@
         font-size: 14px;
         margin-bottom: 12px;
     }
-}
-
-@media(max-width:992px) {
-    .team {
-        &-item {
-            &__card {}
-        }
-    }
-
-    .get-free {
-        padding-top: 80px;
-
-        .mac-view {
-            .macbook-window {
-                margin: auto;
-                padding-left: 42px;
-                padding-right: 42px;
-                padding-bottom: 28px;
-            }
-
-            .macbook-screen {
-                width: 300px;
-                height: 188px;
-            }
-        }
-
-        .economy-value {
-            margin: 20px;
-            margin-top: 20px;
-        }
-
-        .total-economy {
-            margin-top: 30px;
-        }
-    }
-    .ipad-vertical-window{
-        background-size: contain;
-        width: 290px;
-        padding-left: 17px;
-        padding-top: 37px;
-        padding-bottom: 34px;
-        padding-right: 17px;
-    }
-    .ipad-screen-vertical{
-        width: 100%;
-        height: 341px;
-    }
-    .ipad-horizontal-window{
-        background-size: contain;
-        width: 450px;
-        height: 318px;
-        padding-left: 42px;
-        padding-top: 21px;
-        padding-bottom: 22px;
-        padding-right: 40px;    
-    }
-    .ipad-table, .ipad-kvartal{
-        top: 38px;
-        max-width: 172px;
+    .table-wrapper, .btn-open{
+        display: none;
     }
 }
-
+@media(max-width:576px){
+    .intro-devices{
+        left: initial;
+        right: 0;
+    }
+    // .ipad-vertical-window {
+    //     width: 263px;
+    //     padding-left: 16px;
+    //     padding-top: 35px;
+    //     padding-bottom: 33px;
+    //     padding-right: 17px;
+    // }
+    // .ipad-screen-vertical {
+    //     width: 100%;
+    //     height: 306px;
+    // }
+}
 @media(max-width:435px) {
     .get-free {
         .mac-view {

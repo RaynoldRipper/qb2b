@@ -187,9 +187,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
     })
   })()
   $('.burger-menu').click (function(){
-    $(this).toggleClass('active');
+    $('.burger-menu ').toggleClass('active');
     $('#menu').toggleClass('open');
-    $('body').toggleClass('overflow-hide');
   });
 });
 
@@ -376,49 +375,50 @@ $(document).ready(function () {
     pagination: false
   });
 
-  // var angrednsol1 = $('#block_1').offset().top;
-  // var angrednsol2 = $('#block_2').offset().top;
-  // var angrednsol3 = $('#block_3').offset().top;
-  // var angrednsol4 = $('#block_4').offset().top;
-  // var scrollOffset = 500;
+  var angrednsol1 = $('#block_1').offset().top;
+  var angrednsol2 = $('#block_2').offset().top;
+  var angrednsol3 = $('#block_3').offset().top;
+  var angrednsol4 = $('#block_4').offset().top;
+  var scrollOffset = 0;
 
-  // $(window).scroll(function () {
+  $(window).scroll(function () {
 
-  //   var scroll = $(window).scrollTop() + scrollOffset;
+    var scroll = $(window).scrollTop() + scrollOffset;
+    var halfPhoneHeight = ($('#sticky-phone').height() +  24)/2;
+    var posPhone = $('#sticky-phone').offset().top + halfPhoneHeight;
 
+    if (posPhone > angrednsol1) {
+      $('.routine-screen').removeClass('active');
+      $('#routine-screen-buh').addClass('active');
+    }
 
-  //   if (scroll < 500) {
-  //     $('.routine-screen').removeClass('active');
-  //     $('#routine-screen-buh').addClass('active');
-  //   }
+    if (posPhone > angrednsol2) {
+      $('.routine-screen').removeClass('active');
+      $('#routine-screen-uchet').addClass('active');
+    }
 
-  //   if (scroll > angrednsol2) {
-  //     $('.routine-screen').removeClass('active');
-  //     $('#routine-screen-uchet').addClass('active');
-  //   }
+    if (posPhone > angrednsol3) {
+      $('.routine-screen').removeClass('active');
+      $('#routine-screen-lawyer').addClass('active');
+    }
 
-  //   if (scroll > angrednsol3) {
-  //     $('.routine-screen').removeClass('active');
-  //     $('#routine-screen-lawyer').addClass('active');
-  //   }
+    if (posPhone > angrednsol4 ) {
+      $('.routine-screen').removeClass('active');
+      $('#routine-screen-mark').addClass('active');
+    }
+  });
 
-  //   if (scroll > angrednsol4 ) {
-  //     $('.routine-screen').removeClass('active');
-  //     $('#routine-screen-mark').addClass('active');
-  //   }
-  // });
-
-  var wHeight = $('.routine-service').height();
-  $('.slide')
-    .height(wHeight)
-    .scrollie({
-      scrollOffset: -400,
-      scrollingToTheTop: function (elem) {
-        var bgColor = elem.data('background');
-        $('.routine-screen').removeClass('active');
-        $(bgColor).addClass('active');
-      }
-    });
+  // var wHeight = $('.routine-service').height();
+  // $('.slide')
+  //   .height(wHeight)
+  //   .scrollie({
+  //     scrollOffset: -400,
+  //     scrollingToTheTop: function (elem) {
+  //       var bgColor = elem.data('background');
+  //       $('.routine-screen').removeClass('active');
+  //       $(bgColor).addClass('active');
+  //     }
+  //   });
 
   // let element_1 = $('#block_1'),
   //     element_2 = $('#block_2'),

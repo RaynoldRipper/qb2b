@@ -60,12 +60,14 @@
     cursor: pointer;
     z-index: 1;
     transition: all .3s;
+    opacity: 1;
     &.active {
+        opacity: 0;
         // position: relative;
-        right: 0;
-        z-index: 1200;
-        background: rgba(179, 90, 48, 0.56);
-        transform: translateY(5px);
+        // right: 0;
+        // z-index: 1200;
+        // background: rgba(179, 90, 48, 0.56);
+        // transform: translateY(5px);
         &::after{
             display: none;
         }
@@ -182,21 +184,20 @@
         color: $primary;
         padding: 10px 76px;
     }
-
-    &.active {}
 }
 
 // It actually starts here
 
 $menu-bg: $primary;
 $menu-color: #ffffff;
-$menu-font-size: 2.5rem;
+$menu-font-size: 16px;
 $menu-zindex: 1100;
 
 #menu {
+    max-width: 320px;
     background: $menu-bg;
     height: 100%;
-    left: 0;
+    right: 0;
     opacity: 0;
     overflow: hidden;
     position: fixed;
@@ -204,11 +205,46 @@ $menu-zindex: 1100;
     top: 0;
     transition: all 0.7s ease-in-out;
     // For some sweet fadez
-    visibility: hidden;
-    width: 100%;
+    width: 0;
     z-index: $menu-zindex;
 
+    .burger-menu {
+        max-width: 38px;
+        max-height: 38px;
+        opacity: 0;
+        &.active {
+            opacity: 1;
+            z-index: 1200;
+            background: rgba(179, 90, 48, 0.56);
+            &::after{
+                display: none;
+            }
+            &:hover{
+                background: rgba(128, 63, 32, 0.56);
+            }
+            .burger-menu__line {
+                transition-delay: .12s;
+                transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+                transform: rotate(45deg);
+    
+                &::before {
+                    bottom: 0;
+                    transition: bottom 75ms ease, transform 75ms cubic-bezier(.215, .61, .355, 1) .12s;
+                    transform: rotate(-90deg);
+                }
+    
+                &::after {
+                    top: 0;
+                    transition: top 75ms ease, opacity 75ms ease .12s;
+                    opacity: 0;
+                }
+            }
+        }
+    }
     &.open {
+        width: 100%;
+        max-width: 320px;
+        padding: 20px;
         opacity: 1;
         visibility: visible;
 
@@ -222,6 +258,9 @@ $menu-zindex: 1100;
             animation-duration: 1.0s;
             animation-fill-mode: both;
             animation-name: fadeInUp;
+        }
+        .main-nav{
+            opacity: 1;
         }
     }
 
@@ -245,10 +284,9 @@ $menu-zindex: 1100;
     }
 
     .main-nav {
+        opacity: 0;
+        transition: opacity .5s .5s;
         position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-
         ul {
             list-style: none;
             margin: 0;
@@ -259,7 +297,8 @@ $menu-zindex: 1100;
             color: $menu-color;
             display: block;
             font-size: $menu-font-size;
-            font-weight: bold;
+            font-weight: 500;
+            text-align: left;
             padding: 1rem 1rem;
             text-decoration: none;
             text-transform: uppercase;

@@ -60,8 +60,7 @@
 .phone-window--routine{
     position: sticky;
     top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin: auto;
     max-width: 222px;
     max-height: 443px;
     z-index: 2;

@@ -7,11 +7,12 @@
     rel="stylesheet">
   <link rel="stylesheet" href="css/app.min.css">
   <link rel="stylesheet" href="css/animate.css">
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
   <link rel="stylesheet" href="./css/style.min.css">
   <title>QB2B</title>
   <script>
@@ -51,6 +52,9 @@
         </div>
         <div class="main-navigation">
           <div id="menu" class="">
+            <div class="burger-menu">
+              <i class="burger-menu__line"></i>
+            </div>
             <nav class="main-nav">
               <ul>
                 <li>
@@ -104,7 +108,7 @@
                 Всё в одном <span class="mobile-br">интерфейсе...</span>
               </p>
             </div>
-            <a href="#" class="btn-style"><span class="btn-text">Зайти в демо кабинет</span><i class="key"></i></a>
+            <button class="btn-style" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо кабинет</span><i class="key"></i></button>
           </div>
           <div class="col-md-7 intro-devices">
             <div class="phone-window phone-window--intro" onclick="this.classList.toggle('active')">
@@ -460,7 +464,7 @@
             <p class="text-3">Настраивать корпоративные почтовые программы</p>
           </div>
           <div class="sticky-wrapper">
-            <div class="phone-lg phone-window--routine">
+            <div class="phone-lg phone-window--routine" id="sticky-phone">
               <div class="screen-wrapper screen-iphone">
                 <div class="screen-item routine-screen active" id="routine-screen-buh">
                   <img src="./img/dest/routine-buh.jpg" class="moc-picture" alt="Картинка Айфона">
@@ -481,8 +485,8 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn-style routine-btn"><span class="btn-text">Зайти в демо кабинет</span><i
-            class="key"></i></a>
+        <button class="btn-style routine-btn"><span class="btn-text" data-toggle="modal" data-target="#loginForm">Зайти в демо кабинет</span><i
+            class="key"></i></button>
       </div>
     </section>
     <section class="section-info get-free" id="section-get-free">
@@ -929,17 +933,17 @@
             </div>
           </div>
         </div>
-        <div id="accordion">
+        <div class="tarif-mobile" id="accordion">
           <div class="tarif-mobile__card">
             <div class="tarif-mobile__header" id="headingOne">
-              <button class="tarif-mobile__btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
                 aria-controls="collapseOne">
                 <span class="tarif-item__bage">Тариф</span>
                 Легкий старт
               </button>
             </div>
 
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="tarif-mobile__description">Разово при подключении</div>
               <div class="tarif-mobile__row">
                 <div class="tarif-mobile__option">Регистрация ООО</div>
@@ -956,50 +960,60 @@
               <br>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingTwo">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo"
-                  aria-expanded="false" aria-controls="collapseTwo">
-                  Collapsible Group Item #2
-                </button>
-              </h5>
+          <div class="tarif-mobile__card">
+            <div class="tarif-mobile__header" id="headingTwo">
+              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
+                aria-controls="collapseTwo">
+                <span class="tarif-item__bage">Тариф</span>
+                Оптимальный
+              </button>
             </div>
             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div class="tarif-mobile__description">Разово при подключении</div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <br>
             </div>
           </div>
-          <div class="card">
-            <div class="card-header" id="headingThree">
-              <h5 class="mb-0">
-                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
-                  aria-expanded="false" aria-controls="collapseThree">
-                  Collapsible Group Item #3
-                </button>
-              </h5>
+          <div class="tarif-mobile__card">
+            <div class="tarif-mobile__header" id="headingThree">
+              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseThree"
+                aria-expanded="false" aria-controls="collapseThree">
+                <span class="tarif-item__bage">Тариф</span>
+                Смарт
+              </button>
             </div>
             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-              <div class="card-body">
-                Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf
-                moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod.
-                Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda
-                shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea
-                proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim
-                aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+              <div class="tarif-mobile__description">Разово при подключении</div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <br>
             </div>
           </div>
         </div>
         <div class="btn-open">Открыть полностью</div>
-        <a href="#" class="btn-style table-btn"><span class="btn-text">Зайти в демо кабинет</span><i
-            class="key"></i></a>
+        <button href="#" class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо кабинет</span><i
+            class="key"></i></button>
       </div>
     </section>
     <section class="section-info reviews" id="section-reviews">
@@ -1070,10 +1084,10 @@
         <h3 class="title-2 text-center feedback__title"><strong>Остались вопросы?<br></strong>Свяжитесь с нами удобным
           способом</h3>
         <div class="row contact">
-          <div class="offset-md-3 col-md-3">
+          <div class="offset-xl-3 col-xl-3 col-md-6">
             <a href="tel:88435005060" class="contact-link">8 (843) 500-50-60</a>
           </div>
-          <div class="offset-md-1 col-md-2">
+          <div class="offset-xl-1 col-xl-2 col-md-6">
             <a href="mailto:kp@qb2b.ru" class="contact-link">kp@qb2b.ru</a>
           </div>
         </div>
@@ -1083,24 +1097,43 @@
         <div class="form-wrapper">
           <form>
             <div class="row">
-              <div class="offset-md-2 col-md-3">
+              <div class="offset-xl-2 col-xl-3 col-md-6">
                 <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="name">
                 <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="phone">
                 <input type="email" class="form-input" placeholder="Как к вам обращаться?" name="email">
               </div>
-              <div class="col-md-5">
+              <div class="col-xl-5 col-md-6">
                 <textarea class="form-textarea" name="text">
 
                 </textarea>
               </div>
             </div>
-            <button class="btn-style form-btn"><span class="btn-text">Зайти в демо кабинет</span><i
+            <button class="btn-style form-btn" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо кабинет</span><i
                 class="key"></i></button>
           </form>
         </div>
       </div>
     </section>
   </main>
+  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Вход в личный кабинет</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -1160,9 +1193,8 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
-  </script>
+  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js">
+    </script>
   <script src="./js/app.min.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./js/jquery.smslider.min.js"></script>

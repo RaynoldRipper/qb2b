@@ -1,0 +1,2399 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <!-- Required meta tags -->
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="css/app.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
+  <link rel="stylesheet" href="./css/style.min.css">
+  <title>QB2B</title>
+  <script>
+    function numAnim(val, el, timeout, step) {
+      var i = 0;
+      (function () {
+        if (i <= val) {
+          setTimeout(arguments.callee, timeout);
+          document.getElementById(el).innerHTML = i;
+          i = i + step;
+        } else {
+          document.getElementById(el).innerHTML = val;
+        }
+      })();
+    }
+  </script>
+</head>
+
+<body data-spy="scroll" data-target="#bodyNav" data-offset="100">
+  <header class="header">
+    <div class="container">
+      <div class="header__top-nav py-4">
+        <div class="col-sm-6 col-md-4 col-xl-5">
+          <a href="#" class="logo">
+            <div class="logo__coube"></div>
+            <div class="logo__text">КУБ2Б</div>
+          </a>
+        </div>
+        <div class="contacts col-sm-6 col-md-8 col-xl-7 justify-content-between">
+          <div class="contacts__info">
+            <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
+            <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
+          </div>
+          <div class="burger-menu">
+            <i class="burger-menu__line"></i>
+          </div>
+        </div>
+        <div class="main-navigation">
+          <div id="menu" class="">
+            <div class="menu-header">
+              <a href="#" class="logo logo--white">
+                <div class="logo__coube"></div>
+                <div class="logo__text">КУБ2Б</div>
+              </a>
+              <div class="burger-menu">
+                <i class="burger-menu__line"></i>
+              </div>
+            </div>
+            <nav class="main-nav">
+              <ul>
+                <li>
+                  <a href="#">
+                    Регистрация ИП
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Регистрация ООО
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Бухгалтерские услуги
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#loginForm">
+                    Войти в личный кабинет
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Заказать обратный звонок
+                  </a>
+                </li>
+                <li>
+                  <a href="#section-tarif">
+                    Тарифы
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:88435005060">
+                    8 (843) 500-50-60
+                  </a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+    <section class="section-info tarif" id="section-tarif">
+      <div class="container">
+        <h3 class="title-2 text-center"><strong>Стоймость</strong> обслуживания</h3>
+        <div class="row">
+          <div class="col-lg-3 col-md-6 tarif-info">
+            <div class="tarif-item">
+              <div class="tarif-item__card">
+                <span class="tarif-item__bage">Тариф</span>
+                <h4 class="tarif-item__title">Легкий старт</h4>
+                <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
+                  лишнего. Идеально поддодит для только что открывшихся фирм.</p>
+                <p class="tarif-item__price">от 1000 руб</p>
+                <span class="tarif-item__bage">За первый месяц</span>
+              </div>
+              <div class="tarif-item__options">
+                <ul class="optins-list">
+                  <li class="options-item">Личный специалист клиентского сервиса</li>
+                  <li class="options-item">Налоговый консультант</li>
+                  <li class="options-item">Бухгалтер по расчету заработной платы</li>
+                  <li class="options-item">Специалист по кадровому делопроизводству</li>
+                  <li class="options-item">Бухгалтер по первичной документации</li>
+                  <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
+                  <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 tarif-info">
+            <div class="tarif-item">
+              <div class="tarif-item__card">
+                <span class="tarif-item__bage">Тариф</span>
+                <h4 class="tarif-item__title">Оптимальный</h4>
+                <p class="tarif-item__description">Когда бизнесу нужна юридическая поддержка и гугл уже не помогает
+                  решать их,
+                  а шаблонные договора не подходят - обороты фирмы и сумма контрактов стали больше и требуют более
+                  серьезной защиты</p>
+                <p class="tarif-item__price">от 1000 руб</p>
+                <span class="tarif-item__bage">За первый месяц</span>
+              </div>
+              <div class="tarif-item__options">
+                <ul class="optins-list">
+                  <li class="options-item">Личный специалист клиентского сервиса</li>
+                  <li class="options-item">Налоговый консультант</li>
+                  <li class="options-item">Бухгалтер по расчету заработной платы</li>
+                  <li class="options-item">Специалист по кадровому делопроизводству</li>
+                  <li class="options-item">Бухгалтер по первичной документации</li>
+                  <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
+                  <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                  <li class="options-item options-item--strong">Юрист</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 tarif-info">
+            <div class="tarif-item">
+              <div class="tarif-item__card">
+                <span class="tarif-item__bage">Тариф</span>
+                <h4 class="tarif-item__title">Смарт</h4>
+                <p class="tarif-item__description">Сотрудников стало больше, техника нуждается в системной настройке и
+                  оптимизации.
+                  Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на буемаге
+                </p>
+                <p class="tarif-item__price">от 1000 руб</p>
+                <span class="tarif-item__bage">За первый месяц</span>
+              </div>
+              <div class="tarif-item__options">
+                <ul class="optins-list">
+                  <li class="options-item">Личный специалист клиентского сервиса</li>
+                  <li class="options-item">Налоговый консультант</li>
+                  <li class="options-item">Бухгалтер по расчету заработной платы</li>
+                  <li class="options-item">Специалист по кадровому делопроизводству</li>
+                  <li class="options-item">Бухгалтер по первичной документации</li>
+                  <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
+                  <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                  <li class="options-item options-item--strong">Юрист</li>
+                  <li class="options-item options-item--strong">ИТ специалист</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-6 tarif-info">
+            <div class="tarif-item">
+              <div class="tarif-item__card">
+                <span class="tarif-item__bage">Тариф</span>
+                <h4 class="tarif-item__title">PROдвижение</h4>
+                <p class="tarif-item__description">Бизнес процессы и циклы сделки выстроены, нужен постоянный поток
+                  новых клиентов,
+                  руководитель фирмы больше не может уделять время маркетингу и привлечению клиентов
+                </p>
+                <p class="tarif-item__price">от 1000 руб</p>
+                <span class="tarif-item__bage">За первый месяц</span>
+              </div>
+              <div class="tarif-item__options">
+                <ul class="optins-list">
+                  <li class="options-item">Личный специалист клиентского сервиса</li>
+                  <li class="options-item">Налоговый консультант</li>
+                  <li class="options-item">Бухгалтер по расчету заработной платы</li>
+                  <li class="options-item">Специалист по кадровому делопроизводству</li>
+                  <li class="options-item">Бухгалтер по первичной документации</li>
+                  <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
+                  <li class="options-item">Бухгалтер по общей системе налогообложения</li>
+                  <li class="options-item options-item--strong">Юрист</li>
+                  <li class="options-item options-item--strong">Маркетолог</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="table-wrapper table-wrapper--opened">
+          <div class="row table-header">
+            <div class="col-md-4"></div>
+            <div class="col-md-2 table-item">
+              <span class="table-text">Тариф</span>
+              <span class="table-title">Легкий старт</span>
+            </div>
+            <div class="col-md-2 table-item">
+              <span class="table-text">Тариф</span>
+              <span class="table-title">Оптимальный</span>
+            </div>
+            <div class="col-md-2 table-item">
+              <span class="table-text">Тариф</span>
+              <span class="table-title">Смарт</span>
+            </div>
+            <div class="col-md-2 table-item">
+              <span class="table-text">Тариф</span>
+              <span class="table-title">PROдвижение</span>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name">Разово при подключении тарифа</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Регистрация ООО и ИП</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Открытие расчета через банки-партнеры</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консультации по выбору системы налогообложения</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консультации по выбору ОКВЭД</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консультация бухгалтера</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Выпуск Электронно-цифровой подписи</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД; ССЧ</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Одностраничный сайт- визитка</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Пакет шаблонов договоров и необходимых документов для ведения бизнеса</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name">Бухгалтерское обслуживание</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Сдача отчетности по всем системам налогообложения</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i></div>
+            <div class="col-md-2 table-cell"><i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Внесение первичных операций по бухгалтерии</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              60 р/операция
+            </div>
+            <div class="col-md-2 table-cell">
+              55 р/операция
+            </div>
+            <div class="col-md-2 table-cell">
+              50 р/операция
+            </div>
+            <div class="col-md-2 table-cell">
+              50 р/операция
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Кадровое делопроизводство, выплата зарплат и страховых взносов</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              800 р/сотрудник
+            </div>
+            <div class="col-md-2 table-cell">
+              700 р/сотрудник
+            </div>
+            <div class="col-md-2 table-cell">
+              600 р/сотрудник
+            </div>
+            <div class="col-md-2 table-cell">
+              600 р/сотрудник
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Ведение банк-клиента</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Учёт онлайн-кассы</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Представление интересов в контролирующих органах</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Бухгалтерская учетная система на платформе 1С</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Виртуальный офис в системе ЭДО СБИС</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              1500 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              1500 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              1500 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              1500 р/мес
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консалтинг</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              4800 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              4800 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              4800 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              4800 р/мес
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Переговоры с контрагентами</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              Стоимость индивидуальная
+            </div>
+            <div class="col-md-2 table-cell">
+              Стоимость индивидуальная
+            </div>
+            <div class="col-md-2 table-cell">
+              Стоимость индивидуальная
+            </div>
+            <div class="col-md-2 table-cell">
+              Стоимость индивидуальная
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Дополнительные управленческие отчеты</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              1000-1500 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              1000-1500 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              1000-1500 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              1000-1500 р/мес
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Сопровождение внешнеэкономической деятельности</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              1350 р/за один обслуживаемый контракт в месяц
+            </div>
+            <div class="col-md-2 table-cell">
+              1350 р/за один обслуживаемый контракт в месяц
+            </div>
+            <div class="col-md-2 table-cell">
+              1350 р/за один обслуживаемый контракт в месяц
+            </div>
+            <div class="col-md-2 table-cell">
+              1350 р/за один обслуживаемый контракт в месяц
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Учет и ведение транспортных средств</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Учет и ведение недвижимости</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+            <div class="col-md-2 table-cell">
+              200 р/мес
+            </div>
+          </div>
+        
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">1 час консультации юриста в месяц</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name">Юридическое обслуживание (4 часа в месяц)</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Проверка контрагентов</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Подготовка документов для регистрации нового юридического лица, регистрация ООО и ИП
+              </p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Подготовка документов для регистрации изменений в ЕГРЮЛ</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+        
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Разработка гражданско-правового договора</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Правовая экспертиза документов и договоров клиента с учётом налоговых рисков,
+                составление протокола разногласий (протокола согласования разногласий)</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Телефонные переговоры с контрагентом Клиента по вопросу обсуждения условий Договора
+              </p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Подготовка обращения в государственные (муниципальные) учреждения</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Консультация по сложным юридическим вопросам</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Корпоративное право – защита интересов учредителей</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Защита интересов в федеральной антимонопольной службе</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Сопровождение сделок с недвижимостью</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Досудебное претензионное представительство</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">1 час консультаций ИТ специалиста</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">1 час консультаций с маркетологом</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name">ИТ обслуживание (5 часов в месяц)</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Решение всех офисных ИТ проблем посредством удаленного подключения</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Обеспечение доступа к интернет, организация резервных каналов</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Программное обслуживание всех компьютеров и периферийных устройств</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Обслуживание хостингов, доменных адресов</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">ИТ консалтинг – автоматизация, бизнес процессы, CRM</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Поддержка и обслуживание платформы 1С, написание конфигураций</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+        
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Приобретение необходимого оборудования, работа с поставщиками</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Обслуживание и настройка серверов</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Построение и обслуживание локальных сетей</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+        
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Настройка и обслуживание мини АТС и IP телефонии</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Организация и техническая поддержка видео и онлайн конференций</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Настройка информационной безопасности, доступов и систем хранения информации</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Разработка и настройка систем коммуникаций между сотрудниками и с клиентами</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">1 час консультаций с маркетологом</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
+              <p class="row-name">Маркетинговое обслуживание (контекстная или таргетированная реклама на выбор)</p>
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+            <div class="col-md-2 table-cell">
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Создание рекламных кампаний в Яндекс.Директ и Google Реклама</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Ежемесячное сопровождение рекламных кампаний в Яндекс.Директ и Google Реклама</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Создание рекламных кампаний в instagram и vk</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">Ежемесячное сопровождение рекламных кампаний в instagram и vk</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+          <div class="row table-row">
+            <div class="col-md-4 table-cell table-cell-name">
+              <p class="row-name">1 час консультаций ИТ специалиста</p>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-disable"></i>
+            </div>
+            <div class="col-md-2 table-cell">
+              <i class="check-active"></i>
+            </div>
+          </div>
+        </div>
+        <div class="tarif-mobile" id="accordion">
+        <div class="tarif-mobile__card">
+          <div class="tarif-mobile__header" id="headingOne">
+            <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              <span class="tarif-item__bage">Тариф</span>
+              Легкий старт
+            </button>
+          </div>
+          <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+            <div class="tarif-mobile__description">Разово при подключении</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация бухгалтера</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД; ССЧ
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Бухгалтерское обслуживание</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сдача отчетности по всем системам налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Внесение первичных операций по бухгалтерии</div>
+              <div class="tarif-mobile__value">60 р/операция</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Кадровое делопроизводство, выплата зарплат и страховых взносов</div>
+              <div class="tarif-mobile__value">800 р/сотрудник</div>
+            </div>
+        
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ведение банк-клиента</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учёт онлайн-кассы</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Представление интересов в контролирующих органах</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Виртуальный офис в системе ЭДО СБИС</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Индивидуальная бухгалтерская учетная система на платформе 1С отдельная
+                или РИБ (распределенная информационная база)</div>
+              <div class="tarif-mobile__value">1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консалтинг</div>
+              <div class="tarif-mobile__value">4800 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Переговоры с контрагентами</div>
+              <div class="tarif-mobile__value">Стоимость индивидуальная</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Дополнительные управленческие отчеты</div>
+              <div class="tarif-mobile__value">1000-1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение внешнеэкономической деятельности</div>
+              <div class="tarif-mobile__value">1350 р/за один обслуживаемый контракт в месяц</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение транспортных средств</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение недвижимости</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультации юриста в месяц</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Юридическое обслуживание (4 часа в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Проверка контрагентов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового </div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового юридического лица,
+                регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации изменений в ЕГРЮЛ</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка гражданско-правового договора</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+        
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Правовая экспертиза документов и договоров клиента с учётом налоговых
+                рисков, составление протокола разногласий (протокола согласования разногласий)</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Телефонные переговоры с контрагентом Клиента по вопросу обсуждения
+                условий Договора</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка обращения в государственные (муниципальные) учреждения</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация по сложным юридическим вопросам</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Корпоративное право – защита интересов учредителей</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Защита интересов в федеральной антимонопольной службе</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение сделок с недвижимостью</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Досудебное претензионное представительство</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__description">ИТ обслуживание (5 часов в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Решение всех офисных ИТ проблем посредством удаленного подключения</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обеспечение доступа к интернет, организация резервных каналов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Программное обслуживание всех компьютеров и периферийных устройств</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание хостингов, доменных адресов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">ИТ консалтинг – автоматизация, бизнес процессы, CRM</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Поддержка и обслуживание платформы 1С, написание конфигураций</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Приобретение необходимого оборудования, работа с поставщиками</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание и настройка серверов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Построение и обслуживание локальных сетей</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка и обслуживание мини АТС и IP телефонии</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Организация и техническая поддержка видео и онлайн конференций</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка информационной безопасности, доступов и систем хранения
+                информации</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка и настройка систем коммуникаций между сотрудниками и с
+                клиентами</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Маркетинговое обслуживание (контекстная или таргетированная реклама
+              на выбор)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в Яндекс.Директ и Google Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в Яндекс.Директ и Google
+                Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+        
+            <br>
+          </div>
+        </div>
+        
+        <div class="tarif-mobile__card">
+          <div class="tarif-mobile__header" id="headingTwo">
+            <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseTwo"
+              aria-expanded="false" aria-controls="collapseTwo">
+              <span class="tarif-item__bage">Тариф</span>
+              Оптимальный
+            </button>
+          </div>
+          <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
+            <div class="tarif-mobile__description">Разово при подключении</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация бухгалтера</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД; ССЧ
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Бухгалтерское обслуживание</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сдача отчетности по всем системам налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Внесение первичных операций по бухгалтерии</div>
+              <div class="tarif-mobile__value">60 р/операция</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Кадровое делопроизводство, выплата зарплат и страховых взносов</div>
+              <div class="tarif-mobile__value">800 р/сотрудник</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ведение банк-клиента</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учёт онлайн-кассы</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Представление интересов в контролирующих органах</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Виртуальный офис в системе ЭДО СБИС</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Индивидуальная бухгалтерская учетная система на платформе 1С отдельная
+                или РИБ (распределенная информационная база)</div>
+              <div class="tarif-mobile__value">1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консалтинг</div>
+              <div class="tarif-mobile__value">4800 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Переговоры с контрагентами</div>
+              <div class="tarif-mobile__value">Стоимость индивидуальная</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Дополнительные управленческие отчеты</div>
+              <div class="tarif-mobile__value">1000-1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение внешнеэкономической деятельности</div>
+              <div class="tarif-mobile__value">1350 р/за один обслуживаемый контракт в месяц</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение транспортных средств</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение недвижимости</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультации юриста в месяц</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Юридическое обслуживание (4 часа в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Проверка контрагентов</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового юридического лица,
+                регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации изменений в ЕГРЮЛ</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка гражданско-правового договора</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Правовая экспертиза документов и договоров клиента с учётом налоговых
+                рисков, составление протокола разногласий (протокола согласования разногласий)</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Телефонные переговоры с контрагентом Клиента по вопросу обсуждения
+                условий Договора</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка обращения в государственные (муниципальные) учреждения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация по сложным юридическим вопросам</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Корпоративное право – защита интересов учредителей</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Защита интересов в федеральной антимонопольной службе</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение сделок с недвижимостью</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Досудебное претензионное представительство</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">ИТ обслуживание (5 часов в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Решение всех офисных ИТ проблем посредством удаленного подключения</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обеспечение доступа к интернет, организация резервных каналов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Программное обслуживание всех компьютеров и периферийных устройств</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание хостингов, доменных адресов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">ИТ консалтинг – автоматизация, бизнес процессы, CRM</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Поддержка и обслуживание платформы 1С, написание конфигураций</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Приобретение необходимого оборудования, работа с поставщиками</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание и настройка серверов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Построение и обслуживание локальных сетей</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка и обслуживание мини АТС и IP телефонии</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Организация и техническая поддержка видео и онлайн конференций</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка информационной безопасности, доступов и систем хранения
+                информации</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка и настройка систем коммуникаций между сотрудниками и с
+                клиентами</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Маркетинговое обслуживание (контекстная или таргетированная реклама
+              на выбор)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в Яндекс.Директ и Google Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в Яндекс.Директ и Google
+                Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+        
+            <br>
+          </div>
+        </div>
+        
+        <div class="tarif-mobile__card">
+          <div class="tarif-mobile__header" id="headingThree">
+            <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseThree"
+              aria-expanded="false" aria-controls="collapseThree">
+              <span class="tarif-item__bage">Тариф</span>
+              Смарт
+            </button>
+          </div>
+          <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
+            <div class="tarif-mobile__description">Разово при подключении</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация бухгалтера</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД; ССЧ
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Бухгалтерское обслуживание</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сдача отчетности по всем системам налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Внесение первичных операций по бухгалтерии</div>
+              <div class="tarif-mobile__value">60 р/операция</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Кадровое делопроизводство, выплата зарплат и страховых взносов</div>
+              <div class="tarif-mobile__value">800 р/сотрудник</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ведение банк-клиента</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учёт онлайн-кассы</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Представление интересов в контролирующих органах</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Виртуальный офис в системе ЭДО СБИС</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Индивидуальная бухгалтерская учетная система на платформе 1С отдельная
+                или РИБ (распределенная информационная база)</div>
+              <div class="tarif-mobile__value">1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консалтинг</div>
+              <div class="tarif-mobile__value">4800 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Переговоры с контрагентами</div>
+              <div class="tarif-mobile__value">Стоимость индивидуальная</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Дополнительные управленческие отчеты</div>
+              <div class="tarif-mobile__value">1000-1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение внешнеэкономической деятельности</div>
+              <div class="tarif-mobile__value">1350 р/за один обслуживаемый контракт в месяц</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение транспортных средств</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение недвижимости</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультации юриста в месяц</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Юридическое обслуживание (4 часа в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Проверка контрагентов</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового юридического лица,
+                регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации изменений в ЕГРЮЛ</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка гражданско-правового договора</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Правовая экспертиза документов и договоров клиента с учётом налоговых
+                рисков, составление протокола разногласий (протокола согласования разногласий)</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Телефонные переговоры с контрагентом Клиента по вопросу обсуждения
+                условий Договора</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка обращения в государственные (муниципальные) учреждения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация по сложным юридическим вопросам</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Корпоративное право – защита интересов учредителей</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Защита интересов в федеральной антимонопольной службе</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение сделок с недвижимостью</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Досудебное претензионное представительство</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">ИТ обслуживание (5 часов в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Решение всех офисных ИТ проблем посредством удаленного подключения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обеспечение доступа к интернет, организация резервных каналов</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Программное обслуживание всех компьютеров и периферийных устройств</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание хостингов, доменных адресов</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">ИТ консалтинг – автоматизация, бизнес процессы, CRM</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Поддержка и обслуживание платформы 1С, написание конфигураций</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Приобретение необходимого оборудования, работа с поставщиками</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание и настройка серверов</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Построение и обслуживание локальных сетей</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка и обслуживание мини АТС и IP телефонии</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Организация и техническая поддержка видео и онлайн конференций</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка информационной безопасности, доступов и систем хранения
+                информации</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка и настройка систем коммуникаций между сотрудниками и с
+                клиентами</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Маркетинговое обслуживание (контекстная или таргетированная реклама
+              на выбор)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в Яндекс.Директ и Google Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в Яндекс.Директ и Google
+                Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+        
+            <br>
+          </div>
+        </div>
+        
+        <div class="tarif-mobile__card">
+          <div class="tarif-mobile__header" id="headingFour">
+            <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseFour"
+              aria-expanded="false" aria-controls="collapseFour">
+              <span class="tarif-item__bage">Тариф</span>
+              PROдвижение
+            </button>
+          </div>
+          <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+            <div class="tarif-mobile__description">Разово при подключении</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация бухгалтера</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД; ССЧ
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+              </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Бухгалтерское обслуживание</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сдача отчетности по всем системам налогообложения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Внесение первичных операций по бухгалтерии</div>
+              <div class="tarif-mobile__value">60 р/операция</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Кадровое делопроизводство, выплата зарплат и страховых взносов</div>
+              <div class="tarif-mobile__value">800 р/сотрудник</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ведение банк-клиента</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учёт онлайн-кассы</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Представление интересов в контролирующих органах</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Виртуальный офис в системе ЭДО СБИС</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Индивидуальная бухгалтерская учетная система на платформе 1С отдельная
+                или РИБ (распределенная информационная база)</div>
+              <div class="tarif-mobile__value">1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консалтинг</div>
+              <div class="tarif-mobile__value">4800 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Переговоры с контрагентами</div>
+              <div class="tarif-mobile__value">Стоимость индивидуальная</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Дополнительные управленческие отчеты</div>
+              <div class="tarif-mobile__value">1000-1500 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение внешнеэкономической деятельности</div>
+              <div class="tarif-mobile__value">1350 р/за один обслуживаемый контракт в месяц</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение транспортных средств</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Учет и ведение недвижимости</div>
+              <div class="tarif-mobile__value">200 р/мес</div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультации юриста в месяц</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Юридическое обслуживание (4 часа в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Проверка контрагентов</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового </div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации нового юридического лица,
+                регистрация ООО и ИП</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка документов для регистрации изменений в ЕГРЮЛ</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка гражданско-правового договора</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Правовая экспертиза документов и договоров клиента с учётом налоговых
+                рисков, составление протокола разногласий (протокола согласования разногласий)</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Телефонные переговоры с контрагентом Клиента по вопросу обсуждения
+                условий Договора</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Подготовка обращения в государственные (муниципальные) учреждения</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Консультация по сложным юридическим вопросам</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Корпоративное право – защита интересов учредителей</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Защита интересов в федеральной антимонопольной службе</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Сопровождение сделок с недвижимостью</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Досудебное претензионное представительство</div>
+              <div class="tarif-mobile__value"><i class="check-active"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__description">ИТ обслуживание (5 часов в месяц)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Решение всех офисных ИТ проблем посредством удаленного подключения</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обеспечение доступа к интернет, организация резервных каналов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Программное обслуживание всех компьютеров и периферийных устройств</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание хостингов, доменных адресов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">ИТ консалтинг – автоматизация, бизнес процессы, CRM</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Поддержка и обслуживание платформы 1С, написание конфигураций</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Приобретение необходимого оборудования, работа с поставщиками</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Обслуживание и настройка серверов</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Построение и обслуживание локальных сетей</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка и обслуживание мини АТС и IP телефонии</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Организация и техническая поддержка видео и онлайн конференций</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Настройка информационной безопасности, доступов и систем хранения
+                информации</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Разработка и настройка систем коммуникаций между сотрудниками и с
+                клиентами</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций с маркетологом</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__description">Маркетинговое обслуживание (контекстная или таргетированная реклама
+              на выбор)</div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в Яндекс.Директ и Google Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в Яндекс.Директ и Google
+                Реклама</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Создание рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">Ежемесячное сопровождение рекламных кампаний в instagram и vk</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <div class="tarif-mobile__row">
+              <div class="tarif-mobile__option">1 час консультаций ИТ специалиста</div>
+              <div class="tarif-mobile__value"><i class="check-disable"></i></div>
+            </div>
+            <br>
+          </div>
+        </div>
+        </div>
+      <button href="#" class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span
+          class="btn-text">Зайти в демо кабинет</span><i class="key"></i></button>
+      </div>
+    </section>
+  </main>
+  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Вход в личный кабинет</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <p class="info">Комплексное Управление Бизнесом. Оказание услуг аутсорсинга по бухгалтерским услугам,
+            юридическим услугам, ИТ услугам, маркетинговым услугам. Ведение бухгалтерского учёта, юридическое
+            сопровождение, ИТ обслуживание, Маркетинговое ведение рекламных кампаний. Налоговый аудит бухгалтерии.
+          </p>
+          <div class="company-info">
+            <p class="company-info__title">ООО КУБ2Б</p>
+            <p class="company-info__text">ИНН 132132132123</p>
+            <p class="company-info__text">ОГРН 2131321321321</p>
+          </div>
+          <a href="#" class="privacy">Политика конфиденциальности</a>
+        </div>
+        <div class="offset-md-1 col-md-2">
+          <h4 class="title-6 footer-nav-title">Навигация</h4>
+          <a href="#" class="footer-link">Регистрация ИП</a>
+          <a href="#" class="footer-link">Регистрация ООО</a>
+          <a href="#" class="footer-link">Бухгалтерские услуги</a>
+          <a href="#" class="footer-link">Сдача отчетов</a>
+        </div>
+        <div class="offset-md-1 col-md-2">
+          <h4 class="title-6 footer-nav-title">Личный кабинет</h4>
+          <a href="#" class="footer-link">Регистрация ИП</a>
+          <a href="#" class="footer-link">Регистрация ООО</a>
+        </div>
+        <div class="offset-md-1 col-md-2">
+          <h4 class="title-6 footer-nav-title">Компания</h4>
+          <a href="#" class="footer-link">Вакансии</a>
+          <a href="#" class="footer-link">Контакты</a>
+          <a href="#" class="footer-link">Отзыввы</a>
+          <a href="#" class="footer-link">О коммпании</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="container">
+        <div class="footer__top-nav py-4">
+          <div class="col-sm-6 col-md-4 col-xl-5">
+            <a href="#" class="logo">
+              <div class="logo__coube"></div>
+              <div class="logo__text">КУБ2Б</div>
+            </a>
+          </div>
+          <div class="contacts col-sm-6 col-md-8 col-xl-7 justify-content-between">
+            <div class="contacts__info">
+              <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
+              <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
+            </div>
+            <div class="burger-menu">
+              <i class="burger-menu__line"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
+    </script>
+  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
+  <script src="./js/app.min.js"></script>
+  <script src="./js/wow.min.js"></script>
+  <script src="./js/jquery.smslider.min.js"></script>
+
+
+</body>
+
+</html>

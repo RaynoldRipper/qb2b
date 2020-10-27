@@ -4,11 +4,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
   let tableWrapper = document.querySelector('.table-wrapper');
   let routineItem = document.querySelectorAll('.routine-service');
   let ipadTable = document.querySelector('.ipad-table'),
-      ipadKvartal = document.querySelector('.ipad-kvartal'),
-      ipadAnalitica = document.querySelector('.ipad-analitica'),
-      ipadIndicators = document.querySelector('.ipad-indicators'),
-      screenTable = document.querySelector('#ipad-screen-table'),
-      screenAnalitica = document.querySelector('#ipad-screen-analitica');
+    ipadKvartal = document.querySelector('.ipad-kvartal'),
+    ipadAnalitica = document.querySelector('.ipad-analitica'),
+    ipadIndicators = document.querySelector('.ipad-indicators'),
+    screenTable = document.querySelector('#ipad-screen-table'),
+    screenAnalitica = document.querySelector('#ipad-screen-analitica');
   let subList = document.querySelector('.capabilities'),
       freeList = document.querySelector('.free-list'),
       freeItem = freeList.querySelectorAll('.sub-item'),
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       subItem = subList.querySelectorAll('.sub-item'),
       activeClass = "sub-item--active";
   let controlBlocks = document.querySelectorAll('.tab-block'),
-      reviewBlocks = document.querySelectorAll('.review-block');
+    reviewBlocks = document.querySelectorAll('.review-block');
   let tabButtons = document.querySelectorAll('.tab-link');
 
   freeList.addEventListener("click", function (event) {
@@ -52,8 +52,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
           screenAnalitica.classList.add('active');
           ipadIndicators.classList.add('active');
         }
-        
-        if (this.dataset.image){
+
+        if (this.dataset.image) {
           // console.log(this.dataset.image);
           document.getElementById(this.dataset.image).classList.add('active');
         }
@@ -66,6 +66,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
       });
     }
   }
+
+  function timeOut() {
+    i = 0;
+    (function iterate(i) {
+      if (i < subItem.length) {
+        subListActive = document.querySelector('.sm_slide.active');
+        console.log(subListActive);
+        setTimeout(function () {
+          iterate(i + 1);
+        }, 2000);
+      }
+    })(0);
+  }
+
+
+  // timeOut();
 
   for (var i = 0; i < taskList.length; i++) {
     if (taskList[i].nextSibling.length !== null) {
@@ -186,7 +202,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       // console.log(posY);
     })
   })()
-  $('.burger-menu').click (function(){
+  $('.burger-menu').click(function () {
     $('.burger-menu ').toggleClass('active');
     $('#menu').toggleClass('open');
   });
@@ -368,7 +384,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 $(document).ready(function () {
   $('#sm_slider').smSlider({
     duration: 500,
-    subMenuClass : 'tab-link',
+    subMenuClass: 'tab-link',
     delay: 8000,
     subMenu: true,
     autoArr: false,
@@ -384,7 +400,7 @@ $(document).ready(function () {
   $(window).scroll(function () {
 
     var scroll = $(window).scrollTop() + scrollOffset;
-    var halfPhoneHeight = ($('#sticky-phone').height() +  24)/2;
+    var halfPhoneHeight = ($('#sticky-phone').height() + 24) / 2;
     var posPhone = $('#sticky-phone').offset().top + halfPhoneHeight;
 
     if (posPhone > angrednsol1) {
@@ -402,7 +418,7 @@ $(document).ready(function () {
       $('#routine-screen-lawyer').addClass('active');
     }
 
-    if (posPhone > angrednsol4 ) {
+    if (posPhone > angrednsol4) {
       $('.routine-screen').removeClass('active');
       $('#routine-screen-mark').addClass('active');
     }

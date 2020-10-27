@@ -1,28 +1,53 @@
-$primary:     #f5955b;
-$logo-color:  #e16012;
-$success:     #22cb8e;
-$logo-color:  #e16012;
-$light-grey:  #b4b4b4;
-$grey:        #7c7c7c;
-$dark-grey:   #494747;
-$black:       #000000;
-$white:       #ffffff;
+$primary: #f5955b;
+$logo-color: #e16012;
+$success: #22cb8e;
+$logo-color: #e16012;
+$light-grey: #b4b4b4;
+$grey: #7c7c7c;
+$dark-grey: #494747;
+$black: #000000;
+$white: #ffffff;
 $gradietnt-right: linear-gradient(to right, #faa16b, #e87530);
 $gradietnt-bottom: linear-gradient(to bottom, #faa16b, #e87530);
 $btn-shadow: 0px 19px 18px rgba(232, 117, 48, 0.33);
 
-.text{
-    &-1{
+.text {
+    &-1 {
         font-size: 24px;
     }
-    &-2{
+
+    &-2 {
         font-size: 18px;
     }
-    &-3{
+
+    &-3 {
         font-size: 16px;
         color: $grey;
     }
-    &-4{
+
+    &-4 {
         font-size: 14px;
+    }
+}
+
+.title {
+    &-1 {
+        font-weight: 400;
+    }
+
+    &-2 {
+        font-weight: 400;
+    }
+
+    &-4 {
+        font-weight: 400;
+    }
+
+    &-5 {
+        font-weight: 400;
+    }
+
+    &-6 {
+        font-weight: 400;
     }
 }

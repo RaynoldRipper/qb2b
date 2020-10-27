@@ -91,8 +91,6 @@
 
 @media(min-width:992px) {
     .team {
-        padding-top: 170px;
-
         &-item {
             transition: all.3s;
             position: relative;
@@ -264,7 +262,7 @@
     }
 
     .get-free {
-        padding-top: 80px;
+        padding-bottom: 80px;
 
         .mac-view {
             .macbook-window {
@@ -336,6 +334,7 @@
 @media(max-width:768px) {
     .intro {
         padding-top: 52px;
+        padding-bottom: 80px;
 
         &-bgr {
             background-size: cover;
@@ -390,7 +389,7 @@
     }
 
     .capabilities {
-        padding-top: 80px;
+        padding-bottom: 30px;
 
         &__title {
             margin-bottom: 40px;
@@ -457,7 +456,7 @@
     }
 
     .team {
-        padding-top: 15px;
+        padding-bottom: 15px;
 
         &__title {
             margin-bottom: 25px;
@@ -495,7 +494,7 @@
             margin-bottom: 60px;
         }
 
-        padding-top: 40px;
+        padding-bottom: 40px;
 
         &__title {
             margin-bottom: 20px;
@@ -531,7 +530,7 @@
 
     .task {
         background: none;
-        padding-top: 80px;
+        padding-bottom: 80px;
 
         &__title {
             margin-bottom: 30px;
@@ -578,7 +577,7 @@
     }
 
     .service-control {
-        padding-top: 80px;
+        padding-bottom: 80px;
 
         &__title {
             margin-bottom: 30px;
@@ -675,7 +674,7 @@
     }
 
     .reviews {
-        padding-top: 60px;
+        padding-bottom: 60px;
 
         &__title {
             margin-bottom: 45px;
@@ -683,6 +682,27 @@
     }
     .tarif .table-btn{
         margin-top: 45px;
+    }
+    .tarif{
+        padding-bottom: 40px;
+    }
+    .intro-devices {
+        z-index: 2;
+    }
+    .header {
+        .burger-menu{
+            z-index: 50;
+            position: fixed;
+            right: 15px;
+        }
+    }
+    .modal-custom{
+        .image-wrapper{
+            max-width: 240px;
+        }  
+        &__input{
+            padding: 14px;
+        }
     }
 }
 

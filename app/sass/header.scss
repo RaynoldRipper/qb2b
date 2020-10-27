@@ -25,7 +25,18 @@
         background-color: white;
     }
 }
-
+.logo--white{
+    padding: 5px;
+    border-radius: 5px;
+    // background: white;
+    .logo__coube{
+        border-color: $white;
+    }
+    .logo__text{
+        background-color: $primary;
+        color: #bf5518;
+    }
+}
 .contacts {
     display: flex;
     align-items: center;
@@ -113,7 +124,7 @@
             display: block;
             margin: auto;
             top: -6px;
-            width: 23px;
+            width: 100%;
             height: 2px;
             border-radius: 2px;
             background-color: $white;
@@ -126,7 +137,7 @@
             bottom: -6px;
             display: block;
             margin: auto;
-            width: 23px;
+            width: 100%;
             height: 2px;
             border-radius: 2px;
             background-color: $white;
@@ -190,7 +201,7 @@
 
 $menu-bg: $primary;
 $menu-color: #ffffff;
-$menu-font-size: 16px;
+$menu-font-size: 14px;
 $menu-zindex: 1100;
 
 #menu {
@@ -207,8 +218,12 @@ $menu-zindex: 1100;
     // For some sweet fadez
     width: 0;
     z-index: $menu-zindex;
-
+    .menu-header{
+        display: flex;
+        justify-content: space-between;
+    }
     .burger-menu {
+        margin-left: auto;
         max-width: 38px;
         max-height: 38px;
         opacity: 0;
@@ -299,7 +314,7 @@ $menu-zindex: 1100;
             font-size: $menu-font-size;
             font-weight: 500;
             text-align: left;
-            padding: 1rem 1rem;
+            padding: 10px 10px;
             text-decoration: none;
             text-transform: uppercase;
 

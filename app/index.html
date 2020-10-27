@@ -52,8 +52,14 @@
         </div>
         <div class="main-navigation">
           <div id="menu" class="">
-            <div class="burger-menu">
-              <i class="burger-menu__line"></i>
+            <div class="menu-header">
+              <a href="#" class="logo logo--white">
+                <div class="logo__coube"></div>
+                <div class="logo__text">КУБ2Б</div>
+              </a>
+              <div class="burger-menu">
+                <i class="burger-menu__line"></i>
+              </div>
             </div>
             <nav class="main-nav">
               <ul>
@@ -67,10 +73,29 @@
                     Регистрация ООО
                   </a>
                 </li>
-
                 <li>
                   <a href="#">
                     Бухгалтерские услуги
+                  </a>
+                </li>
+                <li>
+                  <a href="#" data-toggle="modal" data-target="#loginForm">
+                    Войти в личный кабинет
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    Заказать обратный звонок
+                  </a>
+                </li>
+                <li>
+                  <a href="#section-tarif">
+                    Тарифы
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:88435005060">
+                    8 (843) 500-50-60
                   </a>
                 </li>
               </ul>
@@ -108,7 +133,8 @@
                 Всё в одном <span class="mobile-br">интерфейсе...</span>
               </p>
             </div>
-            <button class="btn-style" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо кабинет</span><i class="key"></i></button>
+            <button class="btn-style" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо
+                кабинет</span><i class="key"></i></button>
           </div>
           <div class="col-md-7 intro-devices">
             <div class="phone-window phone-window--intro" onclick="this.classList.toggle('active')">
@@ -143,7 +169,7 @@
         <div class="custom-slider" id="sm_slider">
           <ul style="height: 560px; position: relative; width: 100%;">
             <li class="custom-slider-item active" id="capabilities-slide-buh">
-              <div class="row">
+              <div class="row wow fadeInDown">
                 <div class="col-md-5 service-description">
                   <h4 class="title-4 service-description__title">Бухгалтерия</h4>
                   <p class="text-3">Оказываем полный цикл ведения бухгалтерии. Начиная с таких то документов, заканчивая
@@ -230,7 +256,7 @@
                       <div class="ipad-screen-item" id="lawyer-consult">
                         <img src="./img/dest/capabilities-consult.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
-                      <div class="ipad-screen-item" id="lawyer-expert">
+                      <div class="ipad-screen-item active" id="lawyer-expert">
                         <img src="./img/dest/capabilities-expert.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
                       <div class="ipad-screen-item" id="lawyer-changes">
@@ -317,7 +343,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/tema-zilya.jpg" alt="Фотография Зили" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Губаева Зиля Рафаиловна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -333,7 +359,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-leysian.jpg" alt="Фотография Лейсян" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Ахметгареева Лейсан Фагимовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -349,7 +375,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-elvira.jpg" alt="Фотография Эльвиры" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Соцкова Эльвира Ильдусовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -365,7 +391,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-gulnara.jpg" alt="Фотография" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Шарафиева Гульнара Рашидовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -381,7 +407,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-alina.jpg" alt="Фотография Алины" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Утяева Алина Витальевна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -397,7 +423,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-zarina.jpg" alt="Фотография Зарины" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Хаертдинова Зарина Рашитовна</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -413,7 +439,7 @@
                 <div class="team-item__card">
                   <img src="./img/dest/team/team-ramil.jpg" alt="Фотография Рамиля" class="team-item__picture">
                 </div>
-                <h4 class="title-5 team-item__name">Алимова Диана Ринатовна</h4>
+                <h4 class="title-5 team-item__name">Сафиуллин Рамиль Айратович</h4>
                 <div class="info-block">
                   <p class="info-block__text">Три высших образования в области экономики, бухгалтерии и юриспруденции.
                     Красный диплом экономического факультета Международного института экономики и права (г. Москва).
@@ -485,8 +511,8 @@
             </div>
           </div>
         </div>
-        <button class="btn-style routine-btn"><span class="btn-text" data-toggle="modal" data-target="#loginForm">Зайти в демо кабинет</span><i
-            class="key"></i></button>
+        <button class="btn-style routine-btn"><span class="btn-text" data-toggle="modal" data-target="#loginForm">Зайти
+            в демо кабинет</span><i class="key"></i></button>
       </div>
     </section>
     <section class="section-info get-free" id="section-get-free">
@@ -653,7 +679,7 @@
                 <h4 class="tarif-item__title">Легкий старт</h4>
                 <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
                   лишнего. Идеально поддодит для только что открывшихся фирм.</p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 1 000 4 500 руб </p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
               <div class="tarif-item__options">
@@ -678,7 +704,7 @@
                   решать их,
                   а шаблонные договора не подходят - обороты фирмы и сумма контрактов стали больше и требуют более
                   серьезной защиты</p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 5 800 6 400 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
               <div class="tarif-item__options">
@@ -690,8 +716,7 @@
                   <li class="options-item">Бухгалтер по первичной документации</li>
                   <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
-                  <li class="options-item">Юрист</li>
-                  <li class="options-item">ИТ специалист</li>
+                  <li class="options-item options-item--strong">Юрист</li>
                 </ul>
               </div>
             </div>
@@ -703,9 +728,9 @@
                 <h4 class="tarif-item__title">Смарт</h4>
                 <p class="tarif-item__description">Сотрудников стало больше, техника нуждается в системной настройке и
                   оптимизации.
-                  Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на буемаге
+                  Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на бумаге
                 </p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 11 800 12 400 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
               <div class="tarif-item__options">
@@ -717,8 +742,8 @@
                   <li class="options-item">Бухгалтер по первичной документации</li>
                   <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
-                  <li class="options-item">Юрист</li>
-                  <li class="options-item">ИТ специалист</li>
+                  <li class="options-item options-item--strong">Юрист</li>
+                  <li class="options-item options-item--strong">ИТ специалист</li>
                 </ul>
               </div>
             </div>
@@ -732,7 +757,7 @@
                   новых клиентов,
                   руководитель фирмы больше не может уделять время маркетингу и привлечению клиентов
                 </p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 21 000 26 400 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
               </div>
               <div class="tarif-item__options">
@@ -744,14 +769,14 @@
                   <li class="options-item">Бухгалтер по первичной документации</li>
                   <li class="options-item">Бухгалтер по специальным системам налогообложения</li>
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
-                  <li class="options-item">Юрист</li>
-                  <li class="options-item">Маркетолог</li>
+                  <li class="options-item options-item--strong">Юрист</li>
+                  <li class="options-item options-item--strong">Маркетолог</li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
-        <div class="table-wrapper">
+        <div class="table-wrapper table-wrapper--opened">
           <div class="row table-header">
             <div class="col-md-4"></div>
             <div class="col-md-2 table-item">
@@ -773,7 +798,7 @@
           </div>
           <div class="row table-row">
             <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
-              <p class="row-name row-name">Разово при подключении тарифа</p>
+              <p class="row-name">Разово при подключении тарифа</p>
             </div>
             <div class="col-md-2 table-cell">
             </div>
@@ -919,72 +944,114 @@
               <i class="check-active"></i>
             </div>
           </div>
-          <div class="row table-row">
-            <div class="col-md-4 table-cell table-cell-name table-cell-name--title">
-              <p class="row-name row-name">Бухгалтерское обслуживание</p>
-            </div>
-            <div class="col-md-2 table-cell">
-            </div>
-            <div class="col-md-2 table-cell">
-            </div>
-            <div class="col-md-2 table-cell">
-            </div>
-            <div class="col-md-2 table-cell">
-            </div>
-          </div>
         </div>
         <div class="tarif-mobile" id="accordion">
           <div class="tarif-mobile__card">
             <div class="tarif-mobile__header" id="headingOne">
-              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
-                aria-controls="collapseOne">
+              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseOne"
+                aria-expanded="true" aria-controls="collapseOne">
                 <span class="tarif-item__bage">Тариф</span>
                 Легкий старт
               </button>
             </div>
-
             <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
               <div class="tarif-mobile__description">Разово при подключении</div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультация бухгалтера</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД;
+                  ССЧ
+                </div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+                </div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <br>
             </div>
           </div>
+
           <div class="tarif-mobile__card">
             <div class="tarif-mobile__header" id="headingTwo">
-              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false"
-                aria-controls="collapseTwo">
+              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseTwo"
+                aria-expanded="false" aria-controls="collapseTwo">
                 <span class="tarif-item__bage">Тариф</span>
                 Оптимальный
               </button>
             </div>
-            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo">
               <div class="tarif-mobile__description">Разово при подключении</div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультация бухгалтера</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД;
+                  ССЧ
+                </div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+                </div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <br>
             </div>
           </div>
+
           <div class="tarif-mobile__card">
             <div class="tarif-mobile__header" id="headingThree">
               <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseThree"
@@ -993,27 +1060,108 @@
                 Смарт
               </button>
             </div>
-            <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+            <div id="collapseThree" class="collapse" aria-labelledby="headingThree">
               <div class="tarif-mobile__description">Разово при подключении</div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <div class="tarif-mobile__row">
-                <div class="tarif-mobile__option">Регистрация ООО</div>
+                <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультация бухгалтера</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД;
+                  ССЧ
+                </div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+                </div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <br>
+            </div>
+          </div>
+
+          <div class="tarif-mobile__card">
+            <div class="tarif-mobile__header" id="headingFour">
+              <button class="tarif-mobile__btn collapsed" data-toggle="collapse" data-target="#collapseFour"
+                aria-expanded="false" aria-controls="collapseFour">
+                <span class="tarif-item__bage">Тариф</span>
+                PROдвижение
+              </button>
+            </div>
+            <div id="collapseFour" class="collapse" aria-labelledby="headingFour">
+              <div class="tarif-mobile__description">Разово при подключении</div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Регистрация ООО и ИП</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Открытие расчётного счёта через банки-партнёры</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультации по выбору системы налогообложения</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультации по выбору ОКВЭД</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Консультация бухгалтера</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Выпуск Электронно-цифровой подписи</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Подготовка и сдача первых отчётов после открытия ООО: СЗВ-М; СЗВ-ТД;
+                  ССЧ
+                </div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Одностраничный сайт- визитка</div>
+                <div class="tarif-mobile__value"><i class="check-active"></i></div>
+              </div>
+              <div class="tarif-mobile__row">
+                <div class="tarif-mobile__option">Пакет шаблонов договоров и необходимых документов для ведения бизнеса
+                </div>
                 <div class="tarif-mobile__value"><i class="check-active"></i></div>
               </div>
               <br>
             </div>
           </div>
         </div>
-        <div class="btn-open">Открыть полностью</div>
-        <button href="#" class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо кабинет</span><i
-            class="key"></i></button>
+        <a href="/tarif.html" class="tarif-link">Подробнее о тарифах</a>
+        <!-- <div class="btn-open">Открыть полностью</div> -->
+        <button href="#" class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span
+            class="btn-text">Зайти в демо кабинет</span><i class="key"></i></button>
       </div>
     </section>
     <section class="section-info reviews" id="section-reviews">
@@ -1099,37 +1247,49 @@
             <div class="row">
               <div class="offset-xl-2 col-xl-3 col-md-6">
                 <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="name">
-                <input type="text" class="form-input" placeholder="Как к вам обращаться?" name="phone">
-                <input type="email" class="form-input" placeholder="Как к вам обращаться?" name="email">
+                <input type="text" class="form-input" placeholder="+7 (XXX) XXX-XX-XX" name="phone">
+                <input type="email" class="form-input" placeholder="Введите ваш эмайл" name="email">
               </div>
               <div class="col-xl-5 col-md-6">
-                <textarea class="form-textarea" name="text">
-
-                </textarea>
+                <textarea class="form-textarea" name="text" placeholder="Введите ваш запрос"></textarea>
+              </div>
+              <div class="col-md-12">
+                <div class="checkbox-wrapper">
+                  <input type="checkbox" id="form-policy">
+                  <label for="form-policy">Пдтвердите ваше согласие с нашей <a href="#" class="form-link">политикой
+                      конфиденциальности</a></label>
+                </div>
               </div>
             </div>
-            <button class="btn-style form-btn" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в демо кабинет</span><i
-                class="key"></i></button>
+            <button class="btn-style form-btn">Отправить запрос</span></button>
           </form>
         </div>
       </div>
     </section>
   </main>
-  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle" aria-hidden="true">
+  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Вход в личный кабинет</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div class="modal-custom">
+        <div class="modal-custom__header">
+          <h5 class="modal-custom__title" id="exampleModalLongTitle">Вход в личный кабинет</h5>
+          <button type="button" class="modal-custom__close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="image-wrapper">
+          <img src="./img/dest/modal-v2.png" alt="">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal-custom__body">
+          <div class="input-wrapper">
+            <input type="text" class="modal-custom__input" placeholder="Введите ваше имя" name="name">
+          </div>
+          <div class="input-wrapper">
+            <input type="tel" class="modal-custom__input" placeholder="+7 (XXX) XXX-XX-XX" name="phone">
+          </div>
+          <button href="#" class="btn-style" data-toggle="modal" data-target="#loginForm">
+            <span class="btn-text">Зайти в демо кабинет</span><i class="key"></i>
+            </button>
         </div>
       </div>
     </div>
@@ -1138,9 +1298,10 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <p class="info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quidem veritatis sapiente
-            voluptas, sunt magnam commodi nihil inventore numquam assumenda velit nobis quos ex in obcaecati autem,
-            pariatur similique ipsam!</p>
+          <p class="info">Комплексное Управление Бизнесом. Оказание услуг аутсорсинга по бухгалтерским услугам,
+            юридическим услугам, ИТ услугам, маркетинговым услугам. Ведение бухгалтерского учёта, юридическое
+            сопровождение, ИТ обслуживание, Маркетинговое ведение рекламных кампаний. Налоговый аудит бухгалтерии.
+          </p>
           <div class="company-info">
             <p class="company-info__title">ООО КУБ2Б</p>
             <p class="company-info__text">ИНН 132132132123</p>
@@ -1169,9 +1330,9 @@
         </div>
       </div>
     </div>
-    <div class="header">
+    <div class="footer">
       <div class="container">
-        <div class="header__top-nav py-4">
+        <div class="footer__top-nav py-4">
           <div class="col-sm-6 col-md-4 col-xl-5">
             <a href="#" class="logo">
               <div class="logo__coube"></div>
@@ -1192,9 +1353,9 @@
     </div>
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js">
+    integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
+  <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
   <script src="./js/app.min.js"></script>
   <script src="./js/wow.min.js"></script>
   <script src="./js/jquery.smslider.min.js"></script>

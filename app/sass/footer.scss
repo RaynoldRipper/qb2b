@@ -27,11 +27,15 @@
 .footer{
     padding-top: 120px;
     &-link{
+        transition: all .3s;
         display: block;
         margin-bottom: 20px;
         font-size: 12px;
         font-weight: 500;
         color: #727272;
+        &:hover{
+            color: $primary;
+        }
     }
     &-nav-title{
         margin-bottom: 30px;

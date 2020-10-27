@@ -5,7 +5,7 @@
   <!-- Required meta tags -->
   <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap"
     rel="stylesheet">
-  <link rel="stylesheet" href="css/app.min.css">
+  <!-- <link rel="stylesheet" href="css/app.min.css"> -->
   <link rel="stylesheet" href="css/animate.css">
   <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="utf-8">
@@ -601,13 +601,13 @@
     <section class="section-info service-control" id="section-service-control">
       <div class="container">
         <h3 class="title-2 service-control__title text-center">Всю работу по поставленным
-          задачам,<br>будет<strong>контролировать служба клиентского
+          задачам,<br>будет<strong> контролировать служба клиентского
             сервиса</strong></h3>
-        <div class="row align-items-center">
+        <div class="row align-items-center position-relative">
           <div class="col-md-6">
             <div class="row">
               <div class="flex-container">
-                <div class="col-md-6">
+                <div class="col-md-6 service-control__item">
                   <div class="tab-block" id="srvice-control-1">
                     <span class="tab-block__num">01.</span>
                     <p class="tab-block__text">Вы можете поставить нам задачу через встроенный чат в виртуальном офисе,
@@ -615,7 +615,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 service-control__item">
                   <div class="tab-block" id="srvice-control-2">
                     <span class="tab-block__num">02.</span>
                     <p class="tab-block__text">
@@ -625,7 +625,7 @@
                 </div>
               </div>
               <div class="flex-container">
-                <div class="col-md-6">
+                <div class="col-md-6 service-control__item">
                   <div class="tab-block" id="srvice-control-3">
                     <span class="tab-block__num">03.</span>
                     <p class="tab-block__text">Информация о всех ваших поставленных задачах выводится в виртуальный
@@ -635,7 +635,7 @@
                     </p>
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 service-control__item">
                   <div class="tab-block" id="srvice-control-4">
                     <span class="tab-block__num">04.</span>
                     <p class="tab-block__text">
@@ -647,7 +647,7 @@
               </div>
             </div>
           </div>
-          <div class="offset-md-1 col-md-5">
+          <div class="offset-md-1 col-md-5 sticky-ipad">
             <div class="ipad-vertical-window">
               <div class="screen-wrapper ipad-screen-vertical">
                 <div class="ipad-screen-item active" id="service-screen-1">
@@ -670,7 +670,7 @@
     </section>
     <section class="section-info tarif" id="section-tarif">
       <div class="container">
-        <h3 class="title-2 text-center"><strong>Стоймость</strong> обслуживания</h3>
+        <h3 class="title-2 text-center"><strong>Стоимость</strong> обслуживания</h3>
         <div class="row">
           <div class="col-lg-3 col-md-6 tarif-info">
             <div class="tarif-item">
@@ -679,8 +679,10 @@
                 <h4 class="tarif-item__title">Легкий старт</h4>
                 <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
                   лишнего. Идеально поддодит для только что открывшихся фирм.</p>
-                <p class="tarif-item__price">от 1 000 4 500 руб </p>
+                <p class="tarif-item__price">от 1 000 руб </p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 4 500 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -693,10 +695,12 @@
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
                 </ul>
               </div>
+              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
             <div class="tarif-item">
+              <span class="badge-hit">Хит</span>
               <div class="tarif-item__card">
                 <span class="tarif-item__bage">Тариф</span>
                 <h4 class="tarif-item__title">Оптимальный</h4>
@@ -704,8 +708,10 @@
                   решать их,
                   а шаблонные договора не подходят - обороты фирмы и сумма контрактов стали больше и требуют более
                   серьезной защиты</p>
-                <p class="tarif-item__price">от 5 800 6 400 руб</p>
+                <p class="tarif-item__price">от 5 800 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 6 400 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -719,6 +725,7 @@
                   <li class="options-item options-item--strong">Юрист</li>
                 </ul>
               </div>
+              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -730,8 +737,10 @@
                   оптимизации.
                   Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на бумаге
                 </p>
-                <p class="tarif-item__price">от 11 800 12 400 руб</p>
+                <p class="tarif-item__price">от 11 800 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 12 400 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -746,6 +755,7 @@
                   <li class="options-item options-item--strong">ИТ специалист</li>
                 </ul>
               </div>
+              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -757,8 +767,10 @@
                   новых клиентов,
                   руководитель фирмы больше не может уделять время маркетингу и привлечению клиентов
                 </p>
-                <p class="tarif-item__price">от 21 000 26 400 руб</p>
+                <p class="tarif-item__price">от 21 000 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 26 400 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -773,6 +785,7 @@
                   <li class="options-item options-item--strong">Маркетолог</li>
                 </ul>
               </div>
+              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
         </div>
@@ -1168,7 +1181,7 @@
       <div class="container">
         <h3 class="title-2 text-center reviews__title"><strong>Оценки нашей работы<br></strong>Клиентами</h3>
         <div class="row">
-          <div class="offset-md-3 col-md-2">
+          <div class="offset-md-3 col-md-2 review-content">
             <div class="review-block" id="review-block-yandex">
               <div class="review-block__desc">
                 <p class="review-block__name">Яндекс</p>
@@ -1261,7 +1274,7 @@
                 </div>
               </div>
             </div>
-            <button class="btn-style form-btn">Отправить запрос</span></button>
+            <button class="btn-style form-btn"><span class="btn-text">Отправить запрос</span></button>
           </form>
         </div>
       </div>
@@ -1281,15 +1294,23 @@
           <img src="./img/dest/modal-v2.png" alt="">
         </div>
         <div class="modal-custom__body">
-          <div class="input-wrapper">
-            <input type="text" class="modal-custom__input" placeholder="Введите ваше имя" name="name">
-          </div>
-          <div class="input-wrapper">
-            <input type="tel" class="modal-custom__input" placeholder="+7 (XXX) XXX-XX-XX" name="phone">
-          </div>
-          <button href="#" class="btn-style" data-toggle="modal" data-target="#loginForm">
-            <span class="btn-text">Зайти в демо кабинет</span><i class="key"></i>
+          <form>
+            <div class="input-wrapper">
+              <input type="text" class="modal-custom__input" placeholder="Введите ваше имя" name="name">
+            </div>
+            <div class="input-wrapper">
+              <input type="tel" class="modal-custom__input" placeholder="+7 (XXX) XXX-XX-XX" name="phone">
+            </div>
+            <!-- <div class="checkbox-wrapper">
+              <input type="checkbox" id="lk-privacy">
+              <label for="form-policy">Согласие на обработку персональных данных <a href="#" class="form-link">политикой
+                  конфиденциальности</a></label>
+            </div>   -->
+            <button href="#" class="btn-style" data-toggle="modal" data-target="#loginForm">
+              <span class="btn-text">Зайти в демо кабинет</span><i class="key"></i>
             </button>
+            <a href="#" class="form-link">Политика конфиденциальности</a>
+          </form>
         </div>
       </div>
     </div>
@@ -1354,7 +1375,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"
     integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
-    </script>
+  </script>
   <script src="https://getbootstrap.com/docs/4.0/dist/js/bootstrap.min.js"></script>
   <script src="./js/app.min.js"></script>
   <script src="./js/wow.min.js"></script>

@@ -145,6 +145,114 @@ p {
   flex-wrap: wrap;
 }
 
+.badge {
+  &-hit {
+    position: absolute;
+    background-color: #59dd83;
+    top: 16px;
+    right: 0;
+    z-index: 50;
+    transform: rotate(45deg);
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+  }
+}
+
+.collapse,
+.collapsing {
+  max-height: 334px;
+  overflow: overlay;
+}
+
+.modal-custom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  // border: 1px solid rgba(0, 0, 0, .2);
+  padding: 15px;
+  border-radius: 20px;
+
+  .btn-style {
+    margin: auto;
+  }
+
+  &__header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1rem;
+    border-top-left-radius: .3rem;
+    border-top-right-radius: .3rem;
+  }
+
+  &__close {
+    float: right;
+    font-size: 38px;
+    font-weight: 400;
+    line-height: 1;
+    color: $primary;
+    text-shadow: 0 1px 0 #fff;
+    background: initial;
+    border: none;
+    cursor: pointer;
+    transition: all .3s;
+    &:focus {
+      border: none;
+      outline: none;
+    }
+    &:hover{
+      color: #c77442;
+    }
+  }
+
+  &__body {
+    position: relative;
+    flex: 1 1 auto;
+    padding: 1rem;
+  }
+
+  &__input {
+    border-radius: 50px;
+    padding: 22px;
+    width: 100%;
+    border: 1px solid #a2a2a2;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  .input-wrapper {
+    max-width: 325px;
+    margin: auto;
+    margin-bottom: 25px;
+  }
+
+  .image-wrapper {
+    padding: 0 15px;
+
+    img {
+      width: 100%;
+    }
+  }
+  .form-link{
+    display: block;
+    text-align: center;
+    margin-top: 16px;
+    color: $grey;
+    &:hover{
+      color: $primary;
+    }
+  }
+}
+
 @media(max-width:768px) {
   .btn-style {
     font-size: 12px;
@@ -165,70 +273,19 @@ p {
       background-position: center;
     }
   }
-}
-
-.collapse,
-.collapsing {
-  max-height: 334px;
-  overflow: overlay;
-}
-
-.modal-custom {
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  pointer-events: auto;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid rgba(0, 0, 0, .2);
-  border-radius: .3rem;
-
-  &__header {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    padding: 1rem;
-    border-bottom: 1px solid #e9ecef;
-    border-top-left-radius: .3rem;
-    border-top-right-radius: .3rem;
-  }
-
-  &__close {
-    float: right;
-    font-size: 38px;
-    font-weight: 400;
-    line-height: 1;
-    color: $primary;
-    text-shadow: 0 1px 0 #fff;
-    background: initial;
-    border: none;
-    cursor: pointer;
-    &:focus{
-      border: none;
-      outline: none;
+  .modal-custom{
+    &__input{
+      padding: 14px;
+      &::placeholder{
+        font-size: 14px;
+      }
     }
-  }
-  &__body{
-    position: relative;
-    flex: 1 1 auto;
-    padding: 1rem;
-  }
-  &__input{
-    border-radius: 50px;
-    padding: 22px;
-    width: 100%;
-    border: 1px solid #a2a2a2;
-    &:focus{
-      outline: none;
+    &__title{
+      font-size: 16px;
+      font-weight: 500;
     }
-  }
-  .input-wrapper{
-    margin-bottom: 30px;
-  }
-  .image-wrapper{
-    img{
-      width: 100%;
+    .input-wrapper{
+      margin-bottom: 20px;
     }
   }
 }

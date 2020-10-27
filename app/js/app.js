@@ -19,6 +19,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     reviewBlocks = document.querySelectorAll('.review-block');
   let tabButtons = document.querySelectorAll('.tab-link');
 
+  
   freeList.addEventListener("click", function (event) {
     const element = event.target.closest(".sub-item");
     if (!element) return;
@@ -164,10 +165,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
   //   }
   // }
 
-  tableOpenBtn.addEventListener('click', function () {
-    tableWrapper.classList.toggle('table-wrapper--opened');
-    tableOpenBtn.classList.toggle('btn-open--active');
-  });
+  // tableOpenBtn.addEventListener('click', function () {
+  //   tableWrapper.classList.toggle('table-wrapper--opened');
+  //   tableOpenBtn.classList.toggle('btn-open--active');
+  // });
 
   var h = $('.table-content').css('height');
   console.log(h);

@@ -55,6 +55,9 @@
             position: relative;
             animation: phone-reverse 2s forwards;
         }
+        .moc-picture{
+            max-width: 145px;
+        }
     }
 }
 .phone-window--routine{
@@ -86,7 +89,7 @@
 .macbook{
     &-window{
         width: fit-content;
-        padding-left: 55px;
+        padding-left: 56px;
         padding-right: 53px;
         padding-bottom: 36px;
         padding-top: 11px;

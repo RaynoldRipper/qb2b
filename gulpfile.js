@@ -9,6 +9,8 @@
   const imagemin = require('gulp-imagemin');
   const del = require('del');
   const newer = require('gulp-newer');
+  const webp = require('gulp-webp');
+  const gulp = require('gulp');
 
 function browsersync() {
   browserSync.init({
@@ -80,12 +82,23 @@ function startwatch() {
 	watch('app/img/src/**/*', img);
  
 }
- 
+function webpEncode(){
+	return src('app/img/dest/**/*')
+        .pipe(webp())
+        .pipe(gulp.dest('app/img/dist'))
+}
+gulp.task('webp', () =>
+    gulp.src('app/img/dest/**/*')
+        .pipe(webp())
+        .pipe(gulp.dest('app/img/dist'))
+);
+
 exports.browsersync = browsersync;
 exports.scripts = scripts;
 exports.styles = styles;
 exports.styles_bootstrap = styles_bootstrap;
 exports.img = img;
 exports.cleanimg = cleanimg;
+exports.webpEncode = webpEncode;
 exports.build = series(cleandist, styles, styles_bootstrap, scripts, img, buildcopy);
-exports.default = parallel(styles, styles_bootstrap, scripts, browsersync, startwatch);
+exports.default = parallel(styles, styles_bootstrap, scripts, browsersync, startwatch, webpEncode);

@@ -3,17 +3,19 @@
 
 <head>
   <!-- Required meta tags -->
-  <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,400&display=swap"
-    rel="stylesheet">
-  <!-- <link rel="stylesheet" href="css/app.min.css"> -->
+
+  <link rel="preload" href="./fonts/GothamPro.woff">
+  <link rel="preload" href="./fonts/GothamPro-Black.woff">
+  <link rel="preload" href="./fonts/GothamPro-Medium.woff">
+  <link rel="preload" href="./fonts/GothamPro-Bold.woff">
   <link rel="stylesheet" href="css/animate.css">
   <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+  <link rel="stylesheet" href="./css/style.min.css">
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-  <link rel="stylesheet" href="./css/style.min.css">
+  
   <title>QB2B</title>
   <script>
     function numAnim(val, el, timeout, step) {
@@ -177,7 +179,7 @@
                     такими документами.</p>
                   <ol class="sub-list">
                     <li class="sub-item" id="ipad-table">Предстоящие отчеты</li>
-                    <li class="sub-item" id="ipad-kvartal">Сумма налогов к уплате</li>
+                    <li class="sub-item sub-item--active" id="ipad-kvartal">Сумма налогов к уплате</li>
                     <li class="sub-item" id="ipad-indicators">Доход и расход компании</li>
                     <li class="sub-item" id="ipad-analitica">Проводимые операции</li>
                   </ol>
@@ -186,7 +188,7 @@
                   <div class="ipad-horizontal-window">
                     <div class="screen-wrapper ipad-screen-horizontal">
                       <div class="ipad-screen-item active" id="ipad-screen-table">
-                        <img src="./img/dest/ipad-bgr.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/ipad-bgr.png" class="moc-picture" alt="Каринка фона айпада">
                         <img src="./img/dest/ipad-table.png" alt="Картинка в айпаде с таблицей" class="ipad-table">
                         <img src="./img/dest/ipad-kvartal.png" alt="Картинка в айпаде с суммой налогов"
                           class="ipad-kvartal">
@@ -211,9 +213,8 @@
                   </p>
                   <ol class="sub-list">
                     <li class="sub-item" data-image="mark-analitic" id="ipad-site">Разработка сайтов</li>
-                    <li class="sub-item" data-image="mark-site" id="ipad-context">Настройка контекстной рекламы</li>
-                    <li class="sub-item" data-image="mark-context" id="ipad-analitic-config">Настройка систем аналитики
-                    </li>
+                    <li class="sub-item sub-item--active" data-image="mark-site" id="ipad-context">Настройка контекстной рекламы</li>
+                    <li class="sub-item" data-image="mark-context" id="ipad-analitic-config">Настройка систем аналитики</li>
                     <li class="sub-item" data-image="mark-targeting" id="ipad-target-mark">Настройка таргетированной
                       рекламы</li>
                   </ol>
@@ -221,17 +222,17 @@
                 <div class="col-md-6">
                   <div class="ipad-horizontal-window">
                     <div class="screen-wrapper ipad-screen-horizontal">
-                      <div class="ipad-screen-item active" id="mark-analitic">
-                        <img src="./img/dest/mark-site.jpg" class="moc-picture" alt="Каринка фона айпада">
+                      <div class="ipad-screen-item" id="mark-analitic">
+                        <img src="./img/dest/mark-site.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
-                      <div class="ipad-screen-item" id="mark-site">
-                        <img src="./img/dest/mark-context.jpg" class="moc-picture" alt="Каринка фона айпада">
+                      <div class="ipad-screen-item active" id="mark-site">
+                        <img src="./img/dest/mark-context.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
                       <div class="ipad-screen-item" id="mark-context">
-                        <img src="./img/dest/mark-analitic.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/mark-analitic.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
                       <div class="ipad-screen-item" id="mark-targeting">
-                        <img src="./img/dest/mark-targeting.jpg" class="moc-picture" alt="Каринка фона айпада">
+                        <img src="./img/dest/mark-targeting.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
                     </div>
                   </div>
@@ -245,7 +246,7 @@
                   <p class="text-3">Оказываем полную юридическую поддержку бизнеса:</p>
                   <ol class="sub-list">
                     <li class="sub-item" data-image="lawyer-consult">Консультации по сложным вопросам</li>
-                    <li class="sub-item" data-image="lawyer-expert">Правовая экспертиза документов</li>
+                    <li class="sub-item sub-item--active" data-image="lawyer-expert">Правовая экспертиза документов</li>
                     <li class="sub-item" data-image="lawyer-changes">Внесение изменений в учредительные документы</li>
                     <li class="sub-item" data-image="lawyer-deal">Сопровождение сделок</li>
                   </ol>
@@ -279,7 +280,7 @@
                   </p>
                   <ol class="sub-list">
                     <li class="sub-item" data-image="it-to">Подбор и покупка технического оснащения</li>
-                    <li class="sub-item" data-image="it-config">Настройка программного обеспечения</li>
+                    <li class="sub-item sub-item--active" data-image="it-config">Настройка программного обеспечения</li>
                     <li class="sub-item" data-image="it-settings">Настройка и организация удаленных рабочих мест
                       сотрудникам
                     </li>
@@ -290,10 +291,10 @@
                 <div class="col-md-6">
                   <div class="ipad-horizontal-window">
                     <div class="screen-wrapper ipad-screen-horizontal">
-                      <div class="ipad-screen-item active" id="it-to">
+                      <div class="ipad-screen-item" id="it-to">
                         <img src="./img/dest/capabilities-to.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
-                      <div class="ipad-screen-item" id="it-config">
+                      <div class="ipad-screen-item active" id="it-config">
                         <img src="./img/dest/capabilities-config.png" class="moc-picture" alt="Каринка фона айпада">
                       </div>
                       <div class="ipad-screen-item" id="it-settings">
@@ -452,7 +453,7 @@
             </div>
           </div>
         </div>
-
+    
       </div>
     </section>
     <section class="section-info routine" id="section-routine">
@@ -493,7 +494,7 @@
             <div class="phone-lg phone-window--routine" id="sticky-phone">
               <div class="screen-wrapper screen-iphone">
                 <div class="screen-item routine-screen active" id="routine-screen-buh">
-                  <img src="./img/dest/routine-buh.jpg" class="moc-picture" alt="Картинка Айфона">
+                  <img src="./img/dest/routine-buh.png" class="moc-picture" alt="Картинка экрана айфона">
                 </div>
                 <div class="screen-item routine-screen" id="routine-screen-uchet">
                   <img src="./img/dest/routine-kadr.png" class="moc-picture" alt="Картинка Айфона">
@@ -651,9 +652,9 @@
             <div class="ipad-vertical-window">
               <div class="screen-wrapper ipad-screen-vertical">
                 <div class="ipad-screen-item active" id="service-screen-1">
-                  <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
+                  <img src="./img/dest/ipad-screen-vertical.png" class="moc-picture" alt="Каринка Экрана айпада">
                 </div>
-                <div class="ipad-screen-item" id="service-screen-2">
+                <!-- <div class="ipad-screen-item" id="service-screen-2">
                   <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
                 </div>
                 <div class="ipad-screen-item" id="service-screen-3">
@@ -661,7 +662,7 @@
                 </div>
                 <div class="ipad-screen-item" id="service-screen-4">
                   <img src="./img/dest/vertical-screen-ipad.png" class="moc-picture" alt="Каринка айпада">
-                </div>
+                </div> -->
               </div>
             </div>
           </div>
@@ -695,7 +696,7 @@
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
                 </ul>
               </div>
-              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -725,7 +726,7 @@
                   <li class="options-item options-item--strong">Юрист</li>
                 </ul>
               </div>
-              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -755,7 +756,7 @@
                   <li class="options-item options-item--strong">ИТ специалист</li>
                 </ul>
               </div>
-              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -785,7 +786,7 @@
                   <li class="options-item options-item--strong">Маркетолог</li>
                 </ul>
               </div>
-              <button href="#" class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
         </div>
@@ -1173,7 +1174,7 @@
         </div>
         <a href="/tarif.html" class="tarif-link">Подробнее о тарифах</a>
         <!-- <div class="btn-open">Открыть полностью</div> -->
-        <button href="#" class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span
+        <button class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span
             class="btn-text">Зайти в демо кабинет</span><i class="key"></i></button>
       </div>
     </section>
@@ -1198,7 +1199,7 @@
             <div class="review-block" id="review-block-google">
               <div class="review-block__desc">
                 <p class="review-block__name">Google</p>
-                <p class="review-block__value">4.9</p>
+                <p class="review-block__value">5.0</p>
               </div>
               <div class="review-block__stars">
                 <i class="star"></i>
@@ -1211,7 +1212,7 @@
             <div class="review-block" id="review-block-2gis">
               <div class="review-block__desc">
                 <p class="review-block__name">2Gis</p>
-                <p class="review-block__value">4.9</p>
+                <p class="review-block__value">5.0</p>
               </div>
               <div class="review-block__stars">
                 <i class="star"></i>
@@ -1280,12 +1281,11 @@
       </div>
     </section>
   </main>
-  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle"
-    aria-hidden="true">
+  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-custom">
         <div class="modal-custom__header">
-          <h5 class="modal-custom__title" id="exampleModalLongTitle">Вход в личный кабинет</h5>
+          <h5 class="modal-custom__title" id="loginFormTitle">Заявка на получение доступа к кабинету</h5>
           <button type="button" class="modal-custom__close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -1306,8 +1306,8 @@
               <label for="form-policy">Согласие на обработку персональных данных <a href="#" class="form-link">политикой
                   конфиденциальности</a></label>
             </div>   -->
-            <button href="#" class="btn-style" data-toggle="modal" data-target="#loginForm">
-              <span class="btn-text">Зайти в демо кабинет</span><i class="key"></i>
+            <button class="btn-style" data-toggle="modal" data-target="#loginForm">
+              <span class="btn-text">Отравить заявку</span><i class="key"></i>
             </button>
             <a href="#" class="form-link">Политика конфиденциальности</a>
           </form>
@@ -1319,54 +1319,46 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <p class="info">Комплексное Управление Бизнесом. Оказание услуг аутсорсинга по бухгалтерским услугам,
-            юридическим услугам, ИТ услугам, маркетинговым услугам. Ведение бухгалтерского учёта, юридическое
-            сопровождение, ИТ обслуживание, Маркетинговое ведение рекламных кампаний. Налоговый аудит бухгалтерии.
-          </p>
+          
           <div class="company-info">
+            <a href="#" class="logo">
+              <div class="logo__coube"></div>
+              <div class="logo__text">КУБ2Б</div>
+            </a>
             <p class="company-info__title">ООО КУБ2Б</p>
             <p class="company-info__text">ИНН 132132132123</p>
             <p class="company-info__text">ОГРН 2131321321321</p>
           </div>
           <a href="#" class="privacy">Политика конфиденциальности</a>
         </div>
-        <div class="offset-md-1 col-md-2">
+        <div class="col-md-3">
+          <p class="info">Комплексное Управление Бизнесом. Оказание услуг аутсорсинга по бухгалтерским услугам,
+            юридическим услугам, ИТ услугам, маркетинговым услугам. Ведение бухгалтерского учёта, юридическое
+            сопровождение, ИТ обслуживание, Маркетинговое ведение рекламных кампаний. Налоговый аудит бухгалтерии.
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-2 footer-nav">
           <h4 class="title-6 footer-nav-title">Навигация</h4>
           <a href="#" class="footer-link">Регистрация ИП</a>
           <a href="#" class="footer-link">Регистрация ООО</a>
           <a href="#" class="footer-link">Бухгалтерские услуги</a>
           <a href="#" class="footer-link">Сдача отчетов</a>
+          <a href="#" class="footer-link">Налоговый аудит</a>
         </div>
-        <div class="offset-md-1 col-md-2">
-          <h4 class="title-6 footer-nav-title">Личный кабинет</h4>
-          <a href="#" class="footer-link">Регистрация ИП</a>
-          <a href="#" class="footer-link">Регистрация ООО</a>
-        </div>
-        <div class="offset-md-1 col-md-2">
+        <div class="offset-md-1 col-md-2 footer-nav">
           <h4 class="title-6 footer-nav-title">Компания</h4>
           <a href="#" class="footer-link">Вакансии</a>
           <a href="#" class="footer-link">Контакты</a>
-          <a href="#" class="footer-link">Отзыввы</a>
+          <a href="#" class="footer-link">Отзывы</a>
           <a href="#" class="footer-link">О коммпании</a>
+          <a href="#" class="footer-link">Блог</a>
         </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="footer__top-nav py-4">
-          <div class="col-sm-6 col-md-4 col-xl-5">
-            <a href="#" class="logo">
-              <div class="logo__coube"></div>
-              <div class="logo__text">КУБ2Б</div>
-            </a>
-          </div>
-          <div class="contacts col-sm-6 col-md-8 col-xl-7 justify-content-between">
-            <div class="contacts__info">
-              <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
-              <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
-            </div>
-            <div class="burger-menu">
-              <i class="burger-menu__line"></i>
+        <div class="contacts col-sm-12">
+          <div class="contacts__info">
+            <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
+            <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
+            <div class="develop-by">
+              <a href="/" class="develop-by__link">Разработка сайтов КУБ2Б</a>
             </div>
           </div>
         </div>

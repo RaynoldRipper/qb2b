@@ -20,6 +20,7 @@
 
         &-6 {
             font-size: 16px;
+            font-weight: bold;
         }
     }
 
@@ -131,6 +132,13 @@
         }
     }
 
+    .task {
+        background: url(./../../img/dest/task-lise.png);
+        background-repeat: no-repeat;
+        background-position: 53% 276px;
+        padding-bottom: 216px;
+    }
+
     .person:nth-child(4n+4) {
         .team-item::before {
             right: 0;
@@ -189,7 +197,6 @@
         &-6 {
             font-size: 16px;
             color: $black;
-            font-weight: bold;
         }
 
     }
@@ -375,7 +382,9 @@
             display: block;
         }
     }
-
+    .tarif-item{
+        overflow: hidden;
+    }
     .tarif-item:hover {
         border-bottom-left-radius: 0;
 
@@ -692,20 +701,23 @@
                 display: flex;
                 flex-wrap: wrap;
             }
+
             &-block {
                 margin-left: 15px;
                 margin-right: 15px;
                 margin-top: 20px;
                 margin-bottom: 20px;
-                &__desc{
+
+                &__desc {
                     font-size: 16px;
                     margin-bottom: 14px;
                 }
-                &__stars{
-                    .star{
+
+                &__stars {
+                    .star {
                         margin-right: 6px;
                         width: 16px;
-                        height: 16px;                    
+                        height: 16px;
                     }
                 }
             }
@@ -732,45 +744,10 @@
         }
     }
 
-    .modal-custom {
-        .image-wrapper {
-            max-width: 240px;
+    .footer{
+        &-nav{
+            display: none;
         }
-
-        &__input {
-            padding: 14px;
-        }
-    }
-
-    // .sticky-ipad {
-    //     position: sticky;
-    //     z-index: -2;
-    //     bottom: 70px;
-    //     top: 0;
-    //     right: 0;
-    //     left: 0;
-    // }
-
-    .service-control {
-        // &__item {
-        //     width: auto;
-        //     z-index: 3;
-        //     background-color: #fff;
-        //     border-radius: 8px;
-        //     margin-left: 15px;
-        //     margin-right: 15px;
-        //     padding-top: 20px;
-        //     padding-bottom: 20px;
-        //     border-radius: 10px;
-        //     opacity: .9;    
-        //     margin-top: 200px;
-        //     height: auto !important;
-        //     box-shadow: 0 3px 7px rgba(0, 0, 0, .3);
-        // }
-
-        // .tab-block {
-        //     padding-left: 15px;
-        // }
     }
 }
 

@@ -15,8 +15,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
       taskList = document.querySelectorAll('.task-link'),
       subItem = subList.querySelectorAll('.sub-item'),
       activeClass = "sub-item--active";
-  let controlBlocks = document.querySelectorAll('.tab-block'),
-    reviewBlocks = document.querySelectorAll('.review-block');
+  let reviewBlocks = document.querySelectorAll('.review-block');
   let tabButtons = document.querySelectorAll('.tab-link');
 
   
@@ -99,22 +98,22 @@ document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
   // Секция служба клиентского сервиса
-  for (var i = 0; i < controlBlocks.length; i++) {
-    if (controlBlocks[i].nextSibling.length !== null) {
-      controlBlocks[i].addEventListener('mouseover', function () {
-        $('.ipad-screen-vertical .ipad-screen-item').removeClass('active');
-        if (this.id == 'srvice-control-1') {
-          document.querySelector('#service-screen-1').classList.add('active');
-        } else if (this.id == 'srvice-control-2') {
-          document.querySelector('#service-screen-2').classList.add('active');
-        } else if (this.id == 'srvice-control-3') {
-          document.querySelector('#service-screen-3').classList.add('active');
-        } else if (this.id == 'srvice-control-4') {
-          document.querySelector('#service-screen-4').classList.add('active');
-        }
-      });
-    }
-  }
+  // for (var i = 0; i < controlBlocks.length; i++) {
+  //   if (controlBlocks[i].nextSibling.length !== null) {
+  //     controlBlocks[i].addEventListener('mouseover', function () {
+  //       $('.ipad-screen-vertical .ipad-screen-item').removeClass('active');
+  //       if (this.id == 'srvice-control-1') {
+  //         document.querySelector('#service-screen-1').classList.add('active');
+  //       } else if (this.id == 'srvice-control-2') {
+  //         document.querySelector('#service-screen-2').classList.add('active');
+  //       } else if (this.id == 'srvice-control-3') {
+  //         document.querySelector('#service-screen-3').classList.add('active');
+  //       } else if (this.id == 'srvice-control-4') {
+  //         document.querySelector('#service-screen-4').classList.add('active');
+  //       }
+  //     });
+  //   }
+  // }
   // Секция отзывов
   for (var i = 0; i < reviewBlocks.length; i++) {
     if (reviewBlocks[i].nextSibling.length !== null) {
@@ -396,6 +395,8 @@ $(document).ready(function () {
   var angrednsol2 = $('#block_2').offset().top;
   var angrednsol3 = $('#block_3').offset().top;
   var angrednsol4 = $('#block_4').offset().top;
+  var angrednsol5 = $('#block_5').offset().top;
+
   var scrollOffset = 0;
 
   $(window).scroll(function () {
@@ -403,25 +404,32 @@ $(document).ready(function () {
     var scroll = $(window).scrollTop() + scrollOffset;
     var halfPhoneHeight = ($('#sticky-phone').height() + 24) / 2;
     var posPhone = $('#sticky-phone').offset().top + halfPhoneHeight;
-
-    if (posPhone > angrednsol1) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-buh').addClass('active');
-    }
-
-    if (posPhone > angrednsol2) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-uchet').addClass('active');
-    }
-
-    if (posPhone > angrednsol3) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-lawyer').addClass('active');
-    }
-
-    if (posPhone > angrednsol4) {
-      $('.routine-screen').removeClass('active');
-      $('#routine-screen-mark').addClass('active');
+    var routineTop = $('.routine').offset().top;
+    var routineBottom = $('.routine').offset().top + $('.routine').height();
+    if (scroll > routineTop && scroll < routineBottom){
+      if (posPhone > angrednsol1) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-buh').addClass('active');
+      }
+  
+      if (posPhone > angrednsol2) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-uchet').addClass('active');
+      }
+  
+      if (posPhone > angrednsol3) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-lawyer').addClass('active');
+      }
+  
+      if (posPhone > angrednsol4) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-mark').addClass('active');
+      }
+      if (posPhone > angrednsol5) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-it').addClass('active');
+      }
     }
   });
 

@@ -15,7 +15,7 @@
   <link rel="stylesheet" href="./css/style.min.css">
   <!-- Bootstrap CSS -->
   <!-- <link rel="stylesheet" href="./css/bootstrap.min.css"> -->
-  
+
   <title>QB2B</title>
   <script>
     function numAnim(val, el, timeout, step) {
@@ -66,37 +66,57 @@
             <nav class="main-nav">
               <ul>
                 <li>
-                  <a href="#">
-                    Регистрация ИП
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Регистрация ООО
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
+                  <a class="menu__link" href="#">
                     Бухгалтерские услуги
                   </a>
                 </li>
                 <li>
-                  <a href="#" data-toggle="modal" data-target="#loginForm">
-                    Войти в личный кабинет
+                  <a class="menu__link" href="#">
+                    Налоговый аудит
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    Заказать обратный звонок
+                  <a class="menu__link" href="#">
+                    Регистрация ИП
                   </a>
                 </li>
                 <li>
-                  <a href="#section-tarif">
+                  <a class="menu__link" href="#">
+                    Регистрация ООО
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#">
                     Тарифы
                   </a>
                 </li>
                 <li>
-                  <a href="tel:88435005060">
+                  <a class="menu__link" href="#section-tarif">
+                    Статьи и новости
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#section-tarif">
+                    Контакты
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#section-tarif">
+                    О компании
+                  </a>
+                </li>
+                <li class="mt-10">
+                  <a class="menu__link menu__link--btn" href="#" data-toggle="modal" data-target="#loginForm">
+                    Войти в личный кабинет
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link menu__link--btn" href="#">
+                    Заказать обратный звонок
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link menu__link--tel" href="tel:88435005060">
                     8 (843) 500-50-60
                   </a>
                 </li>
@@ -213,8 +233,10 @@
                   </p>
                   <ol class="sub-list">
                     <li class="sub-item" data-image="mark-analitic" id="ipad-site">Разработка сайтов</li>
-                    <li class="sub-item sub-item--active" data-image="mark-site" id="ipad-context">Настройка контекстной рекламы</li>
-                    <li class="sub-item" data-image="mark-context" id="ipad-analitic-config">Настройка систем аналитики</li>
+                    <li class="sub-item sub-item--active" data-image="mark-site" id="ipad-context">Настройка контекстной
+                      рекламы</li>
+                    <li class="sub-item" data-image="mark-context" id="ipad-analitic-config">Настройка систем аналитики
+                    </li>
                     <li class="sub-item" data-image="mark-targeting" id="ipad-target-mark">Настройка таргетированной
                       рекламы</li>
                   </ol>
@@ -453,7 +475,7 @@
             </div>
           </div>
         </div>
-    
+
       </div>
     </section>
     <section class="section-info routine" id="section-routine">
@@ -1174,15 +1196,15 @@
         </div>
         <a href="/tarif.html" class="tarif-link">Подробнее о тарифах</a>
         <!-- <div class="btn-open">Открыть полностью</div> -->
-        <button class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span
-            class="btn-text">Зайти в демо кабинет</span><i class="key"></i></button>
+        <button class="btn-style table-btn" data-toggle="modal" data-target="#loginForm"><span class="btn-text">Зайти в
+            демо кабинет</span><i class="key"></i></button>
       </div>
     </section>
     <section class="section-info reviews" id="section-reviews">
       <div class="container">
         <h3 class="title-2 text-center reviews__title"><strong>Оценки нашей работы<br></strong>Клиентами</h3>
         <div class="row">
-          <div class="offset-md-3 col-md-2 review-content">
+          <div class="offset-md-2 offset-lg-3 col-md-3 col-lg-2 review-content">
             <div class="review-block" id="review-block-yandex">
               <div class="review-block__desc">
                 <p class="review-block__name">Яндекс</p>
@@ -1281,18 +1303,17 @@
       </div>
     </section>
   </main>
-  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle" aria-hidden="true">
+  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle"
+    aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
       <div class="modal-custom">
-        <div class="modal-custom__header">
-          <h5 class="modal-custom__title" id="loginFormTitle">Заявка на получение доступа к кабинету</h5>
-          <button type="button" class="modal-custom__close" data-dismiss="modal" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-          </button>
-        </div>
+        <button type="button" class="modal-custom__close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
         <div class="image-wrapper">
           <img src="./img/dest/modal-v2.png" alt="">
         </div>
+        <h5 class="modal-custom__title" id="loginFormTitle">Заявка на получение доступа к кабинету</h5>
         <div class="modal-custom__body">
           <form>
             <div class="input-wrapper">
@@ -1306,9 +1327,11 @@
               <label for="form-policy">Согласие на обработку персональных данных <a href="#" class="form-link">политикой
                   конфиденциальности</a></label>
             </div>   -->
-            <button class="btn-style" data-toggle="modal" data-target="#loginForm">
-              <span class="btn-text">Отравить заявку</span><i class="key"></i>
-            </button>
+            <div class="input-wrapper">
+              <button class="btn-style" data-toggle="modal" data-target="#loginForm">
+                <span class="btn-text">Отравить заявку</span><i class="key"></i>
+              </button>
+            </div>
             <a href="#" class="form-link">Политика конфиденциальности</a>
           </form>
         </div>
@@ -1319,7 +1342,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          
+
           <div class="company-info">
             <a href="#" class="logo">
               <div class="logo__coube"></div>

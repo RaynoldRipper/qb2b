@@ -196,8 +196,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       w = window.innerWidth,
       h = window.innerHeight;
     body.addEventListener('mousemove', function (evt) {
-      var posX = Math.round(evt.clientX / w * startX)
-      var posY = Math.round(evt.clientY / h * startY)
+      var posX = Math.abs(evt.clientX / w * startX)
+      var posY = Math.abs(evt.clientY / h * startY)
       pen.style.transform = 'translate(' + posX + 'px,' + posY + 'px)';
       // console.log(posY);
     })
@@ -206,6 +206,14 @@ document.addEventListener("DOMContentLoaded", function (event) {
     $('.burger-menu ').toggleClass('active');
     $('#menu').toggleClass('open');
   });
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $("#menu"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0 || $('.menu__link').is(e.target)) { // и не по его дочерним элементам
+      div.removeClass('open'); // скрываем его
+      $('.burger-menu').removeClass('active');
+		}
+	});
 });
 
 

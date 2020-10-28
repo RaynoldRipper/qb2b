@@ -110,6 +110,7 @@
     }
 }
 .macbook-window--intro{
+    pointer-events: none;
     position: absolute;
     left: 75px;
     bottom: 0%;

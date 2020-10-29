@@ -222,6 +222,32 @@ $menu-zindex: 1100;
         display: flex;
         justify-content: space-between;
     }
+    .main-nav .menu{
+        &__link{
+            &--btn{
+                border: 1px solid #ffffff;
+                border-radius: 5px;
+                text-align: center !important;
+                transition: all .3s;
+                margin-top: 16px;
+                &:hover{
+                    background-color: $white;
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .main-nav .menu{
+            &__link{
+                &--tel{
+                    margin-top: 25px;
+                    font-size: 20px !important;
+                }
+            }
+        }
+    .mt-10{
+        margin-top: 35px;
+    }
     .burger-menu {
         margin-left: auto;
         max-width: 38px;
@@ -314,7 +340,7 @@ $menu-zindex: 1100;
             font-size: $menu-font-size;
             font-weight: 500;
             text-align: left;
-            padding: 10px 10px;
+            padding: 6px 10px;
             text-decoration: none;
             text-transform: uppercase;
 
@@ -370,6 +396,13 @@ $menu-zindex: 1100;
 
         .burger-menu {
             margin-left: auto;
+        }
+    }
+    #menu{
+        .main-nav .menu{
+            &__link{
+                font-size: 12px;
+            }
         }
     }
 }

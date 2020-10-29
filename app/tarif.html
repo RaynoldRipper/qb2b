@@ -49,37 +49,57 @@
             <nav class="main-nav">
               <ul>
                 <li>
-                  <a href="#">
-                    Регистрация ИП
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    Регистрация ООО
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
+                  <a class="menu__link" href="#">
                     Бухгалтерские услуги
                   </a>
                 </li>
                 <li>
-                  <a href="#" data-toggle="modal" data-target="#loginForm">
-                    Войти в личный кабинет
+                  <a class="menu__link" href="#">
+                    Налоговый аудит
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    Заказать обратный звонок
+                  <a class="menu__link" href="#">
+                    Регистрация ИП
                   </a>
                 </li>
                 <li>
-                  <a href="#section-tarif">
+                  <a class="menu__link" href="#">
+                    Регистрация ООО
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#">
                     Тарифы
                   </a>
                 </li>
                 <li>
-                  <a href="tel:88435005060">
+                  <a class="menu__link" href="#section-tarif">
+                    Статьи и новости
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#section-tarif">
+                    Контакты
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link" href="#section-tarif">
+                    О компании
+                  </a>
+                </li>
+                <li class="mt-10">
+                  <a class="menu__link menu__link--btn" href="#" data-toggle="modal" data-target="#loginForm">
+                    Войти в личный кабинет
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link menu__link--btn" href="#">
+                    Заказать обратный звонок
+                  </a>
+                </li>
+                <li>
+                  <a class="menu__link menu__link--tel" href="tel:88435005060">
                     8 (843) 500-50-60
                   </a>
                 </li>
@@ -102,8 +122,10 @@
                 <h4 class="tarif-item__title">Легкий старт</h4>
                 <p class="tarif-item__description">Полное бухгалтерское и налоговое обслуживание бизнеса и неичего
                   лишнего. Идеально поддодит для только что открывшихся фирм.</p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 1 000 руб </p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 4 500 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -116,10 +138,12 @@
                   <li class="options-item">Бухгалтер по общей системе налогообложения</li>
                 </ul>
               </div>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
             <div class="tarif-item">
+              <span class="badge-hit">Хит</span>
               <div class="tarif-item__card">
                 <span class="tarif-item__bage">Тариф</span>
                 <h4 class="tarif-item__title">Оптимальный</h4>
@@ -127,8 +151,10 @@
                   решать их,
                   а шаблонные договора не подходят - обороты фирмы и сумма контрактов стали больше и требуют более
                   серьезной защиты</p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 5 800 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 6 400 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -142,6 +168,7 @@
                   <li class="options-item options-item--strong">Юрист</li>
                 </ul>
               </div>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -151,10 +178,12 @@
                 <h4 class="tarif-item__title">Смарт</h4>
                 <p class="tarif-item__description">Сотрудников стало больше, техника нуждается в системной настройке и
                   оптимизации.
-                  Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на буемаге
+                  Бизнес процессы нуждаются в оцифровке, а данные теряются в головах сотрудников или на бумаге
                 </p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 11 800 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 12 400 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -169,6 +198,7 @@
                   <li class="options-item options-item--strong">ИТ специалист</li>
                 </ul>
               </div>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
           <div class="col-lg-3 col-md-6 tarif-info">
@@ -180,8 +210,10 @@
                   новых клиентов,
                   руководитель фирмы больше не может уделять время маркетингу и привлечению клиентов
                 </p>
-                <p class="tarif-item__price">от 1000 руб</p>
+                <p class="tarif-item__price">от 21 000 руб</p>
                 <span class="tarif-item__bage">За первый месяц</span>
+                <p class="tarif-item__price tarif-item__price--second">от 26 400 руб </p>
+                <span class="tarif-item__bage">Со второго месяца</span>
               </div>
               <div class="tarif-item__options">
                 <ul class="optins-list">
@@ -196,6 +228,7 @@
                   <li class="options-item options-item--strong">Маркетолог</li>
                 </ul>
               </div>
+              <button class="btn tarif-btn" data-toggle="modal" data-target="#loginForm">Подключить</button>
             </div>
           </div>
         </div>
@@ -2308,22 +2341,36 @@
       </div>
     </section>
   </main>
-  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle"
-    aria-hidden="true">
+  <div class="modal fade" id="loginForm" tabindex="-1" role="dialog" aria-labelledby="loginFormTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLongTitle">Вход в личный кабинет</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div class="modal-custom">
+        <div class="modal-custom__header">
+          <h5 class="modal-custom__title" id="loginFormTitle">Заявка на получение доступа к кабинету</h5>
+          <button type="button" class="modal-custom__close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
-          ...
+        <div class="image-wrapper">
+          <img src="./img/dest/modal-v2.png" alt="">
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Save changes</button>
+        <div class="modal-custom__body">
+          <form>
+            <div class="input-wrapper">
+              <input type="text" class="modal-custom__input" placeholder="Введите ваше имя" name="name">
+            </div>
+            <div class="input-wrapper">
+              <input type="tel" class="modal-custom__input" placeholder="+7 (XXX) XXX-XX-XX" name="phone">
+            </div>
+            <!-- <div class="checkbox-wrapper">
+              <input type="checkbox" id="lk-privacy">
+              <label for="form-policy">Согласие на обработку персональных данных <a href="#" class="form-link">политикой
+                  конфиденциальности</a></label>
+            </div>   -->
+            <button class="btn-style" data-toggle="modal" data-target="#loginForm">
+              <span class="btn-text">Отравить заявку</span><i class="key"></i>
+            </button>
+            <a href="#" class="form-link">Политика конфиденциальности</a>
+          </form>
         </div>
       </div>
     </div>
@@ -2332,54 +2379,46 @@
     <div class="container">
       <div class="row">
         <div class="col-md-3">
-          <p class="info">Комплексное Управление Бизнесом. Оказание услуг аутсорсинга по бухгалтерским услугам,
-            юридическим услугам, ИТ услугам, маркетинговым услугам. Ведение бухгалтерского учёта, юридическое
-            сопровождение, ИТ обслуживание, Маркетинговое ведение рекламных кампаний. Налоговый аудит бухгалтерии.
-          </p>
+          
           <div class="company-info">
+            <a href="#" class="logo">
+              <div class="logo__coube"></div>
+              <div class="logo__text">КУБ2Б</div>
+            </a>
             <p class="company-info__title">ООО КУБ2Б</p>
             <p class="company-info__text">ИНН 132132132123</p>
             <p class="company-info__text">ОГРН 2131321321321</p>
           </div>
           <a href="#" class="privacy">Политика конфиденциальности</a>
         </div>
-        <div class="offset-md-1 col-md-2">
+        <div class="col-md-3">
+          <p class="info">Комплексное Управление Бизнесом. Оказание услуг аутсорсинга по бухгалтерским услугам,
+            юридическим услугам, ИТ услугам, маркетинговым услугам. Ведение бухгалтерского учёта, юридическое
+            сопровождение, ИТ обслуживание, Маркетинговое ведение рекламных кампаний. Налоговый аудит бухгалтерии.
+          </p>
+        </div>
+        <div class="offset-md-1 col-md-2 footer-nav">
           <h4 class="title-6 footer-nav-title">Навигация</h4>
           <a href="#" class="footer-link">Регистрация ИП</a>
           <a href="#" class="footer-link">Регистрация ООО</a>
           <a href="#" class="footer-link">Бухгалтерские услуги</a>
           <a href="#" class="footer-link">Сдача отчетов</a>
+          <a href="#" class="footer-link">Налоговый аудит</a>
         </div>
-        <div class="offset-md-1 col-md-2">
-          <h4 class="title-6 footer-nav-title">Личный кабинет</h4>
-          <a href="#" class="footer-link">Регистрация ИП</a>
-          <a href="#" class="footer-link">Регистрация ООО</a>
-        </div>
-        <div class="offset-md-1 col-md-2">
+        <div class="offset-md-1 col-md-2 footer-nav">
           <h4 class="title-6 footer-nav-title">Компания</h4>
           <a href="#" class="footer-link">Вакансии</a>
           <a href="#" class="footer-link">Контакты</a>
-          <a href="#" class="footer-link">Отзыввы</a>
+          <a href="#" class="footer-link">Отзывы</a>
           <a href="#" class="footer-link">О коммпании</a>
+          <a href="#" class="footer-link">Блог</a>
         </div>
-      </div>
-    </div>
-    <div class="footer">
-      <div class="container">
-        <div class="footer__top-nav py-4">
-          <div class="col-sm-6 col-md-4 col-xl-5">
-            <a href="#" class="logo">
-              <div class="logo__coube"></div>
-              <div class="logo__text">КУБ2Б</div>
-            </a>
-          </div>
-          <div class="contacts col-sm-6 col-md-8 col-xl-7 justify-content-between">
-            <div class="contacts__info">
-              <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
-              <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
-            </div>
-            <div class="burger-menu">
-              <i class="burger-menu__line"></i>
+        <div class="contacts col-sm-12">
+          <div class="contacts__info">
+            <div class="contacts__adress">г. Казань, ул Пушкина, дом 30. Офис 301</div>
+            <a href="tel:88435005060" class="contacts__phone">8 (843) 500-50-60</a>
+            <div class="develop-by">
+              <a href="/" class="develop-by__link">Разработка сайтов КУБ2Б</a>
             </div>
           </div>
         </div>

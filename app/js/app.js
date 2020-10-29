@@ -196,8 +196,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
       w = window.innerWidth,
       h = window.innerHeight;
     body.addEventListener('mousemove', function (evt) {
-      var posX = Math.round(evt.clientX / w * startX)
-      var posY = Math.round(evt.clientY / h * startY)
+      var posX = Math.abs(evt.clientX / w * startX)
+      var posY = Math.abs(evt.clientY / h * startY)
       pen.style.transform = 'translate(' + posX + 'px,' + posY + 'px)';
       // console.log(posY);
     })
@@ -205,6 +205,55 @@ document.addEventListener("DOMContentLoaded", function (event) {
   $('.burger-menu').click(function () {
     $('.burger-menu ').toggleClass('active');
     $('#menu').toggleClass('open');
+  });
+  $(document).mouseup(function (e){ // событие клика по веб-документу
+		var div = $("#menu"); // тут указываем ID элемента
+		if (!div.is(e.target) // если клик был не по нашему блоку
+		    && div.has(e.target).length === 0 || $('.menu__link').is(e.target)) { // и не по его дочерним элементам
+      div.removeClass('open'); // скрываем его
+      $('.burger-menu').removeClass('active');
+		}
+  });
+  var angrednsol1 = $('#block_1').offset().top;
+  var angrednsol2 = $('#block_2').offset().top;
+  var angrednsol3 = $('#block_3').offset().top;
+  var angrednsol4 = $('#block_4').offset().top;
+  var angrednsol5 = $('#block_5').offset().top;
+
+  var scrollOffset = 0;
+
+  $(window).scroll(function () {
+
+    var scroll = $(window).scrollTop() + scrollOffset;
+    var halfPhoneHeight = ($('#sticky-phone').height() + 24) / 2;
+    var posPhone = $('#sticky-phone').offset().top + halfPhoneHeight;
+    var routineTop = $('.routine').offset().top;
+    var routineBottom = $('.routine').offset().top + $('.routine').height();
+    if (scroll > routineTop && scroll < routineBottom){
+      if (posPhone > angrednsol1) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-buh').addClass('active');
+      }
+  
+      if (posPhone > angrednsol2) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-uchet').addClass('active');
+      }
+  
+      if (posPhone > angrednsol3) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-lawyer').addClass('active');
+      }
+  
+      if (posPhone > angrednsol4) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-mark').addClass('active');
+      }
+      if (posPhone > angrednsol5) {
+        $('.routine-screen').removeClass('active');
+        $('#routine-screen-it').addClass('active');
+      }
+    }
   });
 });
 
@@ -389,48 +438,6 @@ $(document).ready(function () {
     subMenu: true,
     autoArr: false,
     pagination: false
-  });
-
-  var angrednsol1 = $('#block_1').offset().top;
-  var angrednsol2 = $('#block_2').offset().top;
-  var angrednsol3 = $('#block_3').offset().top;
-  var angrednsol4 = $('#block_4').offset().top;
-  var angrednsol5 = $('#block_5').offset().top;
-
-  var scrollOffset = 0;
-
-  $(window).scroll(function () {
-
-    var scroll = $(window).scrollTop() + scrollOffset;
-    var halfPhoneHeight = ($('#sticky-phone').height() + 24) / 2;
-    var posPhone = $('#sticky-phone').offset().top + halfPhoneHeight;
-    var routineTop = $('.routine').offset().top;
-    var routineBottom = $('.routine').offset().top + $('.routine').height();
-    if (scroll > routineTop && scroll < routineBottom){
-      if (posPhone > angrednsol1) {
-        $('.routine-screen').removeClass('active');
-        $('#routine-screen-buh').addClass('active');
-      }
-  
-      if (posPhone > angrednsol2) {
-        $('.routine-screen').removeClass('active');
-        $('#routine-screen-uchet').addClass('active');
-      }
-  
-      if (posPhone > angrednsol3) {
-        $('.routine-screen').removeClass('active');
-        $('#routine-screen-lawyer').addClass('active');
-      }
-  
-      if (posPhone > angrednsol4) {
-        $('.routine-screen').removeClass('active');
-        $('#routine-screen-mark').addClass('active');
-      }
-      if (posPhone > angrednsol5) {
-        $('.routine-screen').removeClass('active');
-        $('#routine-screen-it').addClass('active');
-      }
-    }
   });
 
   // var wHeight = $('.routine-service').height();

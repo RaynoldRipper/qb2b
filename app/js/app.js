@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     activeElement && activeElement.classList.remove(activeClass);
     (element === activeElement) || element.classList.add(activeClass);
   });
-  subList.addEventListener("click", function (event) {
+  subList.addEventListener("mouseover", function (event) {
     const element = event.target.closest(".sub-item");
     if (!element) return;
     const activeElement = element.parentElement.querySelector(".sub-item--active");

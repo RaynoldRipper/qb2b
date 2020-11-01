@@ -49,7 +49,7 @@
     &--intro{
         cursor: pointer;
         border-radius: 25px;
-        animation: phone 2s forwards .5s;
+        animation: phone 2s forwards;
         box-shadow: 0 47px 67px rgba(0,0,0,.3);
         &.active{
             position: relative;
@@ -161,7 +161,7 @@
             width: 100%;
             position: absolute;
             transition: all .5s;      
-            transform: translateY(100%);
+            transform: translateY(0%);
             &.active{
                 transform: translateY(0%);
                 opacity: 1;
@@ -278,7 +278,7 @@
         transform: translateX(0);
     }
     50%{
-        transform: translateX(-100px);
+        transform: translateX(-200px);
         z-index: 3;
         position: relative;
     }
@@ -297,7 +297,7 @@
         position: relative;
     }
     50%{
-        transform: translateX(-100px);
+        transform: translateX(-200px);
         z-index: 3;
         position: relative;
     }

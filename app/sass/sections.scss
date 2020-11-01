@@ -119,7 +119,6 @@
 }
 .sub-item--active{
     color: $black;
-    font-size: 18px;
     &::before{
         visibility: visible;
         left: 20px;

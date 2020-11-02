@@ -135,9 +135,12 @@
 }
 .tab-block{
     cursor: pointer;
-    padding-left: 30px;
+    padding-left: 20px;
+    padding-right: 10px;
     padding-bottom: 58px;
     padding-top: 58px;
+    transition: all .3s;
+    height: 100%;
     &__num{
         transition: all .3s;
         display: block;
@@ -151,6 +154,7 @@
         font-size: 14px;
     }
     &:hover{
+        box-shadow: 0 4px 24px #e8e8e8;
         .tab-block__num{
             color: $primary;
         }

@@ -157,7 +157,7 @@
             // width: 100%;
         }
         &-item{
-            // opacity: 0;
+            opacity: 0;
             width: 100%;
             position: absolute;
             transition: all .5s;      
@@ -166,7 +166,7 @@
                 transform: translateY(0%);
                 opacity: 1;
                 z-index: 2;
-                animation: screen-swipe .5s;
+                // animation: screen-swipe .5s;
             }
     }
     }
@@ -248,13 +248,14 @@
     position: absolute;
     max-height: 419px;
     z-index: 1;  
-    transform: translateY(100%);
-    transition: all .5s;    
+    // transform: translateY(100%);
+    transition: all .5s;  
+    opacity: 0;  
     &.active{
-        transform: translateY(0);
+        // transform: translateY(0);
         opacity: 1;
         z-index: 5;
-        animation: screen-swipe .5s;
+        // animation: screen-swipe .5s;
     }
     &-task{
         width: 100%;

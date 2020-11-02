@@ -68,7 +68,15 @@
 }
 
 @media(min-width:768px) and (max-width:992px) {
-
+    .tarif-info:nth-child(1),
+    .tarif-info:nth-child(3) {
+        &:hover {
+            .tarif-item__options {
+                border-bottom-right-radius: 20px;
+                border-top-right-radius: 20px;
+            }
+        }
+    }
     .tarif-info:nth-child(2),
     .tarif-info:nth-child(4) {
         .tarif-item__options {
@@ -80,11 +88,8 @@
             .tarif-item__options {
                 left: initial;
                 right: 100%;
-            }
-
-            .tarif-item {
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
             }
         }
     }
@@ -151,6 +156,15 @@
         }
     }
 
+    .tarif-info:nth-child(1),
+    .tarif-info:nth-child(2) {
+        &:hover {
+            .tarif-item__options {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+        }
+    }
     .tarif-info:nth-child(3),
     .tarif-info:nth-child(4) {
         .tarif-item__options {
@@ -160,6 +174,8 @@
 
         &:hover {
             .tarif-item__options {
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
                 left: initial;
                 right: 100%;
             }
@@ -518,7 +534,7 @@
 
         &-service {
             width: auto;
-            z-index: 3;
+            z-index: 10;
             background-color: $white;
             border-radius: 8px;
             margin-left: 15px;
@@ -534,7 +550,7 @@
         }
 
         .sticky-wrapper {
-            z-index: 0;
+            z-index: -2;
         }
     }
 
@@ -589,6 +605,7 @@
         .screen-iphone {
             width: 130px;
             height: 280px;
+            border-radius: 10px;
         }
     }
 
@@ -704,10 +721,11 @@
             }
 
             &-block {
-                margin-left: 15px;
-                margin-right: 15px;
+                margin-left: 6px;
+                margin-right: 6px;
                 margin-top: 20px;
                 margin-bottom: 20px;
+                padding: 10px;
 
                 &__desc {
                     font-size: 16px;
